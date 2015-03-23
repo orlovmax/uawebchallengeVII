@@ -1,0 +1,19 @@
+﻿/* TEAM */
+	Devloper: Maxim Orlov
+	From: Ukraine
+
+/* THANKS */
+	^_^
+			
+
+/* SITE */
+	Last update: 23.03.2015
+	Language: Russian
+	Doctype: html5
+	Tools: GIMP, SublimeText3, Openserver, Grunt, Git, Chrome DevTools, RIOT
+    Technologies: Html5, Css3, JS, jQuery, Sass, Jade
+
+
+/* COPYRIGHTS */	
+    PFEncore Sans https://www.myfonts.com/fonts/parachute/pf-encore-sans-pro
+    Layout & design: http://uawebchallenge.com
