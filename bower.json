@@ -1,0 +1,22 @@
+{
+  "name": "UaWebChallengeVII",
+  "version": "1.0.0",
+  "authors": [
+    "Maxim Orlov <mail@orlovmax.com>"
+  ],
+  "description": "UaWebChallengeVII front-end dev middle-senior task",
+  "main": "Gruntfile.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/orlovmax/uaweb7"
+  },
+  "bugs": {
+    "url": "https://github.com/orlovmax/uaweb7/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "1.11.1",
+    "respond": "~1.4.2",
+    "html5shiv": "~3.7.2"
+  }
+}
