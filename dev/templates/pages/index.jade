@@ -8,14 +8,47 @@ doctype html
 html(lang='en')
 	head
 		// Meta information
-		include ../components/meta.jade
+		include ../components/meta
 
 		// Head external resources
-		include ../components/common/head_src.jade
+		include ../components/common/head_src
 
 	body
-		// PARKED PAGE - stub just for project init
-		include ../components/parked/parked.html
+		// Page preloader js
+		include ../components/common/progress
+
+		// Header
+		include ../components/header
+
+		// Home section
+		include ../components/section-home
+
+		// News section
+		include ../components/section-news
+
+		// About section
+		include ../components/section-about
+
+		// Speakers section
+		include ../components/section-speakers
+
+		// Program section
+		include ../components/section-program
+
+		// Tickets section
+		include ../components/section-tickets
+
+		// Videos section
+		include ../components/section-videos
+
+		// Partners section
+		include ../components/section-partners
+
+		// Footer
+		include ../components/footer
 
 		// Browser update screen
 		+ie-out()
+
+		// Body external resources
+		include ../components/common/body_src

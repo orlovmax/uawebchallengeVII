@@ -4,100 +4,113 @@
 //
 // Contents......................Here we are!
 // Elements lib..................Import Sass elements library
-// Layout tools...................Import Sass layout and graphing grid - just for dev
+// Layout tools..................Import Sass layout and graphing grid - just for dev
 // Custom mixins and vars........Project's custom mixins and variables
 //
 // Reset.........................Reset defaults
 // Fonts.........................Fonts
 // General styles................Abstract styles
 // Header styles.................Header and navigation
-// Section1 styles...............
-// Section2 styles...............
-// Section3 styles...............
-// Section4 styles...............
-// Section5 styles...............
-// Section6 styles...............
-// Section7 styles...............
-// Footer styles.................Footer
-//
-// Media queries................Media queries section
+// Home section styles...........Home screen
+// News section styles...........News screen
+// About section styles..........About screen
+// Speakers section styles.......Speakers list screen
+// Program section styles................Program screen
+// Tickets section styles........Tickets options screen
+// Videos section styles.........Video gall screen
+// Partners section styles.......Partners screen
+// Footer styles.................Footer and copyrights
 
 
 
 // ==============================
 // $Elements lib
 // ==============================
-@import components/_elements.sass
+@import components/_elements
+
 // ==============================
 // $Layout tools
 // ==============================
-@import ../devtools/layout-tools.sass
+@import ../devtools/layout-tools
 
 // ==============================
 // $Custom mixins and vars
 // ==============================
-@import components/_variables.sass
+@import components/_variables
+
+// ==============================
+// $Progress
+// ==============================
+@import components/_progress
 
 // ==============================
 // $Reset
 // ==============================
-@import components/_reset.sass
+@import components/_reset
 
 // ==============================
 // $Fonts
 // ==============================
-@import components/_fonts.sass
+@import components/_fonts
 
 // ==============================
 // $General styles
 // ==============================
-@import components/_general.sass
+@import components/_general
 
 // ==============================
 // $Header styles
 // ==============================
-@import components/_header.sass
+@import components/_header
 
 // ==============================
-// $Section1 styles
+// $Home section styles
 // ==============================
-@import components/_section1.sass
+@import components/_section-home
 
 // ==============================
-// $Section2 styles
+// $News section styles
 // ==============================
-@import components/_section2.sass
+@import components/_section-news
 
 // ==============================
-// $Section3 styles
+// $About section styles
 // ==============================
-@import components/_section3.sass
+@import components/_section-about
 
 // ==============================
-// $Section4 styles
+// $Speakers section styles
 // ==============================
-@import components/_section4.sass
+@import components/_section-speakers
 
 // ==============================
-// $Section5 styles
+// $Program section styles
 // ==============================
-@import components/_section5.sass
+@import components/_section-program
 
 // ==============================
-// $Section6 styles
+// $Tickets section styles
 // ==============================
-@import components/_section6.sass
+@import components/_section-tickets
 
 // ==============================
-// $Section7 styles
+// $Videos section styles
 // ==============================
-@import components/_section7.sass
+@import components/_section-videos
+
+// ==============================
+// $Partners section styles
+// ==============================
+@import components/_section-partners
 
 // ==============================
 // $Footer styles
 // ==============================
-@import components/_footer.sass
+@import components/_footer
 
 // ==============================
 // $Media queries
 // ==============================
+
+body
+	// +layout($layout-url: "../layout.jpg", $layout-width: 100%, $layout-opacity: 0.5, $grid-opacity: 0, $cell-width: 10px, $cell-height: 10px, $line-color: #ccc)

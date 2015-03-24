@@ -6,7 +6,7 @@ UaWebChallengeVII task for Middle/Senior frontend dev. Верстка
 
 Демо
 ------
-Live demo: [http://orlovmax.github.io/contest-2](http://orlovmax.github.io/uawebchallengeVII "Check the result for UaWebChallenge task")
+Live demo: [http://orlovmax.github.io/uawebchallengeVII](http://orlovmax.github.io/uawebchallengeVII "Check the result for UaWebChallenge task")
 
 
 Test screenshots

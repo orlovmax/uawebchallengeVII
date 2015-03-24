@@ -187,7 +187,7 @@ module.exports = function(grunt) {
             files: [{
               expand: true,
               cwd: '<%= dev.fonts %>/',
-              src: ['**/*.{eot,svg,ttf,woff}'],
+              src: ['**/*.{eot,svg,ttf,otf,woff,woff2}'],
               dest: '<%= build.fonts %>'
             }]
           },
@@ -316,7 +316,7 @@ module.exports = function(grunt) {
                     '<%= dev.js %>/**/*.js',
                     '<%= dev.img %>/**/*.{png,jpg,gif}',
                     '<%= dev.templates %>/pages/**/*.jade',
-                    '<%= dev.fonts %>/**/*.{eot,svg,ttf,woff}'],
+                    '<%= dev.fonts %>/**/*.{eot,svg,ttf,otf,woff,woff2}'],
             tasks: ['default'],
             options: {
               spawn: false,
