@@ -362,8 +362,8 @@ module.exports = function(grunt) {
     grunt.registerTask('regen', ['concat',
                                  'sass',
                                  'jade',
-                                 'copy',
-                                 'watch'
+                                 // 'imagemin',
+                                 'copy'
     ]);
 
     grunt.registerTask('build', ['processhtml',
