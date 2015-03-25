@@ -1,0 +1,203 @@
+// Custom grid system...
+// I wish I could use this handy and awesome mixin lib
+// https://github.com/mycodelab/miniature-wookie/blob/master/_gs.sass
+// ugh... rules, rules, rules
+
+
+// Calc() mixin
+=calc($property, $expression)
+	#{$property}: -webkit-calc(#{$expression})
+	#{$property}: -moz-calc(#{$expression})
+	#{$property}: calc(#{$expression})
+
+// Clearfix
+=gs_clear
+	clear: both
+	&:before,
+	&:after
+		display: block
+		content: ''
+		clear: both
+		height: 0
+
+// Grid container
+=gs-container()
+	width: 100%
+	+gs_clear
+
+// Columns
+=gs-col-1()
+	width: (100% / 12) * 1
+	+calc(width, #{(100% / 12) * 1} - 30px)
+	margin: auto 1%
+	+calc(margin-left, 15px)
+	+calc(margin-right, 15px)
+
+=gs-col-2()
+	width: (100% / 12) * 2
+	+calc(width, #{(100% / 12) * 2} - 30px)
+	margin: auto 1%
+	+calc(margin-left, 15px)
+	+calc(margin-right, 15px)
+
+=gs-col-3()
+	width: (100% / 12) * 3
+	+calc(width, #{(100% / 12) * 3} - 30px)
+	margin: auto 1%
+	+calc(margin-left, 15px)
+	+calc(margin-right, 15px)
+
+=gs-col-4()
+	width: (100% / 12) * 4
+	+calc(width, #{(100% / 12) * 4} - 30px)
+	margin: auto 1%
+	+calc(margin-left, 15px)
+	+calc(margin-right, 15px)
+
+=gs-col-5()
+	width: (100% / 12) * 5
+	+calc(width, #{(100% / 12) * 5} - 30px)
+	margin: auto 1%
+	+calc(margin-left, 15px)
+	+calc(margin-right, 15px)
+
+=gs-col-6()
+	width: (100% / 12) * 6
+	+calc(width, #{(100% / 12) * 6} - 30px)
+	margin: auto 1%
+	+calc(margin-left, 15px)
+	+calc(margin-right, 15px)
+
+=gs-col-7()
+	width: (100% / 12) * 7
+	+calc(width, #{(100% / 12) * 7} - 30px)
+	margin: auto 1%
+	+calc(margin-left, 15px)
+	+calc(margin-right, 15px)
+
+=gs-col-8()
+	width: (100% / 12) * 8
+	+calc(width, #{(100% / 12) * 8} - 30px)
+	margin: auto 1%
+	+calc(margin-left, 15px)
+	+calc(margin-right, 15px)
+
+=gs-col-9()
+	width: (100% / 12) * 9
+	+calc(width, #{(100% / 12) * 9} - 30px)
+	margin: auto 1%
+	+calc(margin-left, 15px)
+	+calc(margin-right, 15px)
+
+=gs-col-10()
+	width: (100% / 12) * 10
+	+calc(width, #{(100% / 12) * 10} - 30px)
+	margin: auto 1%
+	+calc(margin-left, 15px)
+	+calc(margin-right, 15px)
+
+=gs-col-11()
+	width: (100% / 12) * 11
+	+calc(width, #{(100% / 12) * 11} - 30px)
+	margin: auto 1%
+	+calc(margin-left, 15px)
+	+calc(margin-right, 15px)
+
+=gs-col-12()
+	width: (100% / 12) * 12
+	+calc(width, 100% - 30px)
+	margin: auto 1%
+	+calc(margin-left, 15px)
+	+calc(margin-right, 15px)
+
+
+// Push column
+=gs-push-1()
+	margin-left: (100% / 12) * 1 + 1%
+	+calc(margin-left, #{(100% / 12) * 1} + 15px)
+
+=gs-push-2()
+	margin-left: (100% / 12) * 2 + 1%
+	+calc(margin-left, #{(100% / 12) * 2} + 15px)
+
+=gs-push-3()
+	margin-left: (100% / 12) * 3 + 1%
+	+calc(margin-left, #{(100% / 12) * 3} + 15px)
+
+=gs-push-4()
+	margin-left: (100% / 12) * 4 + 1%
+	+calc(margin-left, #{(100% / 12) * 4} + 15px)
+
+=gs-push-5()
+	margin-left: (100% / 12) * 5 + 1%
+	+calc(margin-left, #{(100% / 12) * 5} + 15px)
+
+=gs-push-6()
+	margin-left: (100% / 12) * 6 + 1%
+	+calc(margin-left, #{(100% / 12) * 6} + 15px)
+
+=gs-push-7()
+	margin-left: (100% / 12) * 7 + 1%
+	+calc(margin-left, #{(100% / 12) * 7} + 15px)
+
+=gs-push-8()
+	margin-left: (100% / 12) * 8 + 1%
+	+calc(margin-left, #{(100% / 12) * 8} + 15px)
+
+=gs-push-9()
+	margin-left: (100% / 12) * 9 + 1%
+	+calc(margin-left, #{(100% / 12) * 9} + 15px)
+
+=gs-push-10()
+	margin-left: (100% / 12) * 10 + 1%
+	+calc(margin-left, #{(100% / 12) * 10} + 15px)
+
+=gs-push-11()
+	margin-left: (100% / 12) * 11 + 1%
+	+calc(margin-left, #{(100% / 12) * 11} + 15px)
+
+
+// Pull column
+=gs-pull-1()
+	margin-left: (100% / 12) * 1 + 1%
+	+calc(margin-left, #{(100% / 12) * 1} + 15px)
+
+=gs-pull-2()
+	margin-left: (100% / 12) * 2 + 1%
+	+calc(margin-left, #{(100% / 12) * 2} + 15px)
+
+=gs-pull-3()
+	margin-left: (100% / 12) * 3 + 1%
+	+calc(margin-left, #{(100% / 12) * 3} + 15px)
+
+=gs-pull-4()
+	margin-left: (100% / 12) * 4 + 1%
+	+calc(margin-left, #{(100% / 12) * 4} + 15px)
+
+=gs-pull-5()
+	margin-left: (100% / 12) * 5 + 1%
+	+calc(margin-left, #{(100% / 12) * 5} + 15px)
+
+=gs-pull-6()
+	margin-left: (100% / 12) * 6 + 1%
+	+calc(margin-left, #{(100% / 12) * 6} + 15px)
+
+=gs-pull-7()
+	margin-left: (100% / 12) * 7 + 1%
+	+calc(margin-left, #{(100% / 12) * 7} + 15px)
+
+=gs-pull-8()
+	margin-left: (100% / 12) * 8 + 1%
+	+calc(margin-left, #{(100% / 12) * 8} + 15px)
+
+=gs-pull-9()
+	margin-left: (100% / 12) * 9 + 1%
+	+calc(margin-left, #{(100% / 12) * 9} + 15px)
+
+=gs-pull-10()
+	margin-left: (100% / 12) * 10 + 1%
+	+calc(margin-left, #{(100% / 12) * 10} + 15px)
+
+=gs-pull-11()
+	margin-left: (100% / 12) * 11 + 1%
+	+calc(margin-left, #{(100% / 12) * 11} + 15px)
