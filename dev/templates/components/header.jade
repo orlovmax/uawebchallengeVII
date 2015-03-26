@@ -1,38 +1,41 @@
 header.main-header
 	.container
 		// Fixed header elements
-		a.iconfont.iconfont_open.iconfont_open_nav(href='#') Open
+		.top-nav
+			a.iconfont.iconfont_menu(href='#') Open
 
-		ul.languages
-			li.languages__item
-				a.languages__link.languages__link_active Ру
-			li.languages__item
-				a.languages__link(href='#') Ук
-			li.languages__item
-				a.languages__link(href='#') En
+			ul.languages
+				li.languages__item
+					a.languages__link.is-active Ру
+				li.languages__item
+					a.languages__link(href='#') Ук
+				li.languages__item
+					a.languages__link(href='#') En
 
-		a.btn-link.btn-link_header.btn-link_header_home(href='#') Купить билет
+			a.btn-link.btn-link_header.is-hidden(href='#') Купить билет
 
 // Main navigation
 nav.main-nav
-	a.iconfont.iconfont_close.iconfont_close_nav(href='#') Close
-	ul.main-nav__list
-		li.main-nav__item
-			a.main-nav__link.is-active(href='#home') Главная
-		li.main-nav__item
-			a.main-nav__link(href='#news') Что нового?
-		li.main-nav__item
-			a.main-nav__link(href='#about') Для кого?
-		li.main-nav__item
-			a.main-nav__link(href='#speakers') Спикеры
-		li.main-nav__item
-			a.main-nav__link(href='#program') Программа
-		li.main-nav__item
-			a.main-nav__link(href='#tickets') Билеты
-		li.main-nav__item
-			a.main-nav__link(href='#video') Видео
-		li.main-nav__item
-			a.main-nav__link(href='#partners') Партеры
+	.container
+		.main-nav__wrap
+			a.iconfont.iconfont_close(href='#') Close
+			ul.main-nav__list
+				li.main-nav__item
+					a.main-nav__link.is-active(href='#home') Главная
+				li.main-nav__item
+					a.main-nav__link(href='#news') Что нового?
+				li.main-nav__item
+					a.main-nav__link(href='#about') Для кого?
+				li.main-nav__item
+					a.main-nav__link(href='#speakers') Спикеры
+				li.main-nav__item
+					a.main-nav__link(href='#program') Программа
+				li.main-nav__item
+					a.main-nav__link(href='#tickets') Билеты
+				li.main-nav__item
+					a.main-nav__link(href='#video') Видео
+				li.main-nav__item
+					a.main-nav__link(href='#partners') Партеры
 
 // Screen switchers
 ul.switchers

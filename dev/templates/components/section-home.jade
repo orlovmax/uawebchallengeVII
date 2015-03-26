@@ -1,13 +1,19 @@
-section#home.common-screen.screen_home.screen_bg_home
+section#home.screen.screen_home.screen_bg_home
 	.container
 		// Main info
 		.home-info
-			h1.home-info__title
-				span.home-info__title_text_thin It
-				|  Conference
-				span.home-info__title_text_thin  И
-				|  Я
-			p.home-info__date 12 - 18 апреля
+			.home-info__wrap
+				h1.home-info__title
+					span.home-info__title_thin It
+					span.home-info__title_br Confe
+					span.home-info__title_br.home-info__title_spacing rence
+					span.home-info__title_thin  И
+					span.home-info__title_pos  Я
+				p.home-info__date
+					time(datetime="2015-04-12") 12
+					|  -
+					time(datetime="2015-04-18")  18
+					|  &nbsp;апреля
 
-			a.btn-link.btn-link_home(href='#') Купить билет
-			p.home-info__afterword  ... у нас интересней всего ©Женя
+				a.btn-link.btn-link_home(href='#') Купить билет
+				p.home-info__afterword  ... у нас интересней всего ©Женя

@@ -1,0 +1,46 @@
+.iconfont
+	display: inline-block
+	font-size: 0
+	text-decoration: none
+	text-align: center
+	&:before
+		display: inline-block
+		font-family: "uaweb"
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+
+	@function unicode($str)
+		@return unquote("\"") + $str + unquote("\"")
+	$icons: close '\e800', menu '\e801', down '\e802', up '\e803', next '\e804', prev '\e805', twi '\e806', vk '\e807', fb '\e808'
+	@each $icon in $icons
+		&_#{nth($icon, 1)}
+			&:before
+				content: unicode(nth($icon, 2))
+
+	&_menu
+		float: right
+		width: 40px
+		height: 40px
+		color: $color-contrast_light
+		background-color: transparentize($color-dark, 0.5)
+		&:before
+			font-size: 25px
+			line-height: 40px
+			color: $color-contrast_light
+			+transition(all, .5s)
+		&:hover:before
+			color: $color-accent
+
+	&_close
+		width: 40px
+		height: 40px
+		margin-top: 12px
+		color: $color-contrast_light
+		&:before
+			font-size: 25px
+			line-height: 40px
+			color: $color-contrast_light
+			+transition(all, .5s)
+		&:hover:before
+			color: $color-darken

@@ -1,0 +1,71 @@
+.home-info
+	position: absolute
+	top: 0
+	left: 0
+	z-index: 10
+	padding-top: 90px
+	background-color: $color-accent
+	height: 100%
+	text-align: left
+	+gs-col-6()
+	@media screen and(max-width: 960px)
+		padding-top: 60px
+		text-align: center
+		+gs-col-12()
+
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		right: -230px
+		z-index: 0
+		display: block
+		width: 500px
+		height: 100%
+		background-color: $color-accent
+		+skewX(-15deg)
+		@media screen and(max-width: 960px)
+			display: none
+
+	&__wrap
+		position: relative
+		display: inline-block
+
+	&__title
+		position: relative
+		margin-left: -5px
+		font-family: $font-ublack
+		text-transform: uppercase
+		font-size: 130px
+		line-height: 100px
+		font-weight: normal
+		letter-spacing: 2px
+		text-align: left
+		color: $color-title
+
+		&_thin
+			font-family: $font-uthin
+
+		&_br
+			display: block
+
+		&_spacing
+			letter-spacing: 6px
+
+		&_pos
+			display: inline-block
+			margin-left: 20px
+
+	&__date
+		position: absolute
+		margin: -20px 0 0 200px
+		text-align: left
+		font-family: $font-xthin
+		font-size: 40px
+		line-height: 0
+		white-space: nowrap
+		color: $color-text
+
+	&__afterword
+		font-family: $font-light
+		font-size: 14px

@@ -1,0 +1,66 @@
+// Main fixed header
+.main-header
+	position: fixed
+	top: 0
+	display: block
+	width: 100%
+	z-index: 100
+	text-align: right
+
+// Top nav - wrap for navicon, languages bar and buy button
+.top-nav
+	display: inline-block
+	height: 65px
+	padding: 12px 15px
+	+clearfix
+
+	&.is-bg
+		background-color: $color-lighten
+
+// Languages dropdown menu
+.languages
+	position: relative
+	float: right
+	width: 55px
+	height: 40px
+	overflow: hidden
+	margin: 0 12px
+	list-style: none
+	+transition(all, .5s)
+
+	&:after
+		content: '\e802'
+		position: absolute
+		top: 8px
+		right: 8px
+		font-family: "uaweb"
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		color: $color-contrast_light
+		+transition(all, .5s)
+
+	&:hover
+		height: auto
+		overflow: visible
+		background-color: transparentize($color-dark, 0.5)
+		&:after
+			content: '\e803'
+
+	&__item
+		height: 40px
+		text-align: center
+
+	&__link
+		text-decoration: none
+		color: #999
+		font-family: $font-bold
+		font-size: 14px
+		line-height: 40px
+		text-transform: uppercase
+		+transition(all, .5s)
+
+		&.is-active
+			cursor: default
+		&:hover, &.is-active
+			color: $color-contrast_light
