@@ -1,27 +1,28 @@
 section#about.screen.screen_about.screen_bg_general
 	.container
-		h2.screen__title.screen__title_about Для кого?
+		aside.screen__aside.screen__aside_about
+			h2.screen__title.screen__title_about Для кого?
 
-		// Sidebar with screen navigation
-		nav.cat.cat_about
-			ul.cat__list
-				li.cat__item
-					a.cat__link.cat__link_about.is-active(href='#general') Для кого?
-				li.cat__item
-					a.cat__link.cat__link_about(href='#front-end') Front-end developers
-				li.cat__item
-					a.cat__link.cat__link_about(href='#back-end') Back-end developers
-				li.cat__item
-					a.cat__link.cat__link_about(href='#testers') Testers
-				li.cat__item
-					a.cat__link.cat__link_about(href='#web-designers') Web-designers
-				li.cat__item
-					a.cat__link.cat__link_about(href='#startupers') Startupers
+			// Sidebar with screen navigation
+			nav.cat.cat_vert
+				ul.cat__list
+					li.cat__item.cat__item_vert
+						a.cat__link.cat__link_vert.is-active(href='#general') Для кого?
+					li.cat__item.cat__item_vert
+						a.cat__link.cat__link_vert(href='#front-end') Front-end developers
+					li.cat__item.cat__item_vert
+						a.cat__link.cat__link_vert(href='#back-end') Back-end developers
+					li.cat__item.cat__item_vert
+						a.cat__link.cat__link_vert(href='#testers') Testers
+					li.cat__item.cat__item_vert
+						a.cat__link.cat__link_vert(href='#web-designers') Web-designers
+					li.cat__item.cat__item_vert
+						a.cat__link.cat__link_vert(href='#startupers') Startupers
 
 
 		// Target information
 		.about-wrap
-			#general.about-info.icon.icon_gen-about
+			#general.about-info.icon.icon_gen-about.is-visible
 				p.about-info__text Участники IT-Конференции - прогрессивно мыслящие люди, интересующиеся будущим IT-рынка в целом и веб–разработкой в частности.
 				p.about-info__text Мероприятие будет одинаково интересно бекендам и фронтендам, тестировщикам и веб-дизайнерам, проектным менеджерами предпринимателям.
 
@@ -45,7 +46,7 @@ section#about.screen.screen_about.screen_bg_general
 				p.about-info__text Тенденции в веб-дизайне, самые дорогие и качественные кейсы, лайфхаки от настоящих мастеров.
 				p.about-info__text Присоединяйтесь к нам на день с высококлассными презентациями от лучших в нашей отрасли.
 
-				h3.about-info__title Участники конференции
+				h3.about-info__title.about-info__title_int Участники конференции
 				ul.about-info__list
 					li.about-info__list-item дизайнеры со стажем
 					li.about-info__list-item дизайнеры с серьёзным стажем, арт-директора и ведущие дизайнеры компаний

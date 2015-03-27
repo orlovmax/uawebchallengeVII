@@ -6,13 +6,13 @@
 	font-family: $font-black
 	text-decoration: none
 	text-transform: uppercase
-	color: $color-dark
+	color: $color-btn_dark
 	text-align: center
 	font-size: 14px
 	line-height: 1
 	border-width: 6px
 	border-style: solid
-	border-color: $color-dark
+	border-color: $color-btn_dark
 	+transition(all, .5s)
 
 	&:before
@@ -27,12 +27,12 @@
 		width: 0
 		height: 100%
 		visibility: hidden
-		background-color: $color-dark
+		background-color: $color-btn_dark
 		+skewX(45deg)
 		+transition(all, .5s)
 
 	&:hover
-		color: $color-light
+		color: $color-btn_light
 		&:before
 			width: 100%
 			visibility: visible
@@ -47,9 +47,7 @@
 		padding: 20px 0
 		font-family: $font-ublack
 		font-size: 16px
-		@media screen and(max-width: 1170px)
-			margin: 40px 0
-		@media screen and(max-width: 960px)
+		@media screen and(max-height: 640px)
 			margin: 20px 0
 
 	&_header
@@ -57,11 +55,31 @@
 		width: 170px
 		padding: 10px 0
 		font-size: 13px
-		color: $color-contrast_light
+		color: $color-btn_light
 		border-width: 4px
-		border-color: $color-contrast_light
+		border-color: $color-btn_light
 
 		&:before
-			background-color: $color-contrast_light
+			background-color: $color-btn_light
 		&:hover
-			color: $color-dark
+			color: $color-btn_dark
+
+	&_ticket
+		width: 100%
+		height: 50px
+		margin: 25px 0
+		padding: 15px 0
+		font-size: 13px
+		border-width: 4px
+
+		&_prem
+			color: $color-accent
+			border-color: $color-accent
+
+			&:before
+				background-color: $color-accent
+			&:hover
+				color: $color-btn_dark
+
+
+

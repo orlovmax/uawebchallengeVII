@@ -1,0 +1,100 @@
+.ticket
+	position: relative
+	float: left
+	width: 33.3333333333%
+	height: 100%
+	padding: 100px
+	text-align: center
+	@media screen and(max-width: 1170px)
+		padding: 40px
+
+	&_light
+		background-color: $color-ticket_light
+
+	&_gold
+		background-color: $color-accent
+
+	&_prem
+		background-color: $color-ticket_dark
+
+	&__header
+		display: inline-block
+
+	&__title
+		margin-bottom: 25px
+		font-family: $font-black
+		font-size: 36px
+		line-height: 22px
+		font-weight: normal
+		color: $color-title
+
+		&_prem
+			color: $color-accent
+
+	&__descr
+		font-family: $font-thin
+		font-size: 16px
+		line-height: 16px
+		color: $color-descr_ticket
+		list-style-position: 1px
+		text-align: left
+
+		&_gold
+			color: #716304
+		&_prem
+			color: #999
+
+
+	&__list
+		display: inline-block
+		min-height: 260px
+		margin: 30px 0 30px
+		list-style: none
+		text-align: left
+
+	&__item
+		position: relative
+		margin-bottom: 20px
+		margin-left: 20px
+		font-family: $font-thin
+		font-size: 16px
+		line-height: 16px
+		color: $color-ticket
+		list-style-position: 1px
+		&:before
+			content: '\2022'
+			position: absolute
+			left: -20px
+			display: inline-block
+			margin-right: 15px
+			color: $color-ticket
+			font-size: 25px
+
+		&_prem
+			color: $color-ticket_light
+			&:before
+				color: $color-accent
+
+	&__footer
+		display: inline-block
+		text-align: left
+
+	&__cost
+		font-family: $font-light
+		font-size: 14px
+		line-height: 22px
+		color: $color-ticket_cost
+
+		&_gold
+			color: $color-ticket_cost_gold
+		&_prem
+			color: $color-ticket_cost_prem
+
+		&_extra
+			color: $color-ticket
+
+		&_extra_prem
+			color: $color-ticket_light
+		&_val
+			font-size: 24px
+

@@ -1,0 +1,47 @@
+.about-wrap
+	+gs-col-6
+	+gs-push-6
+	float: left
+.about-info
+	display: none
+	margin-top: 110px
+	color: $color-about
+	font-size: 18px
+	line-height: 22px
+
+	&.is-visible
+		display: block
+
+	&__title
+		margin-bottom: 18px
+		font-family: $font-bold
+
+		&_int
+			margin-top: 45px
+
+	&__text
+		font-family: $font-thin
+		margin-bottom: 15px
+
+		&_disclaimer
+			margin-top: 35px
+			font-family: $font-thini
+
+	&__list
+		list-style: none
+		font-family: $font-thin
+
+	&__list-item
+		position: relative
+		margin-left: 20px
+
+		&:before
+			content: '\2022'
+			position: absolute
+			left: -20px
+			display: inline-block
+			margin-right: 15px
+			color: $color-accent
+			font-size: 25px
+
+

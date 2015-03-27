@@ -1,0 +1,181 @@
+.screen
+	position: relative
+	width: 100%
+	height: 100%
+	overflow: hidden
+	background-color: $color-screen_light
+	+clearfix
+
+
+	&_home
+		background-color: $color-accent
+
+	&_news
+		background-color: $color-screen_light
+
+	&_about
+		background-color: $color-accent
+
+	&_speak
+		background-color: $color-screen_dark
+
+	&_progr
+		background-color: $color-screen_light
+
+	&_ticket
+		background-color: $color-accent
+
+	&_vid
+		background-color: $color-screen_dark
+
+	&_partn
+		background-color: $color-screen_light
+
+	&_bg_home
+		background-image: url("../img/bg/home-bg.jpg")
+		background-position: top right
+		background-repeat: no-repeat
+		+bg-contain
+
+		@media screen and(max-height: 480px), screen and(max-width: 960px)
+			background-image: none
+
+	&_bg_general
+		background-image: url("../img/bg/about-bg1.jpg")
+		background-position: top right
+		background-repeat: no-repeat
+		+bg-contain
+
+	&_bg_fe
+		background-image: url("../img/bg/about-bg2.jpg")
+		background-position: top right
+		background-repeat: no-repeat
+		+bg-contain
+
+	&_bg_be
+		background-image: url("../img/bg/about-bg3.jpg")
+		background-position: top right
+		background-repeat: no-repeat
+		+bg-contain
+
+	&_bg_test
+		background-image: url("../img/bg/about-bg4.jpg")
+		background-position: top right
+		background-repeat: no-repeat
+		+bg-contain
+
+	&_bg_design
+		background-image: url("../img/bg/about-bg5.jpg")
+		background-position: top right
+		background-repeat: no-repeat
+		+bg-contain
+
+	&_bg_start
+		background-image: url("../img/bg/about-bg6.jpg")
+		background-position: top right
+		background-repeat: no-repeat
+		+bg-contain
+
+
+	&__title
+		font-family: $font-ublack
+		font-size: 48px
+		text-transform: uppercase
+		color: $color-title
+		font-weight: normal
+		white-space: nowrap
+		+gs-col-12
+		float: left
+		@media screen and(max-width: 960px)
+			text-align: center
+
+		&_news
+			margin-top: 150px
+			margin-bottom: 100px
+			@media screen and(max-height: 640px), screen and (max-width: 960px)
+				margin-top: 60px
+				margin-bottom: 40px
+			@media screen and(max-height: 480px), screen and (max-width: 800px)
+				font-size: 40px
+				margin-top: 35px
+				margin-bottom: 20px
+
+		&_partn
+			margin-top: 70px
+			margin-bottom: 40px
+
+		&_about
+			margin-top: 80px
+			margin-bottom: 30px
+
+	&__aside
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 10
+		display: block
+		height: 100%
+
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: -1000px
+			display: block
+			width: 1000px
+			height: 100%
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			right: -199px
+			z-index: -1
+			display: block
+			width: 200px
+			height: 100%
+			background-image: url('../img/cr.png')
+			background-repeat: no-repeat
+			+bg-size(100% 100%)
+			@media screen and(max-height: 640px), screen and(max-width: 960px)
+				display: none
+
+		&_about
+			background-color: $color-accent
+			+gs-col-4()
+
+			&:before
+				background-color: $color-accent
+			&:after
+				background-image: url('../img/cr.png')
+
+		&_home
+			text-align: left
+			background-color: $color-accent
+			+gs-col-8()
+			@media screen and(max-height: 480px), screen and(max-width: 960px)
+				text-align: center
+				+gs-col-12()
+
+			&:before
+				background-color: $color-accent
+			&:after
+				background-image: url('../img/cr.png')
+
+		&_progr
+			background-color: $color-accent
+			+gs-col-4()
+
+			&:before
+				background-color: $color-accent
+			&:after
+				background-image: url('../img/cr_light.png')
+
+
+
+
+.container
+	position: relative
+	max-width: 1170px
+	height: 100%
+	margin: 0 auto
+	+clearfix

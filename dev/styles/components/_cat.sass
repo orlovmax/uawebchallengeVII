@@ -1,0 +1,51 @@
+.cat
+	display: inline-block
+
+	&__item
+		border-bottom-width: 5px
+		border-bottom-style: solid
+
+		&_vert
+			border-bottom-color: $color-cat_dark
+
+		&_partn
+			display: inline-block
+			margin-right: 30px
+			border-bottom-color: $color-cat_dark
+
+	&__link
+		display: inline-block
+		width: 100%
+		font-family: $font-bold
+		font-size: 14px
+		white-space: nowrap
+		text-transform: uppercase
+		text-decoration: none
+		+transition(all, .3s)
+		&.is-active, &:hover
+			text-indent: 10px
+
+		&_vert
+			height: 70px
+			line-height: 70px
+			color: $color-cat_dark
+			&.is-active, &:hover
+				background-color: $color-cat_dark
+				color: $color-cat_light
+
+		&_partn
+			width: 165px
+			height: 60px
+			line-height: 60px
+			color: $color-cat_dark
+			&.is-active, &:hover
+				background-color: $color-cat_dark
+				color: $color-cat_light
+
+	&_vert
+		display: block
+		max-width: 190px
+
+	&_partn
+		margin-bottom: 45px
+		+gs-col-12()

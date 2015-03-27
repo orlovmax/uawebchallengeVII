@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <!-- Meta information-->
     <meta charset="utf-8">
@@ -61,7 +61,7 @@
             <li class="main-nav__item"><a href="#speakers" class="main-nav__link">Спикеры</a></li>
             <li class="main-nav__item"><a href="#program" class="main-nav__link">Программа</a></li>
             <li class="main-nav__item"><a href="#tickets" class="main-nav__link">Билеты</a></li>
-            <li class="main-nav__item"><a href="#video" class="main-nav__link">Видео</a></li>
+            <li class="main-nav__item"><a href="#videos" class="main-nav__link">Видео</a></li>
             <li class="main-nav__item"><a href="#partners" class="main-nav__link">Партеры</a></li>
           </ul>
         </div>
@@ -75,15 +75,15 @@
       <li class="switchers__item"><a href="#speakers" class="switchers__link">Спикеры</a></li>
       <li class="switchers__item"><a href="#program" class="switchers__link">Программа</a></li>
       <li class="switchers__item"><a href="#tickets" class="switchers__link">Билеты</a></li>
-      <li class="switchers__item"><a href="#video" class="switchers__link">Видео</a></li>
+      <li class="switchers__item"><a href="#videos" class="switchers__link">Видео</a></li>
       <li class="switchers__item"><a href="#partners" class="switchers__link">Партеры</a></li>
     </ul>
     <!-- Home section-->
     <section id="home" class="screen screen_home screen_bg_home">
       <div class="container">
         <!-- Main info-->
-        <div class="home-info">
-          <div class="home-info__wrap">
+        <aside class="screen__aside screen__aside_home">
+          <div class="home-info">
             <h1 class="home-info__title"><span class="home-info__title_thin">It</span><span class="home-info__title_br">Confe</span><span class="home-info__title_br home-info__title_spacing">rence</span><span class="home-info__title_thin"> И</span><span class="home-info__title_pos"> Я</span></h1>
             <p class="home-info__date">
               <time datetime="2015-04-12">12</time> -
@@ -91,7 +91,7 @@
             </p><a href="#" class="btn-link btn-link_home">Купить билет</a>
             <p class="home-info__afterword"> ... у нас интересней всего ©Женя</p>
           </div>
-        </div>
+        </aside>
       </div>
     </section>
     <!-- News section-->
@@ -123,21 +123,23 @@
     <!-- About section-->
     <section id="about" class="screen screen_about screen_bg_general">
       <div class="container">
-        <h2 class="screen__title screen__title_about">Для кого?</h2>
-        <!-- Sidebar with screen navigation-->
-        <nav class="cat cat_about">
-          <ul class="cat__list">
-            <li class="cat__item"><a href="#general" class="cat__link cat__link_about is-active">Для кого?</a></li>
-            <li class="cat__item"><a href="#front-end" class="cat__link cat__link_about">Front-end developers</a></li>
-            <li class="cat__item"><a href="#back-end" class="cat__link cat__link_about">Back-end developers</a></li>
-            <li class="cat__item"><a href="#testers" class="cat__link cat__link_about">Testers</a></li>
-            <li class="cat__item"><a href="#web-designers" class="cat__link cat__link_about">Web-designers</a></li>
-            <li class="cat__item"><a href="#startupers" class="cat__link cat__link_about">Startupers</a></li>
-          </ul>
-        </nav>
+        <aside class="screen__aside screen__aside_about">
+          <h2 class="screen__title screen__title_about">Для кого?</h2>
+          <!-- Sidebar with screen navigation-->
+          <nav class="cat cat_vert">
+            <ul class="cat__list">
+              <li class="cat__item cat__item_vert"><a href="#general" class="cat__link cat__link_vert is-active">Для кого?</a></li>
+              <li class="cat__item cat__item_vert"><a href="#front-end" class="cat__link cat__link_vert">Front-end developers</a></li>
+              <li class="cat__item cat__item_vert"><a href="#back-end" class="cat__link cat__link_vert">Back-end developers</a></li>
+              <li class="cat__item cat__item_vert"><a href="#testers" class="cat__link cat__link_vert">Testers</a></li>
+              <li class="cat__item cat__item_vert"><a href="#web-designers" class="cat__link cat__link_vert">Web-designers</a></li>
+              <li class="cat__item cat__item_vert"><a href="#startupers" class="cat__link cat__link_vert">Startupers</a></li>
+            </ul>
+          </nav>
+        </aside>
         <!-- Target information-->
         <div class="about-wrap">
-          <div id="general" class="about-info icon icon_gen-about">
+          <div id="general" class="about-info icon icon_gen-about is-visible">
             <p class="about-info__text">Участники IT-Конференции - прогрессивно мыслящие люди, интересующиеся будущим IT-рынка в целом и веб–разработкой в частности.</p>
             <p class="about-info__text">Мероприятие будет одинаково интересно бекендам и фронтендам, тестировщикам и веб-дизайнерам, проектным менеджерами предпринимателям.</p>
           </div>
@@ -160,7 +162,7 @@
             <h3 class="about-info__title">В фокусе</h3>
             <p class="about-info__text">Тенденции в веб-дизайне, самые дорогие и качественные кейсы, лайфхаки от настоящих мастеров.</p>
             <p class="about-info__text">Присоединяйтесь к нам на день с высококлассными презентациями от лучших в нашей отрасли.</p>
-            <h3 class="about-info__title">Участники конференции</h3>
+            <h3 class="about-info__title about-info__title_int">Участники конференции</h3>
             <ul class="about-info__list">
               <li class="about-info__list-item">дизайнеры со стажем</li>
               <li class="about-info__list-item">дизайнеры с серьёзным стажем, арт-директора и ведущие дизайнеры компаний</li>
@@ -601,7 +603,7 @@
     <!-- Tickets section-->
     <div id="tickets" class="screen screen_ticket">
       <section class="ticket ticket_light">
-        <header class="ticket__header ticket__header_light">
+        <header class="ticket__header icon icon_light-tc">
           <h2 class="ticket__title">Light</h2>
           <p class="ticket__descr">лучший вариант если Вас интересует только одно направление</p>
         </header>
@@ -612,15 +614,13 @@
           <li class="ticket__item">запись выступлений Ваших дней</li>
         </ul>
         <footer class="ticket__footer">
-          <p class="ticket__cost"><span class="ticket__extra"><span class="ticket__val">450</span> грн</span> / с 01.03 -<span class="ticket__val">
-              550
-               грн</span></p><a href="#" class="btn-link btn-link_ticket_light">Купить билет</a>
+          <p class="ticket__cost"><span class="ticket__cost_extra"><span class="ticket__cost_val">450</span> грн</span> / с 01.03 -<span class="ticket__cost_val">550</span> грн</p><a href="#" class="btn-link btn-link_ticket">Купить билет</a>
         </footer>
       </section>
       <section class="ticket ticket_gold">
-        <header class="ticket__header ticket__header_gold">
+        <header class="ticket__header icon icon_gold-tc">
           <h2 class="ticket__title">Gold</h2>
-          <p class="ticket__descr">если Вас интересует два направления, тогда выбирайте:</p>
+          <p class="ticket__descr ticket__descr_gold">если Вас интересует два направления, тогда выбирайте:</p>
         </header>
         <ul class="ticket__list">
           <li class="ticket__item">посещение 2 дней на выбор</li>
@@ -630,15 +630,13 @@
           <li class="ticket__item">возможность выиграть призы и сувениры </li>
         </ul>
         <footer class="ticket__footer">
-          <p class="ticket__cost"><span class="ticket__extra"><span class="ticket__val">650</span> грн</span> / с 01.03 -<span class="ticket__val">
-              750
-               грн</span></p><a href="#" class="btn-link btn-link_ticket_gold">Купить билет</a>
+          <p class="ticket__cost ticket__cost_gold"><span class="ticket__cost_extra"><span class="ticket__cost_val">650</span> грн</span> / с 01.03 -<span class="ticket__cost_val">750</span> грн</p><a href="#" class="btn-link btn-link_ticket">Купить билет</a>
         </footer>
       </section>
       <section class="ticket ticket_prem">
-        <header class="ticket__header ticket__header_prem">
+        <header class="ticket__header icon icon_prem-tc">
           <h2 class="ticket__title ticket__title_prem">Premium</h2>
-          <p class="ticket__descr">эта неделя станет серьёзным вкладом в себя</p>
+          <p class="ticket__descr ticket__descr_prem">эта неделя станет серьёзным вкладом в себя</p>
         </header>
         <ul class="ticket__list">
           <li class="ticket__item ticket__item_prem">посещение всех дней</li>
@@ -649,9 +647,7 @@
           <li class="ticket__item ticket__item_prem">возможность выиграть призы и сувениры</li>
         </ul>
         <footer class="ticket__footer">
-          <p class="ticket__cost"><span class="ticket__extra"><span class="ticket__val">1200</span> грн</span> / с 01.03 -<span class="ticket__val">
-              1300
-               грн</span></p><a href="#" class="btn-link btn-link_ticket_prem">Купить билет</a>
+          <p class="ticket__cost ticket__cost_prem"><span class="ticket__cost_extra ticket__cost_extra_prem"><span class="ticket__cost_val">1200</span> грн</span> / с 01.03 -<span class="ticket__cost_val">1300</span> грн</p><a href="#" class="btn-link btn-link_ticket btn-link_ticket_prem">Купить билет</a>
         </footer>
       </section>
     </div>
@@ -663,42 +659,42 @@
         </header>
         <!-- Video gallery-->
         <div class="gall gall_vid">
-          <figure class="gall-item gall-item_vid"><a href="#vid1" class="icon icon_play icon_play_gall"></a><img src="img/vid_thumb/vid1.jpg" alt="Video thumb" class="gall-item__pic">
+          <figure class="gall-item gall-item_vid"><a href="#vid1" class="icon icon_play">Смотреть видео</a><img src="img/vid_thumb/vid1.jpg" alt="Video thumb" class="gall-item__pic">
             <figcaption class="gall-item__caption">
               <h3 class="gall-item__title">Jean-Baptiste Guerrax</h3>
             </figcaption>
           </figure>
-          <figure class="gall-item gall-item_vid"><a href="#vid1" class="icon icon_play icon_play_gall"></a><img src="img/vid_thumb/vid2.jpg" alt="Video thumb" class="gall-item__pic">
+          <figure class="gall-item gall-item_vid"><a href="#vid1" class="icon icon_play">Смотреть видео</a><img src="img/vid_thumb/vid2.jpg" alt="Video thumb" class="gall-item__pic">
             <figcaption class="gall-item__caption">
               <h3 class="gall-item__title">Jean-Baptiste Guerrax</h3>
             </figcaption>
           </figure>
-          <figure class="gall-item gall-item_vid"><a href="#vid1" class="icon icon_play icon_play_gall"></a><img src="img/vid_thumb/vid3.jpg" alt="Video thumb" class="gall-item__pic">
+          <figure class="gall-item gall-item_vid"><a href="#vid1" class="icon icon_play">Смотреть видео</a><img src="img/vid_thumb/vid3.jpg" alt="Video thumb" class="gall-item__pic">
             <figcaption class="gall-item__caption">
               <h3 class="gall-item__title">Jean-Baptiste Guerrax</h3>
             </figcaption>
           </figure>
-          <figure class="gall-item gall-item_vid"><a href="#vid1" class="icon icon_play icon_play_gall"></a><img src="img/vid_thumb/vid4.jpg" alt="Video thumb" class="gall-item__pic">
+          <figure class="gall-item gall-item_vid"><a href="#vid1" class="icon icon_play">Смотреть видео</a><img src="img/vid_thumb/vid4.jpg" alt="Video thumb" class="gall-item__pic">
             <figcaption class="gall-item__caption">
               <h3 class="gall-item__title">Jean-Baptiste Guerrax</h3>
             </figcaption>
           </figure>
-          <figure class="gall-item gall-item_vid"><a href="#vid1" class="icon icon_play icon_play_gall"></a><img src="img/vid_thumb/vid1.jpg" alt="Video thumb" class="gall-item__pic">
+          <figure class="gall-item gall-item_vid"><a href="#vid1" class="icon icon_play">Смотреть видео</a><img src="img/vid_thumb/vid1.jpg" alt="Video thumb" class="gall-item__pic">
             <figcaption class="gall-item__caption">
               <h3 class="gall-item__title">Jean-Baptiste Guerrax</h3>
             </figcaption>
           </figure>
-          <figure class="gall-item gall-item_vid"><a href="#vid1" class="icon icon_play icon_play_gall"></a><img src="img/vid_thumb/vid2.jpg" alt="Video thumb" class="gall-item__pic">
+          <figure class="gall-item gall-item_vid"><a href="#vid1" class="icon icon_play">Смотреть видео</a><img src="img/vid_thumb/vid2.jpg" alt="Video thumb" class="gall-item__pic">
             <figcaption class="gall-item__caption">
               <h3 class="gall-item__title">Jean-Baptiste Guerrax</h3>
             </figcaption>
           </figure>
-          <figure class="gall-item gall-item_vid"><a href="#vid1" class="icon icon_play icon_play_gall"></a><img src="img/vid_thumb/vid3.jpg" alt="Video thumb" class="gall-item__pic">
+          <figure class="gall-item gall-item_vid"><a href="#vid1" class="icon icon_play">Смотреть видео</a><img src="img/vid_thumb/vid3.jpg" alt="Video thumb" class="gall-item__pic">
             <figcaption class="gall-item__caption">
               <h3 class="gall-item__title">Jean-Baptiste Guerrax</h3>
             </figcaption>
           </figure>
-          <figure class="gall-item gall-item_vid"><a href="#vid1" class="icon icon_play icon_play_gall"></a><img src="img/vid_thumb/vid4.jpg" alt="Video thumb" class="gall-item__pic">
+          <figure class="gall-item gall-item_vid"><a href="#vid1" class="icon icon_play">Смотреть видео</a><img src="img/vid_thumb/vid4.jpg" alt="Video thumb" class="gall-item__pic">
             <figcaption class="gall-item__caption">
               <h3 class="gall-item__title">Jean-Baptiste Guerrax</h3>
             </figcaption>
@@ -734,14 +730,14 @@
         <!-- Top screen navigation-->
         <nav class="cat cat_partn">
           <ul class="cat__list">
-            <li class="cat__item"><a href="#partners" class="cat__link cat__link_partn cat__link_partn_active">Партнеры</a></li>
-            <li class="cat__item"><a href="#info-partners" class="cat__link cat__link_about">Инфо-партнеры</a></li>
+            <li class="cat__item cat__item_partn"><a href="#partners" class="cat__link cat__link_partn is-active">Партнеры</a></li>
+            <li class="cat__item cat__item_partn"><a href="#info-partners" class="cat__link cat__link_partn">Инфо-партнеры</a></li>
           </ul>
         </nav>
         <div class="partners">
           <!-- Target information-->
-          <div id="partners" class="partners__page"><a href="#" class="partners__item partners__item_general"><span class="partners__status">Генеральный партнер</span><img src="img/partners/par1.png" alt="Partner1" class="partners__logo"></a><a href="#" class="partners__item"><img src="img/partners/par2.png" alt="Partner2" class="partners__logo"></a><a href="#" class="partners__item"><img src="img/partners/par3.png" alt="Partner3" class="partners__logo"></a><a href="#" class="partners__item"><img src="img/partners/par4.png" alt="Partner4" class="partners__logo"></a><a href="#" class="partners__item"><img src="img/partners/par5.png" alt="Partner5" class="partners__logo"></a><a href="#" class="partners__item"><img src="img/partners/par6.png" alt="Partner6" class="partners__logo"></a><a href="#" class="partners__item"><img src="img/partners/par7.png" alt="Partner7" class="partners__logo"></a><a href="#" class="partners__item"><img src="img/partners/par2.png" alt="Partner8" class="partners__logo"></a><a href="#" class="partners__item"><img src="img/partners/par3.png" alt="Partner9" class="partners__logo"></a><a href="#" class="partners__item"><img src="img/partners/par4.png" alt="Partner10" class="partners__logo"></a></div>
-          <div id="info-partners" class="partners__page"><a href="#" class="partners__item"><img src="img/partners/par6.png" alt="Partner6" class="partners__logo"></a><a href="#" class="partners__item"><img src="img/partners/par7.png" alt="Partner7" class="partners__logo"></a><a href="#" class="partners__item"><img src="img/partners/par2.png" alt="Partner2" class="partners__logo"></a><a href="#" class="partners__item"><img src="img/partners/par3.png" alt="Partner3" class="partners__logo"></a><a href="#" class="partners__item"><img src="img/partners/par4.png" alt="Partner4" class="partners__logo"></a><a href="#" class="partners__item"><img src="img/partners/par5.png" alt="Partner5" class="partners__logo"></a></div>
+          <div id="partners" class="partners__page is-visible"><a href="#" class="partners__item partners__item_general"><span class="partners__status">Генеральный партнер</span><img src="img/partners/par1.png" alt="Partner1" class="partners__logo"></a><a href="#" class="partners__item"><img src="img/partners/par2.png" alt="Partner2" class="partners__logo"></a><a href="#" class="partners__item"><img src="img/partners/par3.png" alt="Partner3" class="partners__logo"></a><a href="#" class="partners__item"><img src="img/partners/par4.png" alt="Partner4" class="partners__logo"></a><a href="#" class="partners__item"><img src="img/partners/par5.png" alt="Partner5" class="partners__logo"></a><a href="#" class="partners__item"><img src="img/partners/par6.png" alt="Partner6" class="partners__logo"></a><a href="#" class="partners__item"><img src="img/partners/par7.png" alt="Partner7" class="partners__logo"></a><a href="#" class="partners__item"><img src="img/partners/par2.png" alt="Partner8" class="partners__logo"></a><a href="#" class="partners__item"><img src="img/partners/par3.png" alt="Partner9" class="partners__logo"></a></div>
+          <div id="info-partners" class="partners__page"><a href="#" class="partners__item"><img src="img/partners/par6.png" alt="Partner6" class="partners__logo"></a><a href="#" class="partners__item"><img src="img/partners/par7.png" alt="Partner7" class="partners__logo"></a><a href="#" class="partners__item"><img src="img/partners/par4.png" alt="Partner10" class="partners__logo"></a><a href="#" class="partners__item"><img src="img/partners/par2.png" alt="Partner2" class="partners__logo"></a><a href="#" class="partners__item"><img src="img/partners/par3.png" alt="Partner3" class="partners__logo"></a><a href="#" class="partners__item"><img src="img/partners/par4.png" alt="Partner4" class="partners__logo"></a><a href="#" class="partners__item"><img src="img/partners/par5.png" alt="Partner5" class="partners__logo"></a></div>
         </div>
       </div>
     </section>
@@ -749,15 +745,15 @@
     <footer class="main-footer">
       <div class="container">
         <p class="copyright">Организатор<a href="#" class="copyright__link"><img src="img/uwc.png" alt="uwc logo" class="copyright__img"></a> &copy; 2015</p>
-        <ul class="social">
-          <li class="social__item"><a href="#" class="social__link">Facebook</a></li>
-          <li class="social__item"><a href="#" class="social__link">Вконтакте</a></li>
-          <li class="social__item"><a href="#" class="social__link">Twitter</a></li>
+        <ul class="social social_footer">
+          <li class="social__item"><a href="#" class="social__link iconfont iconfont_fb">Facebook</a></li>
+          <li class="social__item"><a href="#" class="social__link iconfont iconfont_vk">Вконтакте</a></li>
+          <li class="social__item"><a href="#" class="social__link iconfont iconfont_twi">Twitter</a></li>
         </ul>
-        <p class="copyright__contact">Мы на связи:<a href="mailto:box@uwcua.com"> box@uwcua.com</a></p>
+        <p class="contact">Мы на связи:<a href="mailto:box@uwcua.com" class="contact__link"> box@uwcua.com</a></p>
       </div>
     </footer>
-    <!-- Browser update screen--><!--[if lt IE 8]><div class="browser-msg"><h2 class="browser-msg__title">Houston we've had a problem</h2><p class="browser-msg__info">It looks like you’re using an insecure version of Internet Explorer.<br>Using an outdated browser makes your computer unsafe.</p><h3 class="browser-msg__sub">For the best experience on the web, please update your browser.</h3><ul class="browser-msg__list"><li class="browser-msg__item"><a href="http://www.google.com/chrome" title="Google Chrome"><span class="browser-item__img chrome"></span><h2 class="browser-item__title">Google Chrome</h2><p class="browser-item__descr">Built for the modern web and designed to be fast in every possible way.</p><p class="browser-item__note">Visit official website for more info</p></a></li><li class="browser-msg__item"><a href="http://www.firefox.com/" title="Mozilla Firefox"><span class="browser-item__img firefox"></span><h2 class="browser-item__title">Mozilla Firefox</h2><p class="browser-item__descr">Committed to you, your privacy and an open Web.</p><p class="browser-item__note">Visit official website for more info</p></a></li><li class="browser-msg__item"><a href="http://www.apple.com/safari/" title="Apple Safari"><span class="browser-item__img safari"></span><h2 class="browser-item__title">Safari</h2><p class="browser-item__descr">The smartest way to surf. Wait less and browse more.</p><p class="browser-item__note">Visit official website for more info</p></a></li><li class="browser-msg__item"><a href="http://www.opera.com/" title="Opera"><span class="browser-item__img opera"></span><h2 class="browser-item__title">Opera</h2><p class="browser-item__descr">Made to discover. Get a better experience.</p><p class="browser-item__note">Visit official website for more info</p></a></li><li class="browser-msg__item"><a href="http://windows.microsoft.com/ie" title="Microsoft Internet Explorer"><span class="browser-item__img ie"></span><h2 class="browser-item__title">Internet Explorer</h2><p class="browser-item__descr">Fast and fluid. Stay safer as you browse.</p><p class="browser-item__note">Visit official website for more info</p></a></li></ul><p class="browser-msg__info">Thank you :)</p></div><![endif]-->
+    <!-- Browser update screen--><!--[if lt IE 8]><div class="browser-msg"><h2 class="browser-msg__title">Хьюстон у нас проблема</h2><p class="browser-msg__info">Похоже, что вы используете ненадежную версию Интернет Эксплорера.<br>Использование устаревших браузеров делает вашу систему уязвимой.</p><h3 class="browser-msg__sub">Для более удобного и безопасного использования веба, пожалуйста обновите ваш браузер.</h3><ul class="browser-msg__list"><li class="browser-msg__item"><a href="http://www.google.com/chrome" title="Google Chrome"><span class="browser-item__img chrome"></span><h2 class="browser-item__title">Google Chrome</h2><p class="browser-item__descr">Built for the modern web and designed to be fast in every possible way.</p><p class="browser-item__note">Посетить официальный сайт чтоб узнать больше</p></a></li><li class="browser-msg__item"><a href="http://www.firefox.com/" title="Mozilla Firefox"><span class="browser-item__img firefox"></span><h2 class="browser-item__title">Mozilla Firefox</h2><p class="browser-item__descr">Committed to you, your privacy and an open Web.</p><p class="browser-item__note">Посетить официальный сайт чтоб узнать больше</p></a></li><li class="browser-msg__item"><a href="http://www.apple.com/safari/" title="Apple Safari"><span class="browser-item__img safari"></span><h2 class="browser-item__title">Safari</h2><p class="browser-item__descr">The smartest way to surf. Wait less and browse more.</p><p class="browser-item__note">Посетить официальный сайт чтоб узнать больше</p></a></li><li class="browser-msg__item"><a href="http://www.opera.com/" title="Opera"><span class="browser-item__img opera"></span><h2 class="browser-item__title">Opera</h2><p class="browser-item__descr">Made to discover. Get a better experience.</p><p class="browser-item__note">Посетить официальный сайт чтоб узнать больше</p></a></li><li class="browser-msg__item"><a href="http://windows.microsoft.com/ie" title="Microsoft Internet Explorer"><span class="browser-item__img ie"></span><h2 class="browser-item__title">Internet Explorer</h2><p class="browser-item__descr">Fast and fluid. Stay safer as you browse.</p><p class="browser-item__note">Посетить официальный сайт чтоб узнать больше</p></a></li></ul><p class="browser-msg__info">Спасибо за понимание :)</p></div><![endif]-->
     <!-- Body external resources--><!-- build:js js/vendor/vendor.min.js -->
     <script src="js/vendor/vendor.js"></script><!-- /build -->
     <!-- build:js js/assembled.min.js -->
