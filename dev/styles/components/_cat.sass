@@ -1,51 +1,103 @@
+// Category nav wrap
 .cat
 	display: inline-block
 
-	&__item
-		border-bottom-width: 5px
-		border-bottom-style: solid
+	&__list
+		list-style: none
 
-		&_vert
-			border-bottom-color: $color-cat_dark
-
-		&_partn
-			display: inline-block
-			margin-right: 30px
-			border-bottom-color: $color-cat_dark
-
-	&__link
-		display: inline-block
-		width: 100%
-		font-family: $font-bold
-		font-size: 14px
-		white-space: nowrap
-		text-transform: uppercase
-		text-decoration: none
-		+transition(all, .3s)
-		&.is-active, &:hover
-			text-indent: 10px
-
-		&_vert
-			height: 70px
-			line-height: 70px
-			color: $color-cat_dark
-			&.is-active, &:hover
-				background-color: $color-cat_dark
-				color: $color-cat_light
-
-		&_partn
-			width: 165px
-			height: 60px
-			line-height: 60px
-			color: $color-cat_dark
-			&.is-active, &:hover
-				background-color: $color-cat_dark
-				color: $color-cat_light
+	&__time
+		display: block
+		color: $c-cat_date
 
 	&_vert
 		display: block
-		max-width: 190px
+		&_about
+			width: 195px
+		&_progr
+			width: 165px
 
-	&_partn
+	&_hor
 		margin-bottom: 45px
-		+gs-col-12()
+		+gs-container()
+
+// Category nav item
+.cat__item
+	display: block
+
+	&-counter
+		display: inline-block
+		font-family: $f-bold
+		font-size: 14px
+		line-height: 70px
+		color: $c-cat_counter
+	&-btn
+		width: 42px
+		height: 60px
+		margin-left: 14%
+		text-align: center
+		line-height: 60px
+		border: 4px solid $c-btn_fade
+		+transition(all, .3s)
+		&:before
+			font-size: 18px
+			line-height: 50px
+			color: $c-cat-arrow
+			+transition(all, .3s)
+
+		&:hover
+			border-color: $c-contrast_light
+			background-color: $c-contrast_light
+			&:before
+				color: $c-dark
+
+	&_hor
+		float: left
+		+gs-col-2()
+
+	&_contr
+		white-space: nowrap
+		text-align: right
+		border: none
+
+// Category nav link
+.cat__link
+	display: inline-block
+	width: 100%
+	height: 100%
+	font-family: $f-bold
+	font-size: 14px
+	line-height: 18px
+	white-space: nowrap
+	text-transform: uppercase
+	text-decoration: none
+	border-bottom-width: 5px
+	border-bottom-style: solid
+	+transition(all, .3s)
+
+	&.is-active, &:hover
+		padding-left: 10px
+
+	&_vert
+		height: 70px
+		padding-top: 26px
+		color: $c-dark
+		border-bottom-color: $c-dark
+		&.is-active, &:hover
+			background-color: $c-dark
+			color: $c-light
+
+	&_hor
+		height: 55px
+		line-height: 60px
+		&_partn
+			color: $c-dark
+			border-bottom-color: $c-dark
+			&.is-active, &:hover
+				background-color: $c-dark
+				color: $c-light
+		&_speak
+			color: $c-light
+			border-bottom-color: $c-light
+			&.is-active, &:hover
+				background-color: $c-light
+				color: $c-dark

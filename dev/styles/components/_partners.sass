@@ -1,12 +1,12 @@
 .partners
 	width: 100%
 
-	&__page
-		display: none
-		width: 100%
+.partners-page
+	display: none
+	width: 100%
 
-		&.is-visible
-			display: block
+	&.is-visible
+		display: block
 
 	&__item
 		position: relative
@@ -14,7 +14,7 @@
 		margin-bottom: 30px
 		text-align: left
 		text-decoration: none
-		background-color: $color-partn_bg
+		background-color: $c-contrast_light
 		+gs-col-2()
 		float: none
 		+transition(all, .5s)
@@ -26,16 +26,16 @@
 			+gs-col-4()
 			float: none
 
-	&__logo
-		display: block
-		max-width: 100%
+		&-logo
+			display: block
+			max-width: 100%
 
-	&__status
-		position: absolute
-		top: -20px
-		display: inline-block
-		font-family: $font-black
-		font-size: 11px
-		text-transform: uppercase
-		letter-spacing: 2px
-		color: $color-partn
+		&-status
+			position: absolute
+			top: -20px
+			display: inline-block
+			font-family: $f-black
+			font-size: 11px
+			text-transform: uppercase
+			letter-spacing: 2px
+			color: $c-partn_status

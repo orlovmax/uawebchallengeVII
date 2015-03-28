@@ -8,41 +8,33 @@
 	@media screen and(max-width: 1170px)
 		padding: 40px
 
-	&_light
-		background-color: $color-ticket_light
-
-	&_gold
-		background-color: $color-accent
-
-	&_prem
-		background-color: $color-ticket_dark
-
 	&__header
 		display: inline-block
+		&:before
+			margin-bottom: 20px
 
 	&__title
 		margin-bottom: 25px
-		font-family: $font-black
+		font-family: $f-black
 		font-size: 36px
 		line-height: 22px
-		font-weight: normal
-		color: $color-title
+		color: $c-dark
 
 		&_prem
-			color: $color-accent
+			color: $c-accent
 
 	&__descr
-		font-family: $font-thin
+		font-family: $f-thin
 		font-size: 16px
 		line-height: 16px
-		color: $color-descr_ticket
+		color: $c-ticket_descr_light
 		list-style-position: 1px
 		text-align: left
 
 		&_gold
-			color: #716304
+			color: $c-ticket_descr_gold
 		&_prem
-			color: #999
+			color: $c-ticket_descr_prem
 
 
 	&__list
@@ -52,49 +44,57 @@
 		list-style: none
 		text-align: left
 
-	&__item
-		position: relative
-		margin-bottom: 20px
-		margin-left: 20px
-		font-family: $font-thin
-		font-size: 16px
-		line-height: 16px
-		color: $color-ticket
-		list-style-position: 1px
-		&:before
-			content: '\2022'
-			position: absolute
-			left: -20px
-			display: inline-block
-			margin-right: 15px
-			color: $color-ticket
-			font-size: 25px
-
-		&_prem
-			color: $color-ticket_light
+		&-item
+			position: relative
+			margin-bottom: 15px
+			margin-left: 20px
+			font-family: $f-thin
+			font-size: 16px
+			line-height: 16px
+			color: $c-dark
+			letter-spacing: 1px
 			&:before
-				color: $color-accent
+				content: '\2022'
+				position: absolute
+				left: -20px
+				display: inline-block
+				margin-right: 15px
+				color: $c-dark
+				font-size: 25px
+
+			&_prem
+				color: $c-light
+				&:before
+					color: $c-accent
 
 	&__footer
 		display: inline-block
 		text-align: left
 
 	&__cost
-		font-family: $font-light
+		font-family: $f-light
 		font-size: 14px
 		line-height: 22px
-		color: $color-ticket_cost
+		color: $c-ticket_cost
 
-		&_gold
-			color: $color-ticket_cost_gold
-		&_prem
-			color: $color-ticket_cost_prem
+		&-extra
+			color: $c-dark
 
-		&_extra
-			color: $color-ticket
-
-		&_extra_prem
-			color: $color-ticket_light
-		&_val
+		&-extra_prem
+			color: $c-light
+		&-val
 			font-size: 24px
 
+		&_gold
+			color: $c-ticket_cost_gold
+		&_prem
+			color: $c-ticket_cost_prem
+
+	&_light
+		background-color: $c-bg_light
+
+	&_gold
+		background-color: $c-accent
+
+	&_prem
+		background-color: $c-bg_dark

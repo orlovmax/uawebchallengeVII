@@ -23,7 +23,7 @@
 		display: block
 		width: 30%
 		height: 100%
-		background-color: $color-nav_bg
+		background-color: $c-dark
 
 
 	&__wrap
@@ -32,7 +32,7 @@
 		right: 0
 		display: inline-block
 		height: 100%
-		background-color: $color-nav_bg
+		background-color: $c-dark
 		+gs-col-3
 
 		&:before
@@ -44,7 +44,7 @@
 			display: block
 			width: 500px
 			height: 100%
-			background-color: $color-nav_bg
+			background-color: $c-dark
 			+skewX(-15deg)
 			@media screen and(max-width: 960px)
 				display: none
@@ -55,11 +55,11 @@
 
 	&__link
 		text-decoration: none
-		color: $color-nav
-		font-family: $font-bold
+		color: $c-contrast_light
+		font-family: $f-bold
 		font-size: 36px
 		line-height: 65px
 		+transition(all, .5s)
 
 		&:hover, &.is-active
-			color: $color-accent
+			color: $c-accent

@@ -22,6 +22,7 @@
 // Home-info.....................Home screen info: title, etc
 
 
+///////////////////////////////// HELPERS AND LIBS
 
 // ==============================
 // $Elements lib
@@ -43,10 +44,15 @@
 // ==============================
 @import components/_gs
 
+///////////////////////////////// PAGE LOADER
+
 // ==============================
 // $Progress
 // ==============================
 @import components/_progress
+
+
+///////////////////////////////// GENERAL COMPONENTS
 
 // ==============================
 // $Reset
@@ -63,25 +69,18 @@
 // ==============================
 @import components/_general
 
-// ==============================
-// $Main header
-// ==============================
-@import components/_main-header
 
-// ==============================
-// $Main nav
-// ==============================
-@import components/_main-nav
-
-// ==============================
-// $Switchers
-// ==============================
-@import components/_switchers
+///////////////////////////////// REUSABLE COMPONENTS
 
 // ==============================
 // $Screen
 // ==============================
 @import components/_page-screen
+
+// ==============================
+// $Switchers
+// ==============================
+@import components/_switchers
 
 // ==============================
 // $Font icons
@@ -99,6 +98,39 @@
 @import components/_btn-link
 
 // ==============================
+// $Category navigation
+// ==============================
+@import components/_cat
+
+// ==============================
+// $Social buttons
+// ==============================
+@import components/_social
+
+// ==============================
+// $Gallery
+// ==============================
+@import components/_gall
+
+// ==============================
+// $Popup
+// ==============================
+@import components/_popup
+
+
+///////////////////////////////// CUSTOM COMPONENTS
+
+// ==============================
+// $Main header
+// ==============================
+@import components/_main-header
+
+// ==============================
+// $Main nav
+// ==============================
+@import components/_main-nav
+
+// ==============================
 // $Home information
 // ==============================
 @import components/_home-info
@@ -114,19 +146,9 @@
 @import components/_about-info
 
 // ==============================
-// $Category navigation
-// ==============================
-@import components/_cat
-
-// ==============================
 // $Tickets
 // ==============================
 @import components/_tickets
-
-// ==============================
-// $Social buttons
-// ==============================
-@import components/_social
 
 // ==============================
 // $Partners links
@@ -136,4 +158,17 @@
 // ==============================
 // $Footer
 // ==============================
-@import components/_footer
+@import components/_main-footer
+
+
+/////////////////////////////////// EVENTS
+
+
+.events
+	display: none
+
+	&.is-active
+		display: block
+
+.afterparty
+	display: none

@@ -3,148 +3,170 @@ section#speakers.screen.screen_speak
 		h2.screen__title.screen__title_speak Спикеры
 
 		// Top screen category filter
-		nav.cat.cat_speak
-			ul.cat__list
-				li.cat__item.cat__item_speak
-					a.cat__link.cat__link_speak.is-active(href='#') Все спикеры
-				li.cat__item.cat__item_speak
-					a.cat__link.cat__link_speak(href='#') Front-end
-				li.cat__item.cat__item_speak
-					a.cat__link.cat__link_speak(href='#') Back-end
-				li.cat__item.cat__item_speak
-					a.cat__link.cat__link_speak(href='#') QA
-				li.cat__item.cat__item_speak
-					a.cat__link.cat__link_speak(href='#') Web-design
+		nav.cat.cat_hor
+			ul.cat__list.cat__list_hor_speak
+				li.cat__item.cat__item_hor.cat__item_hor_speak
+					a.cat__link.cat__link_hor.cat__link_hor_speak.is-active(href='#') Все спикеры
+				li.cat__item.cat__item_hor.cat__item_hor_speak
+					a.cat__link.cat__link_hor.cat__link_hor_speak(href='#') Front-end
+				li.cat__item.cat__item_hor.cat__item_hor_speak
+					a.cat__link.cat__link_hor.cat__link_hor_speak(href='#') Back-end
+				li.cat__item.cat__item_hor.cat__item_hor_speak
+					a.cat__link.cat__link_hor.cat__link_hor_speak(href='#') QA
+				li.cat__item.cat__item_hor.cat__item_hor_speak
+					a.cat__link.cat__link_hor.cat__link_hor_speak(href='#') Web-design
 
-			.controls
-				p.controls__counter
-					span.controls__current -
-					| /
-					span.controls__total -
-				a.iconfont.iconfont_prev.iconfont_ctrl_prev(href='#') Назад
-				a.iconfont.iconfont__next.iconfont_ctrl_next(href='#') Вперед
+				li.cat__item.cat__item_hor.cat__item_contr
+					p.cat__item-counter
+						span.js-sp-current -
+						| /
+						span.js-sp-total -
+					a.cat__item-btn.iconfont.iconfont_prev.iconfont_ctrl_prev(href='#') Назад
+					a.cat__item-btn.iconfont.iconfont_next.iconfont_ctrl_next(href='#') Вперед
 
 		// Spoiler-styled speakers list
 		.gall.gall_speak
 			// ok, that's first 6 visible persons...
-			figure.gall-item.gall-item_person(class='all back-end')
+			figure.gall-item.gall-item_pers(class='all back-end')
 				a.gall-item__link(href='#sp1')
-					img.gall-item__pic(src='img/speakers/sp1.jpg', alt='Speaker')
-				figcaption.gall-item__caption
-					h3.gall-item__title Jean-Baptiste Guerrax
-					p.gall-item__descr розработчик комплексных back-end решений
+					img.gall-item__link-pic(src='img/speakers/sp1.jpg', alt='Speaker')
+				figcaption.gall-item__capt
+					h3.gall-item__capt-title Jean-Baptiste Guerrax
+					p.gall-item__capt-descr розработчик комплексных back-end решений
 
-			figure.gall-item.gall-item_person(class='all back-end')
+			figure.gall-item.gall-item_pers(class='all back-end')
 				a.gall-item__link(href='#sp1')
-					img.gall-item__pic(src='img/speakers/sp2.jpg', alt='Speaker')
-				figcaption.gall-item__caption
-					h3.gall-item__title Юрий Миколишин
-					p.gall-item__descr розработчик комплексных back-end решений
+					img.gall-item__link-pic(src='img/speakers/sp2.jpg', alt='Speaker')
+				figcaption.gall-item__capt
+					h3.gall-item__capt-title Юрий Миколишин
+					p.gall-item__capt-descr розработчик комплексных back-end решений
 
-			figure.gall-item.gall-item_person(class='all back-end')
+			figure.gall-item.gall-item_pers(class='all back-end')
 				a.gall-item__link(href='#sp1')
-					img.gall-item__pic(src='img/speakers/sp3.jpg', alt='Speaker')
-				figcaption.gall-item__caption
-					h3.gall-item__title Юрий Артюх
-					p.gall-item__descr розработчик комплексных back-end решений
+					img.gall-item__link-pic(src='img/speakers/sp3.jpg', alt='Speaker')
+				figcaption.gall-item__capt
+					h3.gall-item__capt-title Юрий Артюх
+					p.gall-item__capt-descr розработчик комплексных back-end решений
 
-			figure.gall-item.gall-item_person(class='all back-end')
+			figure.gall-item.gall-item_pers(class='all back-end')
 				a.gall-item__link(href='#sp1')
-					img.gall-item__pic(src='img/speakers/sp4.jpg', alt='Speaker')
-				figcaption.gall-item__caption
-					h3.gall-item__title Александр Майданюк
-					p.gall-item__descr розработчик комплексных back-end решений
+					img.gall-item__link-pic(src='img/speakers/sp4.jpg', alt='Speaker')
+				figcaption.gall-item__capt
+					h3.gall-item__capt-title Александр Майданюк
+					p.gall-item__capt-descr розработчик комплексных back-end решений
 
-			figure.gall-item.gall-item_person(class='all')
+			figure.gall-item.gall-item_pers(class='all')
 				a.gall-item__link(href='#sp1')
-					img.gall-item__pic(src='img/speakers/sp5.jpg', alt='Speaker')
-				figcaption.gall-item__caption
-					h3.gall-item__title Дарья Горницская
-					p.gall-item__descr Віце-президент GlobalLogic. Керівник київського центру інжинірингу компанії
+					img.gall-item__link-pic(src='img/speakers/sp5.jpg', alt='Speaker')
+				figcaption.gall-item__capt
+					h3.gall-item__capt-title Дарья Горницская
+					p.gall-item__capt-descr Віце-президент GlobalLogic. Керівник київського центру інжинірингу компанії
 
-			figure.gall-item.gall-item_person(class='all back-end')
+			figure.gall-item.gall-item_pers(class='all back-end')
 				a.gall-item__link(href='#sp1')
-					img.gall-item__pic(src='img/speakers/sp6.jpg', alt='Speaker')
-				figcaption.gall-item__caption
-					h3.gall-item__title Андрей Яворский
-					p.gall-item__descr розработчик комплексных back-end решений
+					img.gall-item__link-pic(src='img/speakers/sp6.jpg', alt='Speaker')
+				figcaption.gall-item__capt
+					h3.gall-item__capt-title Андрей Яворский
+					p.gall-item__capt-descr розработчик комплексных back-end решений
 
 			// ... and here comes other speakers
-			figure.gall-item.gall-item_person(class='all front-end')
+			figure.gall-item.gall-item_pers(class='all front-end')
 				a.gall-item__link(href='#sp1')
-					img.gall-item__pic(src='img/speakers/sp1.jpg', alt='Speaker')
-				figcaption.gall-item__caption
-					h3.gall-item__title Jean-Baptiste Guerrax
-					p.gall-item__descr розработчик комплексных back-end решений
+					img.gall-item__link-pic(src='img/speakers/sp1.jpg', alt='Speaker')
+				figcaption.gall-item__capt
+					h3.gall-item__capt-title Jean-Baptiste Guerrax
+					p.gall-item__capt-descr розработчик комплексных back-end решений
 
-			figure.gall-item.gall-item_person(class='all back-end')
+			figure.gall-item.gall-item_pers(class='all back-end')
 				a.gall-item__link(href='#sp1')
-					img.gall-item__pic(src='img/speakers/sp3.jpg', alt='Speaker')
-				figcaption.gall-item__caption
-					h3.gall-item__title Юрий Миколишин
-					p.gall-item__descr розработчик комплексных back-end решений
+					img.gall-item__link-pic(src='img/speakers/sp3.jpg', alt='Speaker')
+				figcaption.gall-item__capt
+					h3.gall-item__capt-title Юрий Миколишин
+					p.gall-item__capt-descr розработчик комплексных back-end решений
 
-			figure.gall-item.gall-item_person(class='all web-design front-end')
+			figure.gall-item.gall-item_pers(class='all web-design front-end')
 				a.gall-item__link(href='#sp1')
-					img.gall-item__pic(src='img/speakers/sp2.jpg', alt='Speaker')
-				figcaption.gall-item__caption
-					h3.gall-item__title Юрий Артюх
-					p.gall-item__descr розработчик комплексных back-end решений
+					img.gall-item__link-pic(src='img/speakers/sp2.jpg', alt='Speaker')
+				figcaption.gall-item__capt
+					h3.gall-item__capt-title Юрий Артюх
+					p.gall-item__capt-descr розработчик комплексных back-end решений
 
-			figure.gall-item.gall-item_person(class='all qa')
+			figure.gall-item.gall-item_pers(class='all qa')
 				a.gall-item__link(href='#sp1')
-					img.gall-item__pic(src='img/speakers/sp6.jpg', alt='Speaker')
-				figcaption.gall-item__caption
-					h3.gall-item__title Александр Майданюк
-					p.gall-item__descr розработчик комплексных back-end решений
+					img.gall-item__link-pic(src='img/speakers/sp6.jpg', alt='Speaker')
+				figcaption.gall-item__capt
+					h3.gall-item__capt-title Александр Майданюк
+					p.gall-item__capt-descr розработчик комплексных back-end решений
 
-			figure.gall-item.gall-item_person(class='all front-end')
+			figure.gall-item.gall-item_pers(class='all front-end')
 				a.gall-item__link(href='#sp1')
-					img.gall-item__pic(src='img/speakers/sp5.jpg', alt='Speaker')
-				figcaption.gall-item__caption
-					h3.gall-item__title Дарья Горницская
-					p.gall-item__descr Віце-президент GlobalLogic. Керівник київського центру інжинірингу компанії
+					img.gall-item__link-pic(src='img/speakers/sp5.jpg', alt='Speaker')
+				figcaption.gall-item__capt
+					h3.gall-item__capt-title Дарья Горницская
+					p.gall-item__capt-descr Віце-президент GlobalLogic. Керівник київського центру інжинірингу компанії
 
-			figure.gall-item.gall-item_person(class='all qa web-design')
+			figure.gall-item.gall-item_pers(class='all qa web-design')
 				a.gall-item__link(href='#sp1')
-					img.gall-item__pic(src='img/speakers/sp4.jpg', alt='Speaker')
-				figcaption.gall-item__caption
-					h3.gall-item__title Андрей Яворский
-					p.gall-item__descr розработчик комплексных back-end решений
+					img.gall-item__link-pic(src='img/speakers/sp4.jpg', alt='Speaker')
+				figcaption.gall-item__capt
+					h3.gall-item__capt-title Андрей Яворский
+					p.gall-item__capt-descr розработчик комплексных back-end решений
 
-			a.btn-link.btn-link_speak(href='#') Показать всех
+			figure.gall-item.gall-item_pers(class='all front-end')
+				a.gall-item__link(href='#sp1')
+					img.gall-item__link-pic(src='img/speakers/sp1.jpg', alt='Speaker')
+				figcaption.gall-item__capt
+					h3.gall-item__capt-title Jean-Baptiste Guerrax
+					p.gall-item__capt-descr розработчик комплексных back-end решений
+
+			figure.gall-item.gall-item_pers(class='all back-end')
+				a.gall-item__link(href='#sp1')
+					img.gall-item__link-pic(src='img/speakers/sp3.jpg', alt='Speaker')
+				figcaption.gall-item__capt
+					h3.gall-item__capt-title Юрий Миколишин
+					p.gall-item__capt-descr розработчик комплексных back-end решений
+
+			figure.gall-item.gall-item_pers(class='all web-design front-end')
+				a.gall-item__link(href='#sp1')
+					img.gall-item__link-pic(src='img/speakers/sp2.jpg', alt='Speaker')
+				figcaption.gall-item__capt
+					h3.gall-item__capt-title Юрий Артюх
+					p.gall-item__capt-descr розработчик комплексных back-end решений
+
+		a.btn-link.btn-link_speak(href='#') Показать всех
 
 
 	// And here comes popup windows
-	section#sp1.popup.popup_speak
+	section#sp1.popup
 		.container
-			a.iconfont.iconfont_popup_close(href='#') Close
-			header.popup__header
-				h3.popup__title Build tons of multi-device JavaScript applications, design patterns &amp; high performance UI
+			a.popup__close.popup__close_dark.iconfont.iconfont_close(href='#') Close
+			.popup-content
+				header.popup__header
+					h3.popup__title Build tons of multi-device JavaScript applications, design patterns &amp; high performance UI
 
-			.popup__info
-				p.popup__text
-					| И вот я беру хрустальный шар и вангую, что уже совсем скоро все изменится.
-					br
-					| Мы вступаем в эпоху Дилетантов. Клиенты будут решать большинство веб-задач без привлечения специально обученных людей (нас).
-				ul.popup__list
-					li.popup__list-item search engine marketing (SEM)
-					li.popup__list-item display advertising
-					li.popup__list-item remarketing
-					li.popup__list-item E-mail marketing
-					li.popup__list-item Google Analytics
-				p.popup__text Остальное — на лекции. До встречи.
-				h4.popup__sign Олександр Трегуб
-				p.popup__text Арт-директор дизайн-студии Akademia, сооснователь курса веб-дизайна в Школе визуальных технологий, автор 'Метода казанка'.
-				p.popup__text Язык выступления: русский
+				.popup__info
+					p.popup__text
+						| И вот я беру хрустальный шар и вангую, что уже совсем скоро все изменится.
+						br
+						| Мы вступаем в эпоху Дилетантов. Клиенты будут решать большинство веб-задач без привлечения специально обученных людей (нас).
+					ul.popup__list
+						li.popup__list-item search engine marketing (SEM)
+						li.popup__list-item display advertising
+						li.popup__list-item remarketing
+						li.popup__list-item E-mail marketing
+						li.popup__list-item Google Analytics
+					p.popup__text Остальное — на лекции. До встречи.
+					h4.popup__sign Олександр Трегуб
+					p.popup__text Арт-директор дизайн-студии Akademia, сооснователь курса веб-дизайна в Школе визуальных технологий, автор 'Метода казанка'.
+					p.popup__text Язык выступления: русский
 
-			footer.popup__footer
-				a.btn-link.btn-link_popup_sp(href='#') Купить билет
-				ul.social
-					li.social__caption Поделиться
-					li.social__item
-						a.social__link(href='#') Facebook
-					li.social__item
-						a.social__link(href='#') Вконтакте
-					li.social__item
-						a.social__link(href='#') Twitter
+				footer.popup__footer
+					a.btn-link.btn-link_popup.btn-link_popup_dark(href='#') Купить билет
+					ul.popup__social.social
+						li.social__caption Поделиться
+						li.social__item
+							a.social__item-link.iconfont.iconfont_fb(href='#') Facebook
+						li.social__item
+							a.social__item-link.iconfont.iconfont_vk(href='#') Вконтакте
+						li.social__item
+							a.social__item-link.iconfont.iconfont_twi(href='#') Twitter

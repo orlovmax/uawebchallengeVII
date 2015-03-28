@@ -1,35 +1,37 @@
+// Common page screen
 .screen
 	position: relative
 	width: 100%
 	height: 100%
 	overflow: hidden
-	background-color: $color-screen_light
+	background-color: $c-bg_light
 	+clearfix
 
-
 	&_home
-		background-color: $color-accent
+		background-color: $c-accent
 
 	&_news
-		background-color: $color-screen_light
+		background-color: $c-bg_light
 
 	&_about
-		background-color: $color-accent
+		background-color: $c-accent
 
 	&_speak
-		background-color: $color-screen_dark
+		background-color: $c-bg_dark
+		&.is-open
+			height: auto
 
 	&_progr
-		background-color: $color-screen_light
+		background-color: $c-bg_light
 
 	&_ticket
-		background-color: $color-accent
+		background-color: $c-accent
 
 	&_vid
-		background-color: $color-screen_dark
+		background-color: $c-bg_dark
 
 	&_partn
-		background-color: $color-screen_light
+		background-color: $c-bg_light
 
 	&_bg_home
 		background-image: url("../img/bg/home-bg.jpg")
@@ -37,8 +39,8 @@
 		background-repeat: no-repeat
 		+bg-contain
 
-		@media screen and(max-height: 480px), screen and(max-width: 960px)
-			background-image: none
+		// @media screen and(max-height: 480px), screen and(max-width: 960px)
+		// 	background-image: none
 
 	&_bg_general
 		background-image: url("../img/bg/about-bg1.jpg")
@@ -76,54 +78,78 @@
 		background-repeat: no-repeat
 		+bg-contain
 
+// Common screen title
+.screen__title
+	font-family: $f-ublack
+	font-size: 48px
+	line-height: 1
+	text-transform: uppercase
+	color: $c-dark
+	white-space: nowrap
+	+gs-col-12
+	float: left
+	@media screen and(max-width: 960px)
+		text-align: center
 
-	&__title
-		font-family: $font-ublack
-		font-size: 48px
-		text-transform: uppercase
-		color: $color-title
-		font-weight: normal
-		white-space: nowrap
-		+gs-col-12
-		float: left
+	&_news
+		margin-top: 140px
+		margin-bottom: 90px
+		@media screen and(max-width: 960px)
+			text-align: center
+		@media screen and(max-height: 640px), screen and (max-width: 960px)
+			margin-top: 60px
+			margin-bottom: 40px
+		@media screen and(max-height: 480px), screen and (max-width: 800px)
+			font-size: 40px
+			margin-top: 35px
+			margin-bottom: 20px
+
+	&_about
+		margin-top: 70px
+		margin-bottom: 30px
+
+	&_speak
+		margin-top: 75px
+		margin-bottom: 60px
+		color: $c-light
 		@media screen and(max-width: 960px)
 			text-align: center
 
-		&_news
-			margin-top: 150px
-			margin-bottom: 100px
-			@media screen and(max-height: 640px), screen and (max-width: 960px)
-				margin-top: 60px
-				margin-bottom: 40px
-			@media screen and(max-height: 480px), screen and (max-width: 800px)
-				font-size: 40px
-				margin-top: 35px
-				margin-bottom: 20px
+	&_progr
+		margin-top: 35px
+		margin-bottom: 20px
 
-		&_partn
-			margin-top: 70px
-			margin-bottom: 40px
+	&_vid
+		margin-top: 55px
+		margin-bottom: 70px
+		color: $c-light
+		@media screen and(max-width: 960px)
+			text-align: center
 
-		&_about
-			margin-top: 80px
-			margin-bottom: 30px
+	&_partn
+		margin-top: 60px
+		margin-bottom: 35px
+		@media screen and(max-width: 960px)
+			text-align: center
 
-	&__aside
+// Screen aside
+.screen__aside
+	position: absolute
+	top: 0
+	left: 0
+	z-index: 10
+	display: block
+	height: 100%
+
+	&:before
+		content: ''
 		position: absolute
 		top: 0
-		left: 0
-		z-index: 10
+		left: -1000px
 		display: block
+		width: 1000px
 		height: 100%
-
-		&:before
-			content: ''
-			position: absolute
-			top: 0
-			left: -1000px
-			display: block
-			width: 1000px
-			height: 100%
+	&_cor
 		&:after
 			content: ''
 			position: absolute
@@ -139,39 +165,31 @@
 			@media screen and(max-height: 640px), screen and(max-width: 960px)
 				display: none
 
-		&_about
-			background-color: $color-accent
-			+gs-col-4()
+	&_home
+		text-align: left
+		background-color: $c-accent
+		+gs-col-8()
+		@media screen and(max-height: 480px), screen and(max-width: 960px)
+			text-align: center
 
-			&:before
-				background-color: $color-accent
-			&:after
-				background-image: url('../img/cr.png')
+		&:before
+			background-color: $c-accent
 
-		&_home
-			text-align: left
-			background-color: $color-accent
-			+gs-col-8()
-			@media screen and(max-height: 480px), screen and(max-width: 960px)
-				text-align: center
-				+gs-col-12()
+	&_about
+		background-color: $c-accent
+		+gs-col-4()
+		@media screen and(max-height: 480px), screen and(max-width: 960px)
+			+gs-col-6()
 
-			&:before
-				background-color: $color-accent
-			&:after
-				background-image: url('../img/cr.png')
+		&:before
+			background-color: $c-accent
 
-		&_progr
-			background-color: $color-accent
-			+gs-col-4()
+	&_progr
+		background-color: $c-bg_light
+		+gs-col-4()
 
-			&:before
-				background-color: $color-accent
-			&:after
-				background-image: url('../img/cr_light.png')
-
-
-
+		&:before
+			background-color: $c-bg_light
 
 .container
 	position: relative

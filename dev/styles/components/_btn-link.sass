@@ -3,16 +3,16 @@
 	z-index: 5
 	display: inline-block
 	overflow: hidden
-	font-family: $font-black
+	font-family: $f-black
 	text-decoration: none
 	text-transform: uppercase
-	color: $color-btn_dark
+	color: $c-btn_dark
 	text-align: center
 	font-size: 14px
 	line-height: 1
 	border-width: 6px
 	border-style: solid
-	border-color: $color-btn_dark
+	border-color: $c-btn_dark
 	+transition(all, .5s)
 
 	&:before
@@ -27,12 +27,12 @@
 		width: 0
 		height: 100%
 		visibility: hidden
-		background-color: $color-btn_dark
+		background-color: $c-btn_dark
 		+skewX(45deg)
 		+transition(all, .5s)
 
 	&:hover
-		color: $color-btn_light
+		color: $c-contrast_light
 		&:before
 			width: 100%
 			visibility: visible
@@ -45,7 +45,7 @@
 		width: 100%
 		margin: 55px 0
 		padding: 20px 0
-		font-family: $font-ublack
+		font-family: $f-ublack
 		font-size: 16px
 		@media screen and(max-height: 640px)
 			margin: 20px 0
@@ -55,14 +55,14 @@
 		width: 170px
 		padding: 10px 0
 		font-size: 13px
-		color: $color-btn_light
+		color: $c-contrast_light
 		border-width: 4px
-		border-color: $color-btn_light
+		border-color: $c-contrast_light
 
 		&:before
-			background-color: $color-btn_light
+			background-color: $c-contrast_light
 		&:hover
-			color: $color-btn_dark
+			color: $c-btn_dark
 
 	&_ticket
 		width: 100%
@@ -73,13 +73,55 @@
 		border-width: 4px
 
 		&_prem
-			color: $color-accent
-			border-color: $color-accent
+			color: $c-accent
+			border-color: $c-accent
 
 			&:before
-				background-color: $color-accent
+				background-color: $c-accent
 			&:hover
-				color: $color-btn_dark
+				color: $c-btn_dark
 
+	&_speak
+		display: block
+		width: 170px
+		height: 45px
+		margin: 20px auto
+		padding: 13px 0
+		font-size: 12px
+		border-width: 4px
+		color: $c-contrast_light
+		border-color: $c-btn_fade
 
+		&:before
+			background-color: $c-contrast_light
 
+		&:hover
+			color: $c-btn_fade
+			border-color: $c-contrast_light
+
+	&_popup
+		float: left
+		width: 325px
+		height: 55px
+		padding: 20px 0
+		font-size: 13px
+		vertical-align: middle
+		border-width: 4px
+
+		&_dark
+			color: $c-accent
+			border-color: $c-accent
+			&:before
+				background-color: $c-accent
+
+			&:hover
+				color: $c-dark
+
+		&_light
+			color: $c-popup_btn_dark
+			border-color: $c-popup_btn_dark
+			&:before
+				background-color: $c-popup_btn_dark
+
+			&:hover
+				color: $c-contrast_light

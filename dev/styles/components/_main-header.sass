@@ -15,7 +15,21 @@
 	+clearfix
 
 	&.is-bg
-		background-color: $color-topnav_bg
+		background-color: $c-topnav_bg
+
+	&__navicon
+		float: right
+		width: 40px
+		height: 40px
+		color: $c-contrast_light
+		background-color: transparentize(#000, 0.5)
+		&:before
+			font-size: 25px
+			line-height: 40px
+			color: $c-contrast_light
+			+transition(all, .5s)
+		&:hover:before
+			color: $c-accent
 
 // Languages dropdown menu
 .languages
@@ -37,13 +51,13 @@
 		font-style: normal
 		font-weight: normal
 		font-size: 14px
-		color: $color-lang_act
+		color: $c-contrast_light
 		+transition(all, .5s)
 
 	&:hover
 		height: auto
 		overflow: visible
-		background-color: transparentize($color-topnav_bg, 0.5)
+		background-color: transparentize($c-topnav_bg, 0.5)
 		&:after
 			content: '\e803'
 
@@ -54,7 +68,7 @@
 	&__link
 		text-decoration: none
 		color: #999
-		font-family: $font-bold
+		font-family: $f-bold
 		font-size: 14px
 		line-height: 40px
 		text-transform: uppercase
@@ -63,4 +77,4 @@
 		&.is-active
 			cursor: default
 		&:hover, &.is-active
-			color: $color-lang_act
+			color: $c-contrast_light

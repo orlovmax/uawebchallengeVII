@@ -9,24 +9,33 @@
 		height: 32px
 		margin: 0 8px
 		overflow: hidden
+		vertical-align: middle
 		+rounded(50%)
 
-	&__link
-		width: 100%
-		height: 100%
-		color: $color-social
-		background-color: $color-social_bg
-		&:before
-			font-size: 12px
-			line-height: 32px
-			color: $color-social
-			+transition(all, .5s)
-		&:hover
-			color: $color-social_hover
-			background-color: $color-social_bg_hover
-			+transition(all, .5s)
-		&:hover:before
-			color: $color-social_hover
+		&-link
+			width: 100%
+			height: 100%
+			color: $c-contrast_light
+			background-color: $c-bg_dark
+			&:before
+				font-size: 12px
+				line-height: 32px
+				color: $c-contrast_light
+				+transition(all, .5s)
+			&:hover
+				color: $c-accent
+				+transition(all, .5s)
+			&:hover:before
+				color: $c-accent
+
+	&__caption
+		display: inline-block
+		font-family: $f-bold
+		font-size: 11px
+		line-height: 1
+		text-transform: uppercase
+		color: $c-social_capt
+		vertical-align: middle
 
 	&_footer
 		margin-top: 14px

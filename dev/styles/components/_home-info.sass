@@ -10,14 +10,13 @@
 	&__title
 		position: relative
 		margin-left: -5px
-		font-family: $font-ublack
+		font-family: $f-ublack
 		text-transform: uppercase
 		font-size: 130px
 		line-height: 100px
-		font-weight: normal
 		letter-spacing: 2px
 		text-align: left
-		color: $color-title_home
+		color: $c-home_title
 		@media screen and(max-height: 640px), screen and(max-width: 960px)
 			font-size: 100px
 			line-height: 80px
@@ -25,20 +24,21 @@
 			font-size: 80px
 			line-height: 60px
 
-		&_thin
-			font-family: $font-uthin
+		&-thin
+			font-family: $f-uthin
 
-		&_br
+		&-br
 			display: block
 
-		&_spacing
+		&-spacing
+			display: block
 			letter-spacing: 6px
 			@media screen and(max-height: 640px), screen and(max-width: 960px)
 				letter-spacing: 5px
 			@media screen and(max-height: 480px), screen and(max-width: 800px)
 				letter-spacing: 4px
 
-		&_pos
+		&-pos
 			display: inline-block
 			margin-left: 20px
 
@@ -46,11 +46,11 @@
 		position: absolute
 		margin: -20px 0 0 200px
 		text-align: left
-		font-family: $font-xthin
+		font-family: $f-xthin
 		font-size: 40px
 		line-height: 0
 		white-space: nowrap
-		color: $color-text
+		color: $c-dark
 		@media screen and(max-height: 640px), screen and(max-width: 960px)
 			font-size: 30px
 			margin: -15px 0 0 170px
@@ -60,5 +60,5 @@
 
 
 	&__afterword
-		font-family: $font-light
+		font-family: $f-light
 		font-size: 14px

@@ -41,7 +41,7 @@
     <header class="main-header">
       <div class="container">
         <!-- Fixed header elements-->
-        <div class="top-nav"><a href="#" class="iconfont iconfont_menu">Open</a>
+        <div class="top-nav"><a href="#" class="top-nav__navicon iconfont iconfont_menu">Open</a>
           <ul class="languages">
             <li class="languages__item"><a class="languages__link is-active">Ру</a></li>
             <li class="languages__item"><a href="#" class="languages__link">Ук</a></li>
@@ -82,9 +82,9 @@
     <section id="home" class="screen screen_home screen_bg_home">
       <div class="container">
         <!-- Main info-->
-        <aside class="screen__aside screen__aside_home">
+        <aside class="screen__aside screen__aside_home screen__aside_cor">
           <div class="home-info">
-            <h1 class="home-info__title"><span class="home-info__title_thin">It</span><span class="home-info__title_br">Confe</span><span class="home-info__title_br home-info__title_spacing">rence</span><span class="home-info__title_thin"> И</span><span class="home-info__title_pos"> Я</span></h1>
+            <h1 class="home-info__title"><span class="home-info__title-thin">It</span><span class="home-info__title-br">Confe</span><span class="home-info__title-spacing">rence</span><span class="home-info__title-thin"> И</span><span class="home-info__title-pos"> Я</span></h1>
             <p class="home-info__date">
               <time datetime="2015-04-12">12</time> -
               <time datetime="2015-04-18"> 18</time> &nbsp;апреля
@@ -100,22 +100,22 @@
         <h2 class="screen__title screen__title_news">Что нового?</h2>
         <ul class="news">
           <li class="news__item icon icon_conf-news">
-            <h3 class="news__title">Первая в Украине онлайн конференция для разработчиков</h3>
-            <p class="news__text">Шесть дней докладов , которые Вы слушаете не выходя из дома или офиса. Это будет самая интенсивная неделя для Вашего профессионального развития</p>
+            <h3 class="news__item-title">Первая в Украине онлайн конференция для разработчиков</h3>
+            <p class="news__item-text">Шесть дней докладов , которые Вы слушаете не выходя из дома или офиса. Это будет самая интенсивная неделя для Вашего профессионального развития</p>
           </li>
           <li class="news__item icon icon_dev-news">
-            <h3 class="news__title">Всестороннее развитие</h3>
-            <p class="news__text">Бекенд разработчики интересуются фронтенд новинками, тестировщики - бекендом, дизайнеры - фронтендом, а фронтенды - дизайном. Мы даём возможность всем удовлетворить свой интерес, не бегая на три-четыре профильных конференции</p>
+            <h3 class="news__item-title">Всестороннее развитие</h3>
+            <p class="news__item-text">Бекенд разработчики интересуются фронтенд новинками, тестировщики - бекендом, дизайнеры - фронтендом, а фронтенды - дизайном. Мы даём возможность всем удовлетворить свой интерес, не бегая на три-четыре профильных конференции</p>
           </li>
         </ul>
         <ul class="news">
           <li class="news__item icon icon_aft-news">
-            <h3 class="news__title">Душевная оффлайн автепати</h3>
-            <p class="news__text">Только для участников ІТ-Конференции и экспертов. Вы сможете пропустить пару бокальчиков с коллегами по цеху или  поужинать вместе с экспертом</p>
+            <h3 class="news__item-title">Душевная оффлайн автепати</h3>
+            <p class="news__item-text">Только для участников ІТ-Конференции и экспертов. Вы сможете пропустить пару бокальчиков с коллегами по цеху или  поужинать вместе с экспертом</p>
           </li>
           <li class="news__item icon icon_themes-news">
-            <h3 class="news__title">Все темы  уникальны</h3>
-            <p class="news__text">Ранее спикеры с ними нигде не выступали.<br>Спикеры – признанные эксперты и реальные практики</p>
+            <h3 class="news__item-title">Все темы  уникальны</h3>
+            <p class="news__item-text">Ранее спикеры с ними нигде не выступали.<br>Спикеры – признанные эксперты и реальные практики</p>
           </li>
         </ul>
       </div>
@@ -123,10 +123,10 @@
     <!-- About section-->
     <section id="about" class="screen screen_about screen_bg_general">
       <div class="container">
-        <aside class="screen__aside screen__aside_about">
+        <aside class="screen__aside screen__aside_about screen__aside_cor">
           <h2 class="screen__title screen__title_about">Для кого?</h2>
           <!-- Sidebar with screen navigation-->
-          <nav class="cat cat_vert">
+          <nav class="cat cat_vert cat_vert_about">
             <ul class="cat__list">
               <li class="cat__item cat__item_vert"><a href="#general" class="cat__link cat__link_vert is-active">Для кого?</a></li>
               <li class="cat__item cat__item_vert"><a href="#front-end" class="cat__link cat__link_vert">Front-end developers</a></li>
@@ -182,153 +182,175 @@
       <div class="container">
         <h2 class="screen__title screen__title_speak">Спикеры</h2>
         <!-- Top screen category filter-->
-        <nav class="cat cat_speak">
-          <ul class="cat__list">
-            <li class="cat__item cat__item_speak"><a href="#" class="cat__link cat__link_speak is-active">Все спикеры</a></li>
-            <li class="cat__item cat__item_speak"><a href="#" class="cat__link cat__link_speak">Front-end</a></li>
-            <li class="cat__item cat__item_speak"><a href="#" class="cat__link cat__link_speak">Back-end</a></li>
-            <li class="cat__item cat__item_speak"><a href="#" class="cat__link cat__link_speak">QA</a></li>
-            <li class="cat__item cat__item_speak"><a href="#" class="cat__link cat__link_speak">Web-design</a></li>
+        <nav class="cat cat_hor">
+          <ul class="cat__list cat__list_hor_speak">
+            <li class="cat__item cat__item_hor cat__item_hor_speak"><a href="#" class="cat__link cat__link_hor cat__link_hor_speak is-active">Все спикеры</a></li>
+            <li class="cat__item cat__item_hor cat__item_hor_speak"><a href="#" class="cat__link cat__link_hor cat__link_hor_speak">Front-end</a></li>
+            <li class="cat__item cat__item_hor cat__item_hor_speak"><a href="#" class="cat__link cat__link_hor cat__link_hor_speak">Back-end</a></li>
+            <li class="cat__item cat__item_hor cat__item_hor_speak"><a href="#" class="cat__link cat__link_hor cat__link_hor_speak">QA</a></li>
+            <li class="cat__item cat__item_hor cat__item_hor_speak"><a href="#" class="cat__link cat__link_hor cat__link_hor_speak">Web-design</a></li>
+            <li class="cat__item cat__item_hor cat__item_contr">
+              <p class="cat__item-counter"><span class="js-sp-current">-</span>/<span class="js-sp-total">-</span></p><a href="#" class="cat__item-btn iconfont iconfont_prev iconfont_ctrl_prev">Назад</a><a href="#" class="cat__item-btn iconfont iconfont_next iconfont_ctrl_next">Вперед</a>
+            </li>
           </ul>
-          <div class="controls">
-            <p class="controls__counter"><span class="controls__current">-</span>/<span class="controls__total">-</span></p><a href="#" class="iconfont iconfont_prev iconfont_ctrl_prev">Назад</a><a href="#" class="iconfont iconfont__next iconfont_ctrl_next">Вперед</a>
-          </div>
         </nav>
         <!-- Spoiler-styled speakers list-->
         <div class="gall gall_speak">
           <!-- ok, that's first 6 visible persons...-->
-          <figure class="gall-item gall-item_person all back-end"><a href="#sp1" class="gall-item__link"><img src="img/speakers/sp1.jpg" alt="Speaker" class="gall-item__pic"></a>
-            <figcaption class="gall-item__caption">
-              <h3 class="gall-item__title">Jean-Baptiste Guerrax</h3>
-              <p class="gall-item__descr">розработчик комплексных back-end решений</p>
+          <figure class="gall-item gall-item_pers all back-end"><a href="#sp1" class="gall-item__link"><img src="img/speakers/sp1.jpg" alt="Speaker" class="gall-item__link-pic"></a>
+            <figcaption class="gall-item__capt">
+              <h3 class="gall-item__capt-title">Jean-Baptiste Guerrax</h3>
+              <p class="gall-item__capt-descr">розработчик комплексных back-end решений</p>
             </figcaption>
           </figure>
-          <figure class="gall-item gall-item_person all back-end"><a href="#sp1" class="gall-item__link"><img src="img/speakers/sp2.jpg" alt="Speaker" class="gall-item__pic"></a>
-            <figcaption class="gall-item__caption">
-              <h3 class="gall-item__title">Юрий Миколишин</h3>
-              <p class="gall-item__descr">розработчик комплексных back-end решений</p>
+          <figure class="gall-item gall-item_pers all back-end"><a href="#sp1" class="gall-item__link"><img src="img/speakers/sp2.jpg" alt="Speaker" class="gall-item__link-pic"></a>
+            <figcaption class="gall-item__capt">
+              <h3 class="gall-item__capt-title">Юрий Миколишин</h3>
+              <p class="gall-item__capt-descr">розработчик комплексных back-end решений</p>
             </figcaption>
           </figure>
-          <figure class="gall-item gall-item_person all back-end"><a href="#sp1" class="gall-item__link"><img src="img/speakers/sp3.jpg" alt="Speaker" class="gall-item__pic"></a>
-            <figcaption class="gall-item__caption">
-              <h3 class="gall-item__title">Юрий Артюх</h3>
-              <p class="gall-item__descr">розработчик комплексных back-end решений</p>
+          <figure class="gall-item gall-item_pers all back-end"><a href="#sp1" class="gall-item__link"><img src="img/speakers/sp3.jpg" alt="Speaker" class="gall-item__link-pic"></a>
+            <figcaption class="gall-item__capt">
+              <h3 class="gall-item__capt-title">Юрий Артюх</h3>
+              <p class="gall-item__capt-descr">розработчик комплексных back-end решений</p>
             </figcaption>
           </figure>
-          <figure class="gall-item gall-item_person all back-end"><a href="#sp1" class="gall-item__link"><img src="img/speakers/sp4.jpg" alt="Speaker" class="gall-item__pic"></a>
-            <figcaption class="gall-item__caption">
-              <h3 class="gall-item__title">Александр Майданюк</h3>
-              <p class="gall-item__descr">розработчик комплексных back-end решений</p>
+          <figure class="gall-item gall-item_pers all back-end"><a href="#sp1" class="gall-item__link"><img src="img/speakers/sp4.jpg" alt="Speaker" class="gall-item__link-pic"></a>
+            <figcaption class="gall-item__capt">
+              <h3 class="gall-item__capt-title">Александр Майданюк</h3>
+              <p class="gall-item__capt-descr">розработчик комплексных back-end решений</p>
             </figcaption>
           </figure>
-          <figure class="gall-item gall-item_person all"><a href="#sp1" class="gall-item__link"><img src="img/speakers/sp5.jpg" alt="Speaker" class="gall-item__pic"></a>
-            <figcaption class="gall-item__caption">
-              <h3 class="gall-item__title">Дарья Горницская</h3>
-              <p class="gall-item__descr">Віце-президент GlobalLogic. Керівник київського центру інжинірингу компанії</p>
+          <figure class="gall-item gall-item_pers all"><a href="#sp1" class="gall-item__link"><img src="img/speakers/sp5.jpg" alt="Speaker" class="gall-item__link-pic"></a>
+            <figcaption class="gall-item__capt">
+              <h3 class="gall-item__capt-title">Дарья Горницская</h3>
+              <p class="gall-item__capt-descr">Віце-президент GlobalLogic. Керівник київського центру інжинірингу компанії</p>
             </figcaption>
           </figure>
-          <figure class="gall-item gall-item_person all back-end"><a href="#sp1" class="gall-item__link"><img src="img/speakers/sp6.jpg" alt="Speaker" class="gall-item__pic"></a>
-            <figcaption class="gall-item__caption">
-              <h3 class="gall-item__title">Андрей Яворский</h3>
-              <p class="gall-item__descr">розработчик комплексных back-end решений</p>
+          <figure class="gall-item gall-item_pers all back-end"><a href="#sp1" class="gall-item__link"><img src="img/speakers/sp6.jpg" alt="Speaker" class="gall-item__link-pic"></a>
+            <figcaption class="gall-item__capt">
+              <h3 class="gall-item__capt-title">Андрей Яворский</h3>
+              <p class="gall-item__capt-descr">розработчик комплексных back-end решений</p>
             </figcaption>
           </figure>
           <!-- ... and here comes other speakers-->
-          <figure class="gall-item gall-item_person all front-end"><a href="#sp1" class="gall-item__link"><img src="img/speakers/sp1.jpg" alt="Speaker" class="gall-item__pic"></a>
-            <figcaption class="gall-item__caption">
-              <h3 class="gall-item__title">Jean-Baptiste Guerrax</h3>
-              <p class="gall-item__descr">розработчик комплексных back-end решений</p>
+          <figure class="gall-item gall-item_pers all front-end"><a href="#sp1" class="gall-item__link"><img src="img/speakers/sp1.jpg" alt="Speaker" class="gall-item__link-pic"></a>
+            <figcaption class="gall-item__capt">
+              <h3 class="gall-item__capt-title">Jean-Baptiste Guerrax</h3>
+              <p class="gall-item__capt-descr">розработчик комплексных back-end решений</p>
             </figcaption>
           </figure>
-          <figure class="gall-item gall-item_person all back-end"><a href="#sp1" class="gall-item__link"><img src="img/speakers/sp3.jpg" alt="Speaker" class="gall-item__pic"></a>
-            <figcaption class="gall-item__caption">
-              <h3 class="gall-item__title">Юрий Миколишин</h3>
-              <p class="gall-item__descr">розработчик комплексных back-end решений</p>
+          <figure class="gall-item gall-item_pers all back-end"><a href="#sp1" class="gall-item__link"><img src="img/speakers/sp3.jpg" alt="Speaker" class="gall-item__link-pic"></a>
+            <figcaption class="gall-item__capt">
+              <h3 class="gall-item__capt-title">Юрий Миколишин</h3>
+              <p class="gall-item__capt-descr">розработчик комплексных back-end решений</p>
             </figcaption>
           </figure>
-          <figure class="gall-item gall-item_person all web-design front-end"><a href="#sp1" class="gall-item__link"><img src="img/speakers/sp2.jpg" alt="Speaker" class="gall-item__pic"></a>
-            <figcaption class="gall-item__caption">
-              <h3 class="gall-item__title">Юрий Артюх</h3>
-              <p class="gall-item__descr">розработчик комплексных back-end решений</p>
+          <figure class="gall-item gall-item_pers all web-design front-end"><a href="#sp1" class="gall-item__link"><img src="img/speakers/sp2.jpg" alt="Speaker" class="gall-item__link-pic"></a>
+            <figcaption class="gall-item__capt">
+              <h3 class="gall-item__capt-title">Юрий Артюх</h3>
+              <p class="gall-item__capt-descr">розработчик комплексных back-end решений</p>
             </figcaption>
           </figure>
-          <figure class="gall-item gall-item_person all qa"><a href="#sp1" class="gall-item__link"><img src="img/speakers/sp6.jpg" alt="Speaker" class="gall-item__pic"></a>
-            <figcaption class="gall-item__caption">
-              <h3 class="gall-item__title">Александр Майданюк</h3>
-              <p class="gall-item__descr">розработчик комплексных back-end решений</p>
+          <figure class="gall-item gall-item_pers all qa"><a href="#sp1" class="gall-item__link"><img src="img/speakers/sp6.jpg" alt="Speaker" class="gall-item__link-pic"></a>
+            <figcaption class="gall-item__capt">
+              <h3 class="gall-item__capt-title">Александр Майданюк</h3>
+              <p class="gall-item__capt-descr">розработчик комплексных back-end решений</p>
             </figcaption>
           </figure>
-          <figure class="gall-item gall-item_person all front-end"><a href="#sp1" class="gall-item__link"><img src="img/speakers/sp5.jpg" alt="Speaker" class="gall-item__pic"></a>
-            <figcaption class="gall-item__caption">
-              <h3 class="gall-item__title">Дарья Горницская</h3>
-              <p class="gall-item__descr">Віце-президент GlobalLogic. Керівник київського центру інжинірингу компанії</p>
+          <figure class="gall-item gall-item_pers all front-end"><a href="#sp1" class="gall-item__link"><img src="img/speakers/sp5.jpg" alt="Speaker" class="gall-item__link-pic"></a>
+            <figcaption class="gall-item__capt">
+              <h3 class="gall-item__capt-title">Дарья Горницская</h3>
+              <p class="gall-item__capt-descr">Віце-президент GlobalLogic. Керівник київського центру інжинірингу компанії</p>
             </figcaption>
           </figure>
-          <figure class="gall-item gall-item_person all qa web-design"><a href="#sp1" class="gall-item__link"><img src="img/speakers/sp4.jpg" alt="Speaker" class="gall-item__pic"></a>
-            <figcaption class="gall-item__caption">
-              <h3 class="gall-item__title">Андрей Яворский</h3>
-              <p class="gall-item__descr">розработчик комплексных back-end решений</p>
+          <figure class="gall-item gall-item_pers all qa web-design"><a href="#sp1" class="gall-item__link"><img src="img/speakers/sp4.jpg" alt="Speaker" class="gall-item__link-pic"></a>
+            <figcaption class="gall-item__capt">
+              <h3 class="gall-item__capt-title">Андрей Яворский</h3>
+              <p class="gall-item__capt-descr">розработчик комплексных back-end решений</p>
             </figcaption>
-          </figure><a href="#" class="btn-link btn-link_speak">Показать всех</a>
-        </div>
+          </figure>
+          <figure class="gall-item gall-item_pers all front-end"><a href="#sp1" class="gall-item__link"><img src="img/speakers/sp1.jpg" alt="Speaker" class="gall-item__link-pic"></a>
+            <figcaption class="gall-item__capt">
+              <h3 class="gall-item__capt-title">Jean-Baptiste Guerrax</h3>
+              <p class="gall-item__capt-descr">розработчик комплексных back-end решений</p>
+            </figcaption>
+          </figure>
+          <figure class="gall-item gall-item_pers all back-end"><a href="#sp1" class="gall-item__link"><img src="img/speakers/sp3.jpg" alt="Speaker" class="gall-item__link-pic"></a>
+            <figcaption class="gall-item__capt">
+              <h3 class="gall-item__capt-title">Юрий Миколишин</h3>
+              <p class="gall-item__capt-descr">розработчик комплексных back-end решений</p>
+            </figcaption>
+          </figure>
+          <figure class="gall-item gall-item_pers all web-design front-end"><a href="#sp1" class="gall-item__link"><img src="img/speakers/sp2.jpg" alt="Speaker" class="gall-item__link-pic"></a>
+            <figcaption class="gall-item__capt">
+              <h3 class="gall-item__capt-title">Юрий Артюх</h3>
+              <p class="gall-item__capt-descr">розработчик комплексных back-end решений</p>
+            </figcaption>
+          </figure>
+        </div><a href="#" class="btn-link btn-link_speak">Показать всех</a>
       </div>
       <!-- And here comes popup windows-->
-      <section id="sp1" class="popup popup_speak">
-        <div class="container"><a href="#" class="iconfont iconfont_popup_close">Close</a>
-          <header class="popup__header">
-            <h3 class="popup__title">Build tons of multi-device JavaScript applications, design patterns &amp; high performance UI</h3>
-          </header>
-          <div class="popup__info">
-            <p class="popup__text">И вот я беру хрустальный шар и вангую, что уже совсем скоро все изменится.<br>Мы вступаем в эпоху Дилетантов. Клиенты будут решать большинство веб-задач без привлечения специально обученных людей (нас).</p>
-            <ul class="popup__list">
-              <li class="popup__list-item">search engine marketing (SEM)</li>
-              <li class="popup__list-item">display advertising</li>
-              <li class="popup__list-item">remarketing</li>
-              <li class="popup__list-item">E-mail marketing</li>
-              <li class="popup__list-item">Google Analytics</li>
-            </ul>
-            <p class="popup__text">Остальное — на лекции. До встречи.</p>
-            <h4 class="popup__sign">Олександр Трегуб</h4>
-            <p class="popup__text">Арт-директор дизайн-студии Akademia, сооснователь курса веб-дизайна в Школе визуальных технологий, автор 'Метода казанка'.</p>
-            <p class="popup__text">Язык выступления: русский</p>
+      <section id="sp1" class="popup">
+        <div class="container"><a href="#" class="popup__close popup__close_dark iconfont iconfont_close">Close</a>
+          <div class="popup-content">
+            <header class="popup__header">
+              <h3 class="popup__title">Build tons of multi-device JavaScript applications, design patterns &amp; high performance UI</h3>
+            </header>
+            <div class="popup__info">
+              <p class="popup__text">И вот я беру хрустальный шар и вангую, что уже совсем скоро все изменится.<br>Мы вступаем в эпоху Дилетантов. Клиенты будут решать большинство веб-задач без привлечения специально обученных людей (нас).</p>
+              <ul class="popup__list">
+                <li class="popup__list-item">search engine marketing (SEM)</li>
+                <li class="popup__list-item">display advertising</li>
+                <li class="popup__list-item">remarketing</li>
+                <li class="popup__list-item">E-mail marketing</li>
+                <li class="popup__list-item">Google Analytics</li>
+              </ul>
+              <p class="popup__text">Остальное — на лекции. До встречи.</p>
+              <h4 class="popup__sign">Олександр Трегуб</h4>
+              <p class="popup__text">Арт-директор дизайн-студии Akademia, сооснователь курса веб-дизайна в Школе визуальных технологий, автор 'Метода казанка'.</p>
+              <p class="popup__text">Язык выступления: русский</p>
+            </div>
+            <footer class="popup__footer"><a href="#" class="btn-link btn-link_popup btn-link_popup_dark">Купить билет</a>
+              <ul class="popup__social social">
+                <li class="social__caption">Поделиться</li>
+                <li class="social__item"><a href="#" class="social__item-link iconfont iconfont_fb">Facebook</a></li>
+                <li class="social__item"><a href="#" class="social__item-link iconfont iconfont_vk">Вконтакте</a></li>
+                <li class="social__item"><a href="#" class="social__item-link iconfont iconfont_twi">Twitter</a></li>
+              </ul>
+            </footer>
           </div>
-          <footer class="popup__footer"><a href="#" class="btn-link btn-link_popup_sp">Купить билет</a>
-            <ul class="social">
-              <li class="social__caption">Поделиться</li>
-              <li class="social__item"><a href="#" class="social__link">Facebook</a></li>
-              <li class="social__item"><a href="#" class="social__link">Вконтакте</a></li>
-              <li class="social__item"><a href="#" class="social__link">Twitter</a></li>
-            </ul>
-          </footer>
         </div>
       </section>
     </section>
     <!-- Program section-->
     <section id="program" class="screen screen_progr screen_bg_color">
       <div class="container">
-        <h2 class="screen__title screen__title_progr">Программа</h2>
-        <!-- Sidebar with screen navigation-->
-        <nav class="cat cat_progr">
-          <ul class="cat__list">
-            <li class="cat__item"><a href="#all-events" class="cat__link cat__link_progr is-active"><span class="cat__time">
-                  <time datetime="2015-04-12">12.04</time> -
-                  <time datetime="2015-04-18"> 18.04</time></span> Вся программа</a></li>
-            <li class="cat__item"><a href="#opening" class="cat__link cat__link_progr"><span class="cat__time">
-                  <time datetime="2015-04-12">12.04 / вс</time></span> Opening</a></li>
-            <li class="cat__item"><a href="#front-end-day" class="cat__link cat__link_progr"><span class="cat__time">
-                  <time datetime="2015-04-13">13.04 / пн</time></span> Front-end day</a></li>
-            <li class="cat__item"><a href="#back-end-day" class="cat__link cat__link_progr"><span class="cat__time">
-                  <time datetime="2015-04-14">14.04 / вт</time></span> Back-end day</a></li>
-            <li class="cat__item"><a href="#testers-day" class="cat__link cat__link_progr"><span class="cat__time">
-                  <time datetime="2015-04-15">15.04 / ср</time></span> QA day</a></li>
-            <li class="cat__item"><a href="#web-designers-day" class="cat__link cat__link_progr"><span class="cat__time">
-                  <time datetime="2015-04-16"> 16.04 / чт</time></span> Web-design day</a></li>
-            <li class="cat__item"><a href="#soft-skills-day" class="cat__link cat__link_progr"><span class="cat__time">
-                  <time datetime="2015-04-17">17.04 / пт</time></span> Soft skills</a></li>
-            <li class="cat__item"><a href="#afterparty" class="cat__link cat__link_progr"><span class="cat__time">
-                  <time datetime="2015-04-18">18.04 / сб</time></span> Afterparty</a></li>
-          </ul>
-        </nav>
+        <aside class="screen__aside screen__aside_progr">
+          <h2 class="screen__title screen__title_progr">Программа</h2>
+          <!-- Sidebar with screen navigation-->
+          <nav class="cat cat_vert cat_vert_progr">
+            <ul class="cat__list">
+              <li class="cat__item cat__item_vert"><a href="#all-events" class="cat__link cat__link_vert is-active"><span class="cat__time">
+                    <time datetime="2015-04-12">12.04</time> -
+                    <time datetime="2015-04-18"> 18.04</time></span> Вся программа</a></li>
+              <li class="cat__item cat__item_vert"><a href="#opening" class="cat__link cat__link_vert"><span class="cat__time">
+                    <time datetime="2015-04-12">12.04 / вс</time></span> Opening</a></li>
+              <li class="cat__item cat__item_vert"><a href="#front-end-day" class="cat__link cat__link_vert"><span class="cat__time">
+                    <time datetime="2015-04-13">13.04 / пн</time></span> Front-end day</a></li>
+              <li class="cat__item cat__item_vert"><a href="#back-end-day" class="cat__link cat__link_vert"><span class="cat__time">
+                    <time datetime="2015-04-14">14.04 / вт</time></span> Back-end day</a></li>
+              <li class="cat__item cat__item_vert"><a href="#testers-day" class="cat__link cat__link_vert"><span class="cat__time">
+                    <time datetime="2015-04-15">15.04 / ср</time></span> QA day</a></li>
+              <li class="cat__item cat__item_vert"><a href="#web-designers-day" class="cat__link cat__link_vert"><span class="cat__time">
+                    <time datetime="2015-04-16"> 16.04 / чт</time></span> Web-design day</a></li>
+              <li class="cat__item cat__item_vert"><a href="#soft-skills-day" class="cat__link cat__link_vert"><span class="cat__time">
+                    <time datetime="2015-04-17">17.04 / пт</time></span> Soft skills</a></li>
+              <li class="cat__item cat__item_vert"><a href="#afterparty" class="cat__link cat__link_vert"><span class="cat__time">
+                    <time datetime="2015-04-18">18.04 / сб</time></span> Afterparty</a></li>
+            </ul>
+          </nav>
+        </aside>
         <!-- Target information-->
         <!-- All events-->
         <div class="events-wrap">
@@ -474,7 +496,7 @@
               <h3 class="event__title">Влияние выхода платформы Magento 2.0 на мир E-commerce</h3></a>
           </div>
           <!-- Web-design events-->
-          <div id="web-designers-day" class="events all">
+          <div id="web-designers-day" class="events is-active all">
             <div class="event event_extra">
               <p class="event__meta"><span class="event__time">
                   <time datetime="2015-04-16">16.04</time></span><span class="event__info">Web-design day</span></p>
@@ -570,33 +592,35 @@
         </div>
       </div>
       <!-- And here comes popup windows-->
-      <section id="ev1" class="popup popup_progr">
-        <div class="container"><a href="#" class="iconfont iconfont_popup_close">Close</a>
-          <header class="popup__header">
-            <h3 class="popup__title">Build tons of multi-device JavaScript applications, design patterns &amp; high performance UI</h3>
-          </header>
-          <div class="popup__info">
-            <p class="popup__text">И вот я беру хрустальный шар и вангую, что уже совсем скоро все изменится.<br>Мы вступаем в эпоху Дилетантов. Клиенты будут решать большинство веб-задач без привлечения специально обученных людей (нас).</p>
-            <ul class="popup__list">
-              <li class="popup__list-item">search engine marketing (SEM)</li>
-              <li class="popup__list-item">display advertising</li>
-              <li class="popup__list-item">remarketing</li>
-              <li class="popup__list-item">E-mail marketing</li>
-              <li class="popup__list-item">Google Analytics</li>
-            </ul>
-            <p class="popup__text">Остальное — на лекции. До встречи.</p>
-            <h4 class="popup__sign">Олександр Трегуб</h4>
-            <p class="popup__text">Арт-директор дизайн-студии Akademia, сооснователь курса веб-дизайна в Школе визуальных технологий, автор 'Метода казанка'.</p>
-            <p class="popup__text">Язык выступления: русский</p>
+      <section id="ev1" class="popup popup_light">
+        <div class="container"><a href="#" class="popup__close popup__close_dark iconfont iconfont_close">Close</a>
+          <div class="popup-content">
+            <header class="popup__header">
+              <h3 class="popup__title">Build tons of multi-device JavaScript applications, design patterns &amp; high performance UI</h3>
+            </header>
+            <div class="popup__info popup_info_light">
+              <p class="popup__text">И вот я беру хрустальный шар и вангую, что уже совсем скоро все изменится.<br>Мы вступаем в эпоху Дилетантов. Клиенты будут решать большинство веб-задач без привлечения специально обученных людей (нас).</p>
+              <ul class="popup__list">
+                <li class="popup__list-item">search engine marketing (SEM)</li>
+                <li class="popup__list-item">display advertising</li>
+                <li class="popup__list-item">remarketing</li>
+                <li class="popup__list-item">E-mail marketing</li>
+                <li class="popup__list-item">Google Analytics</li>
+              </ul>
+              <p class="popup__text">Остальное — на лекции. До встречи.</p>
+              <h4 class="popup__sign">Олександр Трегуб</h4>
+              <p class="popup__text">Арт-директор дизайн-студии Akademia, сооснователь курса веб-дизайна в Школе визуальных технологий, автор 'Метода казанка'.</p>
+              <p class="popup__text">Язык выступления: русский</p>
+            </div>
+            <footer class="popup__footer"><a href="#" class="btn-link btn-link_popup btn-link_popup_light">Купить билет</a>
+              <ul class="popup__social social">
+                <li class="social__caption">Поделиться</li>
+                <li class="social__item"><a href="#" class="social__item-link iconfont iconfont_fb">Facebook</a></li>
+                <li class="social__item"><a href="#" class="social__item-link iconfont iconfont_vk">Вконтакте</a></li>
+                <li class="social__item"><a href="#" class="social__item-link iconfont iconfont_twi">Twitter</a></li>
+              </ul>
+            </footer>
           </div>
-          <footer class="popup__footer"><a href="#" class="btn-link btn-link_popup_sp">Купить билет</a>
-            <ul class="social">
-              <li class="social__caption">Поделиться</li>
-              <li class="social__item"><a href="#" class="social__link">Facebook</a></li>
-              <li class="social__item"><a href="#" class="social__link">Вконтакте</a></li>
-              <li class="social__item"><a href="#" class="social__link">Twitter</a></li>
-            </ul>
-          </footer>
         </div>
       </section>
     </section>
@@ -608,13 +632,13 @@
           <p class="ticket__descr">лучший вариант если Вас интересует только одно направление</p>
         </header>
         <ul class="ticket__list">
-          <li class="ticket__item">посещение 1 дня на выбор</li>
-          <li class="ticket__item">бонусный день - первый или последний на выбор</li>
-          <li class="ticket__item">раздаточный материал с доставкой</li>
-          <li class="ticket__item">запись выступлений Ваших дней</li>
+          <li class="ticket__list-item">посещение 1 дня на выбор</li>
+          <li class="ticket__list-item">бонусный день - первый или последний на выбор</li>
+          <li class="ticket__list-item">раздаточный материал с доставкой</li>
+          <li class="ticket__list-item">запись выступлений Ваших дней</li>
         </ul>
         <footer class="ticket__footer">
-          <p class="ticket__cost"><span class="ticket__cost_extra"><span class="ticket__cost_val">450</span> грн</span> / с 01.03 -<span class="ticket__cost_val">550</span> грн</p><a href="#" class="btn-link btn-link_ticket">Купить билет</a>
+          <p class="ticket__cost"><span class="ticket__cost-extra"><span class="ticket__cost-val">450</span> грн</span> / с 01.03 -<span class="ticket__cost-val">550</span> грн</p><a href="#" class="btn-link btn-link_ticket">Купить билет</a>
         </footer>
       </section>
       <section class="ticket ticket_gold">
@@ -623,14 +647,14 @@
           <p class="ticket__descr ticket__descr_gold">если Вас интересует два направления, тогда выбирайте:</p>
         </header>
         <ul class="ticket__list">
-          <li class="ticket__item">посещение 2 дней на выбор</li>
-          <li class="ticket__item">бонусный день - первый или последний на выбор</li>
-          <li class="ticket__item">раздаточный материал с доставкой</li>
-          <li class="ticket__item">запись выступлений</li>
-          <li class="ticket__item">возможность выиграть призы и сувениры </li>
+          <li class="ticket__list-item">посещение 2 дней на выбор</li>
+          <li class="ticket__list-item">бонусный день - первый или последний на выбор</li>
+          <li class="ticket__list-item">раздаточный материал с доставкой</li>
+          <li class="ticket__list-item">запись выступлений</li>
+          <li class="ticket__list-item">возможность выиграть призы и сувениры </li>
         </ul>
         <footer class="ticket__footer">
-          <p class="ticket__cost ticket__cost_gold"><span class="ticket__cost_extra"><span class="ticket__cost_val">650</span> грн</span> / с 01.03 -<span class="ticket__cost_val">750</span> грн</p><a href="#" class="btn-link btn-link_ticket">Купить билет</a>
+          <p class="ticket__cost ticket__cost_gold"><span class="ticket__cost-extra"><span class="ticket__cost-val">650</span> грн</span> / с 01.03 -<span class="ticket__cost-val">750</span> грн</p><a href="#" class="btn-link btn-link_ticket">Купить билет</a>
         </footer>
       </section>
       <section class="ticket ticket_prem">
@@ -639,105 +663,105 @@
           <p class="ticket__descr ticket__descr_prem">эта неделя станет серьёзным вкладом в себя</p>
         </header>
         <ul class="ticket__list">
-          <li class="ticket__item ticket__item_prem">посещение всех дней</li>
-          <li class="ticket__item ticket__item_prem">записи всех выступлений</li>
-          <li class="ticket__item ticket__item_prem">раздаточный материал с доставкой</li>
-          <li class="ticket__item ticket__item_prem">приглашение послушать доклады в офисе Web Challenge</li>
-          <li class="ticket__item ticket__item_prem">личный кабинет участника с доступом к материалам выступлений</li>
-          <li class="ticket__item ticket__item_prem">возможность выиграть призы и сувениры</li>
+          <li class="ticket__list-item ticket__list-item_prem">посещение всех дней</li>
+          <li class="ticket__list-item ticket__list-item_prem">записи всех выступлений</li>
+          <li class="ticket__list-item ticket__list-item_prem">раздаточный материал с доставкой</li>
+          <li class="ticket__list-item ticket__list-item_prem">приглашение послушать доклады в офисе Web Challenge</li>
+          <li class="ticket__list-item ticket__list-item_prem">личный кабинет участника с доступом к материалам выступлений</li>
+          <li class="ticket__list-item ticket__list-item_prem">возможность выиграть призы и сувениры</li>
         </ul>
         <footer class="ticket__footer">
-          <p class="ticket__cost ticket__cost_prem"><span class="ticket__cost_extra ticket__cost_extra_prem"><span class="ticket__cost_val">1200</span> грн</span> / с 01.03 -<span class="ticket__cost_val">1300</span> грн</p><a href="#" class="btn-link btn-link_ticket btn-link_ticket_prem">Купить билет</a>
+          <p class="ticket__cost ticket__cost_prem"><span class="ticket__cost-extra ticket__cost-extra_prem"><span class="ticket__cost-val">1200</span> грн</span> / с 01.03 -<span class="ticket__cost-val">1300</span> грн</p><a href="#" class="btn-link btn-link_ticket btn-link_ticket_prem">Купить билет</a>
         </footer>
       </section>
     </div>
     <!-- Videos section-->
     <section id="videos" class="screen screen_vid">
       <div class="container">
-        <header class="screen__header screen__header_vid">
-          <h2>Видео</h2>
-        </header>
+        <h2 class="screen__title screen__title_vid">Видео</h2>
         <!-- Video gallery-->
         <div class="gall gall_vid">
-          <figure class="gall-item gall-item_vid"><a href="#vid1" class="icon icon_play">Смотреть видео</a><img src="img/vid_thumb/vid1.jpg" alt="Video thumb" class="gall-item__pic">
-            <figcaption class="gall-item__caption">
-              <h3 class="gall-item__title">Jean-Baptiste Guerrax</h3>
+          <figure class="gall-item gall-item_vid"><a href="#vid1" class="gall-item__link gall-item__link_vid icon icon_play"><img src="img/vid_thumb/vid1.jpg" alt="Video thumb" class="gall-item__link-pic"></a>
+            <figcaption class="gall-item__capt">
+              <h3 class="gall-item__capt-title">Jean-Baptiste Guerrax</h3>
             </figcaption>
           </figure>
-          <figure class="gall-item gall-item_vid"><a href="#vid1" class="icon icon_play">Смотреть видео</a><img src="img/vid_thumb/vid2.jpg" alt="Video thumb" class="gall-item__pic">
-            <figcaption class="gall-item__caption">
-              <h3 class="gall-item__title">Jean-Baptiste Guerrax</h3>
+          <figure class="gall-item gall-item_vid"><a href="#vid1" class="gall-item__link gall-item__link_vid icon icon_play"><img src="img/vid_thumb/vid2.jpg" alt="Video thumb" class="gall-item__link-pic"></a>
+            <figcaption class="gall-item__capt">
+              <h3 class="gall-item__capt-title">Jean-Baptiste Guerrax</h3>
             </figcaption>
           </figure>
-          <figure class="gall-item gall-item_vid"><a href="#vid1" class="icon icon_play">Смотреть видео</a><img src="img/vid_thumb/vid3.jpg" alt="Video thumb" class="gall-item__pic">
-            <figcaption class="gall-item__caption">
-              <h3 class="gall-item__title">Jean-Baptiste Guerrax</h3>
+          <figure class="gall-item gall-item_vid"><a href="#vid1" class="gall-item__link gall-item__link_vid icon icon_play"><img src="img/vid_thumb/vid3.jpg" alt="Video thumb" class="gall-item__link-pic"></a>
+            <figcaption class="gall-item__capt">
+              <h3 class="gall-item__capt-title">Jean-Baptiste Guerrax</h3>
             </figcaption>
           </figure>
-          <figure class="gall-item gall-item_vid"><a href="#vid1" class="icon icon_play">Смотреть видео</a><img src="img/vid_thumb/vid4.jpg" alt="Video thumb" class="gall-item__pic">
-            <figcaption class="gall-item__caption">
-              <h3 class="gall-item__title">Jean-Baptiste Guerrax</h3>
+          <figure class="gall-item gall-item_vid"><a href="#vid1" class="gall-item__link gall-item__link_vid icon icon_play"><img src="img/vid_thumb/vid4.jpg" alt="Video thumb" class="gall-item__link-pic"></a>
+            <figcaption class="gall-item__capt">
+              <h3 class="gall-item__capt-title">Jean-Baptiste Guerrax</h3>
             </figcaption>
           </figure>
-          <figure class="gall-item gall-item_vid"><a href="#vid1" class="icon icon_play">Смотреть видео</a><img src="img/vid_thumb/vid1.jpg" alt="Video thumb" class="gall-item__pic">
-            <figcaption class="gall-item__caption">
-              <h3 class="gall-item__title">Jean-Baptiste Guerrax</h3>
+          <figure class="gall-item gall-item_vid"><a href="#vid1" class="gall-item__link gall-item__link_vid icon icon_play"><img src="img/vid_thumb/vid1.jpg" alt="Video thumb" class="gall-item__link-pic"></a>
+            <figcaption class="gall-item__capt">
+              <h3 class="gall-item__capt-title">Jean-Baptiste Guerrax</h3>
             </figcaption>
           </figure>
-          <figure class="gall-item gall-item_vid"><a href="#vid1" class="icon icon_play">Смотреть видео</a><img src="img/vid_thumb/vid2.jpg" alt="Video thumb" class="gall-item__pic">
-            <figcaption class="gall-item__caption">
-              <h3 class="gall-item__title">Jean-Baptiste Guerrax</h3>
+          <figure class="gall-item gall-item_vid"><a href="#vid1" class="gall-item__link gall-item__link_vid icon icon_play"><img src="img/vid_thumb/vid2.jpg" alt="Video thumb" class="gall-item__link-pic"></a>
+            <figcaption class="gall-item__capt">
+              <h3 class="gall-item__capt-title">Jean-Baptiste Guerrax</h3>
             </figcaption>
           </figure>
-          <figure class="gall-item gall-item_vid"><a href="#vid1" class="icon icon_play">Смотреть видео</a><img src="img/vid_thumb/vid3.jpg" alt="Video thumb" class="gall-item__pic">
-            <figcaption class="gall-item__caption">
-              <h3 class="gall-item__title">Jean-Baptiste Guerrax</h3>
+          <figure class="gall-item gall-item_vid"><a href="#vid1" class="gall-item__link gall-item__link_vid icon icon_play"><img src="img/vid_thumb/vid3.jpg" alt="Video thumb" class="gall-item__link-pic"></a>
+            <figcaption class="gall-item__capt">
+              <h3 class="gall-item__capt-title">Jean-Baptiste Guerrax</h3>
             </figcaption>
           </figure>
-          <figure class="gall-item gall-item_vid"><a href="#vid1" class="icon icon_play">Смотреть видео</a><img src="img/vid_thumb/vid4.jpg" alt="Video thumb" class="gall-item__pic">
-            <figcaption class="gall-item__caption">
-              <h3 class="gall-item__title">Jean-Baptiste Guerrax</h3>
+          <figure class="gall-item gall-item_vid"><a href="#vid1" class="gall-item__link gall-item__link_vid icon icon_play"><img src="img/vid_thumb/vid4.jpg" alt="Video thumb" class="gall-item__link-pic"></a>
+            <figcaption class="gall-item__capt">
+              <h3 class="gall-item__capt-title">Jean-Baptiste Guerrax</h3>
             </figcaption>
           </figure>
         </div>
       </div>
       <!-- And here comes target popup windows-->
-      <section id="vid1" class="popup popup_vid">
-        <div class="container"><a href="#" class="iconfont iconfont_close iconfont_close_pop">Close</a>
-          <header class="popup__header">
-            <h3 class="popup__title">Build tons of multi-device JavaScript applications, design patterns &amp; high performance UI</h3>
-          </header>
-          <div class="popup__info">
-            <!-- And here comes iframe or video element...-->
+      <section id="sp1" class="popup">
+        <div class="container"><a href="#" class="popup__close popup__close_dark iconfont iconfont_close">Close</a>
+          <div class="popup-content">
+            <header class="popup__header">
+              <h3 class="popup__title">Build tons of multi-device JavaScript applications, design patterns &amp; high performance UI</h3>
+            </header>
+            <div class="popup__info">
+              <div class="popup__video">
+                <iframe width="800" height="400" src="https://www.youtube.com/embed/kPDnw3_1GOI" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div>
+            <footer class="popup__footer">
+              <ul class="popup__social social">
+                <li class="social__caption">Поделиться</li>
+                <li class="social__item"><a href="#" class="social__item-link iconfont iconfont_fb">Facebook</a></li>
+                <li class="social__item"><a href="#" class="social__item-link iconfont iconfont_vk">Вконтакте</a></li>
+                <li class="social__item"><a href="#" class="social__item-link iconfont iconfont_twi">Twitter</a></li>
+              </ul>
+            </footer>
           </div>
-          <footer class="popup__footer"><a href="#" class="btn-link btn-link_popup_vid">Купить билет</a>
-            <ul class="social">
-              <li class="social__caption">Поделиться</li>
-              <li class="social__item"><a href="#" class="social__link">Facebook</a></li>
-              <li class="social__item"><a href="#" class="social__link">Вконтакте</a></li>
-              <li class="social__item"><a href="#" class="social__link">Twitter</a></li>
-            </ul>
-          </footer>
         </div>
       </section>
     </section>
     <!-- Partners section-->
     <section id="partners" class="screen screen_partn">
       <div class="container">
-        <header class="screen__header">
-          <h2 class="screen__title screen__title_partn">Партнеры</h2>
-        </header>
+        <h2 class="screen__title screen__title_partn">Партнеры</h2>
         <!-- Top screen navigation-->
-        <nav class="cat cat_partn">
+        <nav class="cat cat_hor">
           <ul class="cat__list">
-            <li class="cat__item cat__item_partn"><a href="#partners" class="cat__link cat__link_partn is-active">Партнеры</a></li>
-            <li class="cat__item cat__item_partn"><a href="#info-partners" class="cat__link cat__link_partn">Инфо-партнеры</a></li>
+            <li class="cat__item cat__item_hor cat__item_hor_partn"><a href="#partners" class="cat__link cat__link_hor cat__link_hor_partn is-active">Партнеры</a></li>
+            <li class="cat__item cat__item_hor cat__item_hor_partn"><a href="#info-partners" class="cat__link cat__link_hor cat__link_hor_partn">Инфо-партнеры</a></li>
           </ul>
         </nav>
         <div class="partners">
           <!-- Target information-->
-          <div id="partners" class="partners__page is-visible"><a href="#" class="partners__item partners__item_general"><span class="partners__status">Генеральный партнер</span><img src="img/partners/par1.png" alt="Partner1" class="partners__logo"></a><a href="#" class="partners__item"><img src="img/partners/par2.png" alt="Partner2" class="partners__logo"></a><a href="#" class="partners__item"><img src="img/partners/par3.png" alt="Partner3" class="partners__logo"></a><a href="#" class="partners__item"><img src="img/partners/par4.png" alt="Partner4" class="partners__logo"></a><a href="#" class="partners__item"><img src="img/partners/par5.png" alt="Partner5" class="partners__logo"></a><a href="#" class="partners__item"><img src="img/partners/par6.png" alt="Partner6" class="partners__logo"></a><a href="#" class="partners__item"><img src="img/partners/par7.png" alt="Partner7" class="partners__logo"></a><a href="#" class="partners__item"><img src="img/partners/par2.png" alt="Partner8" class="partners__logo"></a><a href="#" class="partners__item"><img src="img/partners/par3.png" alt="Partner9" class="partners__logo"></a></div>
-          <div id="info-partners" class="partners__page"><a href="#" class="partners__item"><img src="img/partners/par6.png" alt="Partner6" class="partners__logo"></a><a href="#" class="partners__item"><img src="img/partners/par7.png" alt="Partner7" class="partners__logo"></a><a href="#" class="partners__item"><img src="img/partners/par4.png" alt="Partner10" class="partners__logo"></a><a href="#" class="partners__item"><img src="img/partners/par2.png" alt="Partner2" class="partners__logo"></a><a href="#" class="partners__item"><img src="img/partners/par3.png" alt="Partner3" class="partners__logo"></a><a href="#" class="partners__item"><img src="img/partners/par4.png" alt="Partner4" class="partners__logo"></a><a href="#" class="partners__item"><img src="img/partners/par5.png" alt="Partner5" class="partners__logo"></a></div>
+          <div id="partners" class="partners-page is-visible"><a href="#" class="partners-page__item partners-page__item_general"><span class="partners-page__item-status">Генеральный партнер</span><img src="img/partners/par1.png" alt="Partner1" class="partners-page__item-logo"></a><a href="#" class="partners-page__item"><img src="img/partners/par2.png" alt="Partner2" class="partners-page__item-logo"></a><a href="#" class="partners-page__item"><img src="img/partners/par3.png" alt="Partner3" class="partners-page__item-logo"></a><a href="#" class="partners-page__item"><img src="img/partners/par4.png" alt="Partner4" class="partners-page__item-logo"></a><a href="#" class="partners-page__item"><img src="img/partners/par5.png" alt="Partner5" class="partners-page__item-logo"></a><a href="#" class="partners-page__item"><img src="img/partners/par6.png" alt="Partner6" class="partners-page__item-logo"></a><a href="#" class="partners-page__item"><img src="img/partners/par7.png" alt="Partner7" class="partners-page__item-logo"></a><a href="#" class="partners-page__item"><img src="img/partners/par2.png" alt="Partner8" class="partners-page__item-logo"></a><a href="#" class="partners-page__item"><img src="img/partners/par3.png" alt="Partner9" class="partners-page__item-logo"></a></div>
+          <div id="info-partners" class="partners-page"><a href="#" class="partners-page__item"><img src="img/partners/par6.png" alt="Partner6" class="partners-page__item-logo"></a><a href="#" class="partners-page__item"><img src="img/partners/par7.png" alt="Partner7" class="partners-page__item-logo"></a><a href="#" class="partners-page__item"><img src="img/partners/par4.png" alt="Partner10" class="partners-page__item-logo"></a><a href="#" class="partners-page__item"><img src="img/partners/par2.png" alt="Partner2" class="partners-page__item-logo"></a><a href="#" class="partners-page__item"><img src="img/partners/par3.png" alt="Partner3" class="partners-page__item-logo"></a><a href="#" class="partners-page__item"><img src="img/partners/par4.png" alt="Partner4" class="partners-page__item-logo"></a><a href="#" class="partners-page__item"><img src="img/partners/par5.png" alt="Partner5" class="partners-page__item-logo"></a></div>
         </div>
       </div>
     </section>
@@ -746,9 +770,9 @@
       <div class="container">
         <p class="copyright">Организатор<a href="#" class="copyright__link"><img src="img/uwc.png" alt="uwc logo" class="copyright__img"></a> &copy; 2015</p>
         <ul class="social social_footer">
-          <li class="social__item"><a href="#" class="social__link iconfont iconfont_fb">Facebook</a></li>
-          <li class="social__item"><a href="#" class="social__link iconfont iconfont_vk">Вконтакте</a></li>
-          <li class="social__item"><a href="#" class="social__link iconfont iconfont_twi">Twitter</a></li>
+          <li class="social__item"><a href="#" class="social__item-link iconfont iconfont_fb">Facebook</a></li>
+          <li class="social__item"><a href="#" class="social__item-link iconfont iconfont_vk">Вконтакте</a></li>
+          <li class="social__item"><a href="#" class="social__item-link iconfont iconfont_twi">Twitter</a></li>
         </ul>
         <p class="contact">Мы на связи:<a href="mailto:box@uwcua.com" class="contact__link"> box@uwcua.com</a></p>
       </div>
