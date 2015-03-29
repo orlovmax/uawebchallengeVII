@@ -32,16 +32,33 @@
     <script src="js/head/head.min.js"></script>  </head>
   <body>
     <!-- Page preloader js-->
+    <script>
+      progressJs().setOptions({overlayMode: true, theme: 'custom'}).start();
+      if(window.attachEvent) {
+          window.attachEvent('onload', function(){ progressJs().end(); });
+      } else {
+          if(window.onload) {
+              var curronload = window.onload;
+              var newonload = function() {
+                  curronload();
+                  progressJs().end();
+              };
+              window.onload = newonload;
+          } else {
+              window.onload = function(){ progressJs().end(); };
+          }
+      }
+    </script>
     <!-- Header-->
     <header class="main-header">
       <div class="container">
         <!-- Fixed header elements-->
-        <div class="top-nav"><a href="#" class="top-nav__navicon iconfont iconfont_menu js-navopen">Menu</a>
+        <div class="top-nav js-topnav"><a href="#" class="top-nav__navicon iconfont iconfont_menu js-navopen">Menu</a>
           <ul class="languages">
             <li class="languages__item"><a class="languages__link is-active">Ру</a></li>
             <li class="languages__item"><a href="#" class="languages__link">Ук</a></li>
             <li class="languages__item"><a href="#" class="languages__link">En</a></li>
-          </ul><a href="#" class="btn-link btn-link_header is-hidden">Купить билет</a>
+          </ul><a href="#" class="btn-link btn-link_header js-topnavbtn">Купить билет</a>
         </div>
       </div>
     </header>
@@ -87,12 +104,15 @@
             <p class="home-info__afterword"> ... у нас интересней всего ©Женя</p>
           </div>
         </aside>
+        <!-- I think there might be some play video controls, but I don't know for what purpose...-->
       </div>
     </section>
     <!-- News section-->
+    <!-- News screen-->
     <section id="news" class="screen screen_news">
       <div class="container">
         <h2 class="screen__title screen__title_news">Что нового?</h2>
+        <!-- Just a simple grid layout-->
         <ul class="news">
           <li class="news__item icon icon_conf-news">
             <h3 class="news__item-title">Первая в Украине онлайн конференция для разработчиков</h3>
@@ -132,7 +152,7 @@
             </ul>
           </nav>
         </aside>
-        <!-- Target information-->
+        <!-- Target information wrap-->
         <div class="about-wrap">
           <div id="general" class="about-info icon icon_gen-about js-toggletarget is-visible">
             <p class="about-info__text">Участники IT-Конференции - прогрессивно мыслящие люди, интересующиеся будущим IT-рынка в целом и веб–разработкой в частности.</p>
@@ -173,121 +193,121 @@
       </div>
     </section>
     <!-- Speakers section-->
-    <section id="speakers" class="screen screen_speak">
+    <section id="speakers" class="screen screen_speak js-toggle js-gall js-filter">
       <div class="container">
         <h2 class="screen__title screen__title_speak">Спикеры</h2>
         <!-- Top screen category filter-->
         <nav class="cat cat_hor">
           <ul class="cat__list cat__list_hor_speak">
-            <li class="cat__item cat__item_hor cat__item_hor_speak"><a href="#" class="cat__link cat__link_hor cat__link_hor_speak is-active">Все спикеры</a></li>
-            <li class="cat__item cat__item_hor cat__item_hor_speak"><a href="#" class="cat__link cat__link_hor cat__link_hor_speak">Front-end</a></li>
-            <li class="cat__item cat__item_hor cat__item_hor_speak"><a href="#" class="cat__link cat__link_hor cat__link_hor_speak">Back-end</a></li>
-            <li class="cat__item cat__item_hor cat__item_hor_speak"><a href="#" class="cat__link cat__link_hor cat__link_hor_speak">QA</a></li>
-            <li class="cat__item cat__item_hor cat__item_hor_speak"><a href="#" class="cat__link cat__link_hor cat__link_hor_speak">Web-design</a></li>
-            <li class="cat__item cat__item_hor cat__item_contr">
-              <p class="cat__item-counter"><span class="js-sp-current">-</span>/<span class="js-sp-total">-</span></p><a href="#" class="cat__item-btn iconfont iconfont_prev iconfont_ctrl_prev">Назад</a><a href="#" class="cat__item-btn iconfont iconfont_next iconfont_ctrl_next">Вперед</a>
+            <li class="cat__item cat__item_hor cat__item_hor_speak"><a href="#" data-filter="all" class="cat__link cat__link_hor cat__link_hor_speak js-filterlink is-active">Все спикеры</a></li>
+            <li class="cat__item cat__item_hor cat__item_hor_speak"><a href="#" data-filter="front-end" class="cat__link cat__link_hor cat__link_hor_speak js-filterlink">Front-end</a></li>
+            <li class="cat__item cat__item_hor cat__item_hor_speak"><a href="#" data-filter="back-end" class="cat__link cat__link_hor cat__link_hor_speak js-filterlink">Back-end</a></li>
+            <li class="cat__item cat__item_hor cat__item_hor_speak"><a href="#" data-filter="qa" class="cat__link cat__link_hor cat__link_hor_speak js-filterlink">QA</a></li>
+            <li class="cat__item cat__item_hor cat__item_hor_speak"><a href="#" data-filter="web-design" class="cat__link cat__link_hor cat__link_hor_speak js-filterlink">Web-design</a></li>
+            <li class="cat__item cat__item_hor cat__item_contr js-controls">
+              <p class="cat__item-counter"><span>-</span>/<span>-</span></p><a class="cat__item-btn iconfont iconfont_prev iconfont_ctrl_prev">Назад</a><a class="cat__item-btn iconfont iconfont_next iconfont_ctrl_next">Вперед</a>
             </li>
           </ul>
         </nav>
         <!-- Spoiler-styled speakers list-->
-        <div class="gall gall_speak">
+        <div class="gall gall_speak js-galllist">
           <!-- ok, that's first 6 visible persons...-->
-          <figure class="gall-item gall-item_pers all back-end"><a href="#sp1" class="gall-item__link"><img src="img/speakers/sp1.jpg" alt="Speaker" class="gall-item__link-pic"></a>
+          <figure data-cat="all back-end" class="gall-item gall-item_pers js-filteritem"><a href="#speaker1" class="gall-item__link js-togglelink"><img src="img/speakers/sp1.jpg" alt="Speaker" class="gall-item__link-pic"></a>
             <figcaption class="gall-item__capt">
               <h3 class="gall-item__capt-title">Jean-Baptiste Guerrax</h3>
               <p class="gall-item__capt-descr">розработчик комплексных back-end решений</p>
             </figcaption>
           </figure>
-          <figure class="gall-item gall-item_pers all back-end"><a href="#sp1" class="gall-item__link"><img src="img/speakers/sp2.jpg" alt="Speaker" class="gall-item__link-pic"></a>
+          <figure data-cat="all back-end" class="gall-item gall-item_pers js-filteritem"><a href="#speaker1" class="gall-item__link js-togglelink"><img src="img/speakers/sp2.jpg" alt="Speaker" class="gall-item__link-pic"></a>
             <figcaption class="gall-item__capt">
               <h3 class="gall-item__capt-title">Юрий Миколишин</h3>
               <p class="gall-item__capt-descr">розработчик комплексных back-end решений</p>
             </figcaption>
           </figure>
-          <figure class="gall-item gall-item_pers all back-end"><a href="#sp1" class="gall-item__link"><img src="img/speakers/sp3.jpg" alt="Speaker" class="gall-item__link-pic"></a>
+          <figure data-cat="all back-end" class="gall-item gall-item_pers js-filteritem"><a href="#speaker1" class="gall-item__link js-togglelink"><img src="img/speakers/sp3.jpg" alt="Speaker" class="gall-item__link-pic"></a>
             <figcaption class="gall-item__capt">
               <h3 class="gall-item__capt-title">Юрий Артюх</h3>
               <p class="gall-item__capt-descr">розработчик комплексных back-end решений</p>
             </figcaption>
           </figure>
-          <figure class="gall-item gall-item_pers all back-end"><a href="#sp1" class="gall-item__link"><img src="img/speakers/sp4.jpg" alt="Speaker" class="gall-item__link-pic"></a>
+          <figure data-cat="all back-end" class="gall-item gall-item_pers js-filteritem"><a href="#speaker1" class="gall-item__link js-togglelink"><img src="img/speakers/sp4.jpg" alt="Speaker" class="gall-item__link-pic"></a>
             <figcaption class="gall-item__capt">
               <h3 class="gall-item__capt-title">Александр Майданюк</h3>
               <p class="gall-item__capt-descr">розработчик комплексных back-end решений</p>
             </figcaption>
           </figure>
-          <figure class="gall-item gall-item_pers all"><a href="#sp1" class="gall-item__link"><img src="img/speakers/sp5.jpg" alt="Speaker" class="gall-item__link-pic"></a>
+          <figure data-cat="all qa" class="gall-item gall-item_pers js-filteritem"><a href="#speaker1" class="gall-item__link js-togglelink"><img src="img/speakers/sp5.jpg" alt="Speaker" class="gall-item__link-pic"></a>
             <figcaption class="gall-item__capt">
               <h3 class="gall-item__capt-title">Дарья Горницская</h3>
               <p class="gall-item__capt-descr">Віце-президент GlobalLogic. Керівник київського центру інжинірингу компанії</p>
             </figcaption>
           </figure>
-          <figure class="gall-item gall-item_pers all back-end"><a href="#sp1" class="gall-item__link"><img src="img/speakers/sp6.jpg" alt="Speaker" class="gall-item__link-pic"></a>
+          <figure data-cat="all back-end" class="gall-item gall-item_pers js-filteritem"><a href="#speaker1" class="gall-item__link js-togglelink"><img src="img/speakers/sp6.jpg" alt="Speaker" class="gall-item__link-pic"></a>
             <figcaption class="gall-item__capt">
               <h3 class="gall-item__capt-title">Андрей Яворский</h3>
               <p class="gall-item__capt-descr">розработчик комплексных back-end решений</p>
             </figcaption>
           </figure>
           <!-- ... and here comes other speakers-->
-          <figure class="gall-item gall-item_pers all front-end"><a href="#sp1" class="gall-item__link"><img src="img/speakers/sp1.jpg" alt="Speaker" class="gall-item__link-pic"></a>
+          <figure data-cat="all front-end" class="gall-item gall-item_pers js-filteritem"><a href="#speaker1" class="gall-item__link js-togglelink"><img src="img/speakers/sp1.jpg" alt="Speaker" class="gall-item__link-pic"></a>
             <figcaption class="gall-item__capt">
               <h3 class="gall-item__capt-title">Jean-Baptiste Guerrax</h3>
               <p class="gall-item__capt-descr">розработчик комплексных back-end решений</p>
             </figcaption>
           </figure>
-          <figure class="gall-item gall-item_pers all back-end"><a href="#sp1" class="gall-item__link"><img src="img/speakers/sp3.jpg" alt="Speaker" class="gall-item__link-pic"></a>
+          <figure data-cat="all back-end" class="gall-item gall-item_pers js-filteritem"><a href="#speaker1" class="gall-item__link js-togglelink"><img src="img/speakers/sp3.jpg" alt="Speaker" class="gall-item__link-pic"></a>
             <figcaption class="gall-item__capt">
               <h3 class="gall-item__capt-title">Юрий Миколишин</h3>
               <p class="gall-item__capt-descr">розработчик комплексных back-end решений</p>
             </figcaption>
           </figure>
-          <figure class="gall-item gall-item_pers all web-design front-end"><a href="#sp1" class="gall-item__link"><img src="img/speakers/sp2.jpg" alt="Speaker" class="gall-item__link-pic"></a>
+          <figure data-cat="all web-design front-end" class="gall-item gall-item_pers js-filteritem"><a href="#speaker1" class="gall-item__link js-togglelink"><img src="img/speakers/sp2.jpg" alt="Speaker" class="gall-item__link-pic"></a>
             <figcaption class="gall-item__capt">
               <h3 class="gall-item__capt-title">Юрий Артюх</h3>
               <p class="gall-item__capt-descr">розработчик комплексных back-end решений</p>
             </figcaption>
           </figure>
-          <figure class="gall-item gall-item_pers all qa"><a href="#sp1" class="gall-item__link"><img src="img/speakers/sp6.jpg" alt="Speaker" class="gall-item__link-pic"></a>
+          <figure data-cat="all qa" class="gall-item gall-item_pers js-filteritem"><a href="#speaker1" class="gall-item__link js-togglelink"><img src="img/speakers/sp6.jpg" alt="Speaker" class="gall-item__link-pic"></a>
             <figcaption class="gall-item__capt">
               <h3 class="gall-item__capt-title">Александр Майданюк</h3>
               <p class="gall-item__capt-descr">розработчик комплексных back-end решений</p>
             </figcaption>
           </figure>
-          <figure class="gall-item gall-item_pers all front-end"><a href="#sp1" class="gall-item__link"><img src="img/speakers/sp5.jpg" alt="Speaker" class="gall-item__link-pic"></a>
+          <figure data-cat="all front-end" class="gall-item gall-item_pers js-filteritem"><a href="#speaker1" class="gall-item__link js-togglelink"><img src="img/speakers/sp5.jpg" alt="Speaker" class="gall-item__link-pic"></a>
             <figcaption class="gall-item__capt">
               <h3 class="gall-item__capt-title">Дарья Горницская</h3>
               <p class="gall-item__capt-descr">Віце-президент GlobalLogic. Керівник київського центру інжинірингу компанії</p>
             </figcaption>
           </figure>
-          <figure class="gall-item gall-item_pers all qa web-design"><a href="#sp1" class="gall-item__link"><img src="img/speakers/sp4.jpg" alt="Speaker" class="gall-item__link-pic"></a>
+          <figure data-cat="all qa web-design" class="gall-item gall-item_pers js-filteritem"><a href="#speaker1" class="gall-item__link js-togglelink"><img src="img/speakers/sp4.jpg" alt="Speaker" class="gall-item__link-pic"></a>
             <figcaption class="gall-item__capt">
               <h3 class="gall-item__capt-title">Андрей Яворский</h3>
               <p class="gall-item__capt-descr">розработчик комплексных back-end решений</p>
             </figcaption>
           </figure>
-          <figure class="gall-item gall-item_pers all front-end"><a href="#sp1" class="gall-item__link"><img src="img/speakers/sp1.jpg" alt="Speaker" class="gall-item__link-pic"></a>
+          <figure data-cat="all front-end" class="gall-item gall-item_pers js-filteritem"><a href="#speaker1" class="gall-item__link js-togglelink"><img src="img/speakers/sp1.jpg" alt="Speaker" class="gall-item__link-pic"></a>
             <figcaption class="gall-item__capt">
               <h3 class="gall-item__capt-title">Jean-Baptiste Guerrax</h3>
               <p class="gall-item__capt-descr">розработчик комплексных back-end решений</p>
             </figcaption>
           </figure>
-          <figure class="gall-item gall-item_pers all back-end"><a href="#sp1" class="gall-item__link"><img src="img/speakers/sp3.jpg" alt="Speaker" class="gall-item__link-pic"></a>
+          <figure data-cat="all back-end" class="gall-item gall-item_pers js-filteritem"><a href="#speaker1" class="gall-item__link js-togglelink"><img src="img/speakers/sp3.jpg" alt="Speaker" class="gall-item__link-pic"></a>
             <figcaption class="gall-item__capt">
               <h3 class="gall-item__capt-title">Юрий Миколишин</h3>
               <p class="gall-item__capt-descr">розработчик комплексных back-end решений</p>
             </figcaption>
           </figure>
-          <figure class="gall-item gall-item_pers all web-design front-end"><a href="#sp1" class="gall-item__link"><img src="img/speakers/sp2.jpg" alt="Speaker" class="gall-item__link-pic"></a>
+          <figure data-cat="all web-design front-end" class="gall-item gall-item_pers js-filteritem"><a href="#speaker1" class="gall-item__link js-togglelink"><img src="img/speakers/sp2.jpg" alt="Speaker" class="gall-item__link-pic"></a>
             <figcaption class="gall-item__capt">
               <h3 class="gall-item__capt-title">Юрий Артюх</h3>
               <p class="gall-item__capt-descr">розработчик комплексных back-end решений</p>
             </figcaption>
           </figure>
-        </div><a href="#" class="btn-link btn-link_speak">Показать всех</a>
+        </div><a href="#" class="btn-link btn-link_speak js-showall">Показать всех</a>
       </div>
       <!-- And here comes popup windows-->
-      <section id="sp1" class="popup">
-        <div class="container"><a href="#" class="popup__close popup__close_dark iconfont iconfont_close">Close</a>
+      <section id="speaker1" class="popup js-togglepopup">
+        <div class="container"><a href="#" class="popup__close iconfont iconfont_close iconfont_close_popup js-toggleclose">Close</a>
           <div class="popup-content">
             <header class="popup__header">
               <h3 class="popup__title">Build tons of multi-device JavaScript applications, design patterns &amp; high performance UI</h3>
@@ -319,29 +339,29 @@
       </section>
     </section>
     <!-- Program section-->
-    <section id="program" class="screen screen_progr screen_bg">
+    <section id="program" class="screen screen_progr screen_bg_none js-toggle js-filter">
       <div class="container">
-        <aside class="screen__aside screen__aside_progr screen__aside_cor screen__aside_cor_light">
+        <aside class="screen__aside screen__aside_progr screen__aside_cor screen__aside_cor_light js-togglecorner">
           <h2 class="screen__title screen__title_progr">Программа</h2>
           <!-- Sidebar with screen navigation-->
           <nav class="cat cat_vert cat_vert_progr">
             <ul class="cat__list">
-              <li class="cat__item cat__item_vert"><a href="#all-events" class="cat__link cat__link_vert is-active"><span class="cat__time">
+              <li class="cat__item cat__item_vert"><a href="#all" class="cat__link cat__link_vert js-togglelink is-active"><span class="cat__time">
                     <time datetime="2015-04-12">12.04</time> -
                     <time datetime="2015-04-18"> 18.04</time></span> Вся программа</a></li>
-              <li class="cat__item cat__item_vert"><a href="#opening" class="cat__link cat__link_vert"><span class="cat__time">
+              <li class="cat__item cat__item_vert"><a href="#opening" class="cat__link cat__link_vert js-togglelink"><span class="cat__time">
                     <time datetime="2015-04-12">12.04 / вс</time></span> Opening</a></li>
-              <li class="cat__item cat__item_vert"><a href="#front-end-day" class="cat__link cat__link_vert"><span class="cat__time">
+              <li class="cat__item cat__item_vert"><a href="#front-end-day" class="cat__link cat__link_vert js-togglelink"><span class="cat__time">
                     <time datetime="2015-04-13">13.04 / пн</time></span> Front-end day</a></li>
-              <li class="cat__item cat__item_vert"><a href="#back-end-day" class="cat__link cat__link_vert"><span class="cat__time">
+              <li class="cat__item cat__item_vert"><a href="#back-end-day" class="cat__link cat__link_vert js-togglelink"><span class="cat__time">
                     <time datetime="2015-04-14">14.04 / вт</time></span> Back-end day</a></li>
-              <li class="cat__item cat__item_vert"><a href="#testers-day" class="cat__link cat__link_vert"><span class="cat__time">
+              <li class="cat__item cat__item_vert"><a href="#testers-day" class="cat__link cat__link_vert js-togglelink"><span class="cat__time">
                     <time datetime="2015-04-15">15.04 / ср</time></span> QA day</a></li>
-              <li class="cat__item cat__item_vert"><a href="#web-designers-day" class="cat__link cat__link_vert"><span class="cat__time">
+              <li class="cat__item cat__item_vert"><a href="#web-designers-day" class="cat__link cat__link_vert js-togglelink"><span class="cat__time">
                     <time datetime="2015-04-16"> 16.04 / чт</time></span> Web-design day</a></li>
-              <li class="cat__item cat__item_vert"><a href="#soft-skills-day" class="cat__link cat__link_vert"><span class="cat__time">
+              <li class="cat__item cat__item_vert"><a href="#soft-skills-day" class="cat__link cat__link_vert js-togglelink"><span class="cat__time">
                     <time datetime="2015-04-17">17.04 / пт</time></span> Soft skills</a></li>
-              <li class="cat__item cat__item_vert"><a href="#afterparty" class="cat__link cat__link_vert"><span class="cat__time">
+              <li class="cat__item cat__item_vert"><a href="#afterparty" class="cat__link cat__link_vert js-togglelink js-togglebg"><span class="cat__time">
                     <time datetime="2015-04-18">18.04 / сб</time></span> Afterparty</a></li>
             </ul>
           </nav>
@@ -351,19 +371,19 @@
         <div class="events-wrap">
           <div class="events-scroll">
             <!-- Opening events-->
-            <div id="opening" class="events-page">
+            <div id="opening" class="events-page js-toggletarget">
               <div class="event event_day">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-12">12.04</time></span><span class="event__info">Opening day</span></p>
-              </div><a href="#ev1" class="event">
+              </div><a href="#ev1" class="event js-togglelink">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-12 09:00">09:00</time>-
                     <time datetime="2015-04-12 10:00">10:00</time></span><span class="event__info">Александр Трегуб</span></p>
-                <h3 class="event__title">Что будет с индустрией через 5-10 лет</h3></a><a href="#ev1" class="event">
+                <h3 class="event__title">Что будет с индустрией через 5-10 лет</h3></a><a href="#ev1" class="event js-togglelink">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-12 10:00">10:00</time>-
                     <time datetime="2015-04-12 11:00">11:00</time></span><span class="event__info">Максим Сохацкий</span></p>
-                <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event">
+                <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event js-togglelink">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-12 12:00">12:00</time>-
                     <time datetime="2015-04-12 13:00">13:00</time></span><span class="event__info">Артем костенко</span></p>
@@ -372,30 +392,30 @@
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-12 13:00">13:00</time>-
                     <time datetime="2015-04-12 14:00">14:00</time></span><span class="event__info event__info_lunch">Обед</span></p>
-              </div><a href="#ev1" class="event">
+              </div><a href="#ev1" class="event js-togglelink">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-12 15:00">15:00</time>-
                     <time datetime="2015-04-12 16:00">16:00</time></span><span class="event__info">Максим Сохацкий</span></p>
                 <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a>
             </div>
             <!-- Front-end events-->
-            <div id="front-end-day" class="events-page">
+            <div id="front-end-day" class="events-page js-toggletarget">
               <div class="event event_day">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-13">13.04</time></span><span class="event__info">Front-end day</span></p>
-              </div><a href="#ev1" class="event">
+              </div><a href="#ev1" class="event js-togglelink">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-13 09:00">09:00</time>-
                     <time datetime="2015-04-13 10:00">10:00</time></span><span class="event__info">Александр Трегуб</span></p>
-                <h3 class="event__title">Что будет с индустрией через 5-10 лет</h3></a><a href="#ev1" class="event">
+                <h3 class="event__title">Что будет с индустрией через 5-10 лет</h3></a><a href="#ev1" class="event js-togglelink">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-13 10:00">10:00</time>-
                     <time datetime="2015-04-13 11:00">11:00</time></span><span class="event__info">Максим Сохацкий</span></p>
-                <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event">
+                <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event js-togglelink">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-13 11:00">11:00</time>-
                     <time datetime="2015-04-13 12:00">12:00</time></span><span class="event__info">Василий Маланка</span></p>
-                <h3 class="event__title">Влияние выхода платформы Magento 2.0 на мир E-commerce</h3></a><a href="#ev1" class="event">
+                <h3 class="event__title">Влияние выхода платформы Magento 2.0 на мир E-commerce</h3></a><a href="#ev1" class="event js-togglelink">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-13 12:00">12:00</time>-
                     <time datetime="2015-04-13 13:00">13:00</time></span><span class="event__info">Артем костенко</span></p>
@@ -404,34 +424,34 @@
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-13 13:00">13:00</time>-
                     <time datetime="2015-04-13 14:00">14:00</time></span><span class="event__info event__info_lunch">Обед</span></p>
-              </div><a href="#ev1" class="event">
+              </div><a href="#ev1" class="event js-togglelink">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-13 15:00">15:00</time>-
                     <time datetime="2015-04-13 16:00">16:00</time></span><span class="event__info">Максим Сохацкий</span></p>
-                <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event">
+                <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event js-togglelink">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-13 16:00">16:00</time>-
                     <time datetime="2015-04-13 17:00">17:00</time></span><span class="event__info">Василий Маланка</span></p>
-                <h3 class="event__title">Влияние выхода платформы Magento 2.0 на мир E-commerce</h3></a><a href="#ev1" class="event">
+                <h3 class="event__title">Влияние выхода платформы Magento 2.0 на мир E-commerce</h3></a><a href="#ev1" class="event js-togglelink">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-13 17:00">17:00</time>-
                     <time datetime="2015-04-13 18:00">18:00</time></span><span class="event__info">Артем костенко</span></p>
                 <h3 class="event__title">Место юзабилити в процессе разработки. Мечты и реалии</h3></a>
             </div>
             <!-- Back-end events-->
-            <div id="back-end-day" class="events-page">
+            <div id="back-end-day" class="events-page js-toggletarget">
               <div class="event event_day">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-14">14.04</time></span><span class="event__info">Back-end day</span></p>
-              </div><a href="#ev1" class="event">
+              </div><a href="#ev1" class="event js-togglelink">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-14 09:00">09:00</time>-
                     <time datetime="2015-04-14 10:00">10:00</time></span><span class="event__info">Александр Трегуб</span></p>
-                <h3 class="event__title">Что будет с индустрией через 5-10 лет</h3></a><a href="#ev1" class="event">
+                <h3 class="event__title">Что будет с индустрией через 5-10 лет</h3></a><a href="#ev1" class="event js-togglelink">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-14 10:00">10:00</time>-
                     <time datetime="2015-04-14 11:00">11:00</time></span><span class="event__info">Максим Сохацкий</span></p>
-                <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event">
+                <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event js-togglelink">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-14 11:00">11:00</time>-
                     <time datetime="2015-04-14 12:00">12:00</time></span><span class="event__info">Василий Маланка</span></p>
@@ -440,34 +460,34 @@
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-14 13:00">13:00</time>-
                     <time datetime="2015-04-14 14:00">14:00</time></span><span class="event__info event__info_lunch">Обед</span></p>
-              </div><a href="#ev1" class="event">
+              </div><a href="#ev1" class="event js-togglelink">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-14 14:00">14:00</time>-
                     <time datetime="2015-04-14 15:00">15:00</time></span><span class="event__info">Jean-Baptiste Guerraz &amp; Igor Uzlov</span></p>
-                <h3 class="event__title">Build tons of multi-device JavaScript applications, design patterns &amp; high performance UI</h3></a><a href="#ev1" class="event">
+                <h3 class="event__title">Build tons of multi-device JavaScript applications, design patterns &amp; high performance UI</h3></a><a href="#ev1" class="event js-togglelink">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-14 15:00">15:00</time>-
                     <time datetime="2015-04-14 16:00">16:00</time></span><span class="event__info">Максим Сохацкий</span></p>
-                <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event">
+                <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event js-togglelink">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-14 17:00">17:00</time>-
                     <time datetime="2015-04-14 18:00">18:00</time></span><span class="event__info">Артем костенко</span></p>
                 <h3 class="event__title">Место юзабилити в процессе разработки. Мечты и реалии</h3></a>
             </div>
             <!-- Testers events-->
-            <div id="testers-day" class="events-page">
+            <div id="testers-day" class="events-page js-toggletarget">
               <div class="event event_day">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-15">15.04</time></span><span class="event__info">Testers day</span></p>
-              </div><a href="#ev1" class="event">
+              </div><a href="#ev1" class="event js-togglelink">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-15 10:00">10:00</time>-
                     <time datetime="2015-04-15 11:00">11:00</time></span><span class="event__info">Максим Сохацкий</span></p>
-                <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event">
+                <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event js-togglelink">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-15 11:00">11:00</time>-
                     <time datetime="2015-04-15 12:00">12:00</time></span><span class="event__info">Василий Маланка</span></p>
-                <h3 class="event__title">Влияние выхода платформы Magento 2.0 на мир E-commerce</h3></a><a href="#ev1" class="event">
+                <h3 class="event__title">Влияние выхода платформы Magento 2.0 на мир E-commerce</h3></a><a href="#ev1" class="event js-togglelink">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-15 12:00">12:00</time>-
                     <time datetime="2015-04-15 13:00">13:00</time></span><span class="event__info">Артем костенко</span></p>
@@ -476,38 +496,38 @@
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-15 13:00">13:00</time>-
                     <time datetime="2015-04-15 14:00">14:00</time></span><span class="event__info event__info_lunch">Обед</span></p>
-              </div><a href="#ev1" class="event">
+              </div><a href="#ev1" class="event js-togglelink">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-15 14:00">14:00</time>-
                     <time datetime="2015-04-15 15:00">15:00</time></span><span class="event__info">Jean-Baptiste Guerraz &amp; Igor Uzlov</span></p>
-                <h3 class="event__title">Build tons of multi-device JavaScript applications, design patterns &amp; high performance UI</h3></a><a href="#ev1" class="event">
+                <h3 class="event__title">Build tons of multi-device JavaScript applications, design patterns &amp; high performance UI</h3></a><a href="#ev1" class="event js-togglelink">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-15 15:00">15:00</time>-
                     <time datetime="2015-04-15 16:00">16:00</time></span><span class="event__info">Максим Сохацкий</span></p>
-                <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event">
+                <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event js-togglelink">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-15 16:00">16:00</time>-
                     <time datetime="2015-04-15 17:00">17:00</time></span><span class="event__info">Василий Маланка</span></p>
                 <h3 class="event__title">Влияние выхода платформы Magento 2.0 на мир E-commerce</h3></a>
             </div>
             <!-- Web-design events-->
-            <div id="web-designers-day" class="events-page">
+            <div id="web-designers-day" class="events-page js-toggletarget">
               <div class="event event_day">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-16">16.04</time></span><span class="event__info">Web-design day</span></p>
-              </div><a href="#ev1" class="event">
+              </div><a href="#ev1" class="event js-togglelink">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-16 09:00">09:00</time>-
                     <time datetime="2015-04-16 10:00">10:00</time></span><span class="event__info">Александр Трегуб</span></p>
-                <h3 class="event__title">Что будет с индустрией через 5-10 лет</h3></a><a href="#ev1" class="event">
+                <h3 class="event__title">Что будет с индустрией через 5-10 лет</h3></a><a href="#ev1" class="event js-togglelink">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-16 10:00">10:00</time>-
                     <time datetime="2015-04-16 11:00">11:00</time></span><span class="event__info">Максим Сохацкий</span></p>
-                <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event">
+                <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event js-togglelink">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-16 11:00">11:00</time>-
                     <time datetime="2015-04-16 12:00">12:00</time></span><span class="event__info">Василий Маланка</span></p>
-                <h3 class="event__title">Влияние выхода платформы Magento 2.0 на мир E-commerce</h3></a><a href="#ev1" class="event">
+                <h3 class="event__title">Влияние выхода платформы Magento 2.0 на мир E-commerce</h3></a><a href="#ev1" class="event js-togglelink">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-16 12:00">12:00</time>-
                     <time datetime="2015-04-16 13:00">13:00</time></span><span class="event__info">Артем костенко</span></p>
@@ -516,42 +536,42 @@
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-16 13:00">13:00</time>-
                     <time datetime="2015-04-16 14:00">14:00</time></span><span class="event__info event__info_lunch">Обед</span></p>
-              </div><a href="#ev1" class="event">
+              </div><a href="#ev1" class="event js-togglelink">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-16 14:00">14:00</time>-
                     <time datetime="2015-04-16 15:00">15:00</time></span><span class="event__info">Jean-Baptiste Guerraz &amp; Igor Uzlov</span></p>
-                <h3 class="event__title">Build tons of multi-device JavaScript applications, design patterns &amp; high performance UI</h3></a><a href="#ev1" class="event">
+                <h3 class="event__title">Build tons of multi-device JavaScript applications, design patterns &amp; high performance UI</h3></a><a href="#ev1" class="event js-togglelink">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-16 15:00">15:00</time>-
                     <time datetime="2015-04-16 16:00">16:00</time></span><span class="event__info">Максим Сохацкий</span></p>
-                <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event">
+                <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event js-togglelink">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-16 16:00">16:00</time>-
                     <time datetime="2015-04-16 17:00">17:00</time></span><span class="event__info">Василий Маланка</span></p>
-                <h3 class="event__title">Влияние выхода платформы Magento 2.0 на мир E-commerce</h3></a><a href="#ev1" class="event">
+                <h3 class="event__title">Влияние выхода платформы Magento 2.0 на мир E-commerce</h3></a><a href="#ev1" class="event js-togglelink">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-16 17:00">17:00</time>-
                     <time datetime="2015-04-16 18:00">18:00</time></span><span class="event__info">Артем костенко</span></p>
                 <h3 class="event__title">Место юзабилити в процессе разработки. Мечты и реалии</h3></a>
             </div>
             <!-- Soft skills events-->
-            <div id="soft-skills-day" class="events-page">
+            <div id="soft-skills-day" class="events-page js-toggletarget">
               <div class="event event_day">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-17">17.04</time></span><span class="event__info">Soft skills day</span></p>
-              </div><a href="#ev1" class="event">
+              </div><a href="#ev1" class="event js-togglelink">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-17 09:00">09:00</time>-
                     <time datetime="2015-04-17 10:00">10:00</time></span><span class="event__info">Александр Трегуб</span></p>
-                <h3 class="event__title">Что будет с индустрией через 5-10 лет</h3></a><a href="#ev1" class="event">
+                <h3 class="event__title">Что будет с индустрией через 5-10 лет</h3></a><a href="#ev1" class="event js-togglelink">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-17 10:00">10:00</time>-
                     <time datetime="2015-04-17 11:00">11:00</time></span><span class="event__info">Максим Сохацкий</span></p>
-                <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event">
+                <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event js-togglelink">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-17 11:00">11:00</time>-
                     <time datetime="2015-04-17 12:00">12:00</time></span><span class="event__info">Василий Маланка</span></p>
-                <h3 class="event__title">Влияние выхода платформы Magento 2.0 на мир E-commerce</h3></a><a href="#ev1" class="event">
+                <h3 class="event__title">Влияние выхода платформы Magento 2.0 на мир E-commerce</h3></a><a href="#ev1" class="event js-togglelink">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-17 12:00">12:00</time>-
                     <time datetime="2015-04-17 13:00">13:00</time></span><span class="event__info">Артем костенко</span></p>
@@ -560,26 +580,26 @@
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-17 13:00">13:00</time>-
                     <time datetime="2015-04-17 14:00">14:00</time></span><span class="event__info event__info_lunch">Обед</span></p>
-              </div><a href="#ev1" class="event">
+              </div><a href="#ev1" class="event js-togglelink">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-17 14:00">14:00</time>-
                     <time datetime="2015-04-17 15:00">15:00</time></span><span class="event__info">Jean-Baptiste Guerraz &amp; Igor Uzlov</span></p>
-                <h3 class="event__title">Build tons of multi-device JavaScript applications, design patterns &amp; high performance UI</h3></a><a href="#ev1" class="event">
+                <h3 class="event__title">Build tons of multi-device JavaScript applications, design patterns &amp; high performance UI</h3></a><a href="#ev1" class="event js-togglelink">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-17 15:00">15:00</time>-
                     <time datetime="2015-04-17 16:00">16:00</time></span><span class="event__info">Максим Сохацкий</span></p>
-                <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event">
+                <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event js-togglelink">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-17 16:00">16:00</time>-
                     <time datetime="2015-04-17 17:00">17:00</time></span><span class="event__info">Василий Маланка</span></p>
-                <h3 class="event__title">Влияние выхода платформы Magento 2.0 на мир E-commerce</h3></a><a href="#ev1" class="event">
+                <h3 class="event__title">Влияние выхода платформы Magento 2.0 на мир E-commerce</h3></a><a href="#ev1" class="event js-togglelink">
                 <p class="event__meta"><span class="event__time">
                     <time datetime="2015-04-17 17:00">17:00</time>-
                     <time datetime="2015-04-17 18:00">18:00</time></span><span class="event__info">Артем костенко</span></p>
                 <h3 class="event__title">Место юзабилити в процессе разработки. Мечты и реалии</h3></a>
             </div>
             <!-- Afterparty-->
-            <div id="afterparty" class="afterparty icon icon_ev-aft">
+            <div id="afterparty" class="afterparty icon icon_ev-aft js-toggletarget">
               <p class="afterparty__text">Душевное автепати в конце недельной конференции.<br>Живая музыка, море напитков и угощений. Лёгкая атмосфера для общения и знакомств.</p>
               <p class="afterparty__text afterparty__text_note">Вечеринка будет закрытой: только участники и спикеры ІТ-Конференции.</p>
               <p class="afterparty__text">Стоимость:<span class="afterparty__price"> 300</span> грн.</p>
@@ -588,8 +608,8 @@
         </div>
       </div>
       <!-- And here comes popup windows-->
-      <section id="ev1" class="popup popup_light">
-        <div class="container"><a href="#" class="popup__close popup__close_dark iconfont iconfont_close">Close</a>
+      <section id="ev1" class="popup popup_light js-togglepopup">
+        <div class="container"><a href="#" class="popup__close iconfont iconfont_close iconfont_close_popup js-toggleclose">Close</a>
           <div class="popup-content">
             <header class="popup__header">
               <h3 class="popup__title">Build tons of multi-device JavaScript applications, design patterns &amp; high performance UI</h3>
@@ -622,6 +642,7 @@
     </section>
     <!-- Tickets section-->
     <div id="tickets" class="screen screen_ticket">
+      <!-- Ticket item-->
       <section class="ticket ticket_light">
         <header class="ticket__header icon icon_light-tc">
           <h2 class="ticket__title">Light</h2>
@@ -637,6 +658,7 @@
           <p class="ticket__cost"><span class="ticket__cost-extra"><span class="ticket__cost-val">450</span> грн</span> / с 01.03 -<span class="ticket__cost-val">550</span> грн</p><a href="#" class="btn-link btn-link_ticket">Купить билет</a>
         </footer>
       </section>
+      <!-- Ticket item-->
       <section class="ticket ticket_gold">
         <header class="ticket__header icon icon_gold-tc">
           <h2 class="ticket__title">Gold</h2>
@@ -653,6 +675,7 @@
           <p class="ticket__cost ticket__cost_gold"><span class="ticket__cost-extra"><span class="ticket__cost-val">650</span> грн</span> / с 01.03 -<span class="ticket__cost-val">750</span> грн</p><a href="#" class="btn-link btn-link_ticket">Купить билет</a>
         </footer>
       </section>
+      <!-- Ticket item-->
       <section class="ticket ticket_prem">
         <header class="ticket__header icon icon_prem-tc">
           <h2 class="ticket__title ticket__title_prem">Premium</h2>
@@ -720,15 +743,14 @@
         </div>
       </div>
       <!-- And here comes target popup windows-->
-      <section id="vid1" class="popup js-toggletarget">
-        <div class="container"><a href="#" class="popup__close popup__close_dark iconfont iconfont_close js-toggleclose">Close</a>
+      <section id="vid1" class="popup js-togglepopup">
+        <div class="container"><a href="#" class="popup__close iconfont iconfont_close iconfont_close_popup js-toggleclose">Close</a>
           <div class="popup-content">
             <header class="popup__header">
               <h3 class="popup__title">Build tons of multi-device JavaScript applications, design patterns &amp; high performance UI</h3>
             </header>
             <div class="popup__info">
               <div class="popup__video">
-                <iframe width="800" height="400" src="//www.youtube.com/embed/kPDnw3_1GOI?html5=1" frameborder="0" allowfullscreen></iframe>
               </div>
             </div>
             <footer class="popup__footer">
@@ -762,9 +784,11 @@
       </div>
     </section>
     <!-- Footer-->
+    <!-- Main footer-->
     <footer class="main-footer">
       <div class="container">
         <p class="copyright">Организатор<a href="#" class="copyright__link"><img src="img/uwc.png" alt="uwc logo" class="copyright__img"></a> &copy; 2015</p>
+        <!-- Social buttons-->
         <ul class="social social_footer">
           <li class="social__item"><a href="#" class="social__item-link iconfont iconfont_fb">Facebook</a></li>
           <li class="social__item"><a href="#" class="social__item-link iconfont iconfont_vk">Вконтакте</a></li>

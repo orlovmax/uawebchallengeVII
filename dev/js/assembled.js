@@ -86,6 +86,114 @@
 })( jQuery, window, document );
 
 /*
+ * filter script to 'mix' items
+*/
+
+;(function ( $, window, document, undefined ) {
+    var defaults = {
+        item: "js-filteritem",
+        itemHidden: "is-hidden",
+        filterLink: "js-filterlink",
+        filterSelected: "is-active"
+    };
+
+    function MixFilter( element, options ) {
+        this.options = $.extend( {}, defaults, options) ;
+        this.element = element;
+        this.init();
+    }
+
+    MixFilter.prototype.init = function () {
+        var $this = $(this.element),
+            $item = $this.find("." + this.options.item),
+            $itemHidden = $("." + this.options.itemHidden),
+            $filterLink = $this.find("." + this.options.filterLink),
+            $filterSelected = $("." + this.options.filterSelected);
+
+        $filterLink.on('click', $.proxy(function(e){
+        	e.preventDefault();
+			var $target = $($(e.target));
+
+	        if (!$target.hasClass(this.options.filterSelected)) {
+				$filterLink.removeClass(this.options.filterSelected);
+				$target.addClass(this.options.filterSelected);
+	        	var filterVal = $target.data("filter").toLowerCase();
+
+	        	$item.each(function () {
+					var itemVal = $(this).data("cat").toLowerCase();
+					if (!$(this).is("[data-cat*=" + filterVal + "]")) {
+						$(this).hide();
+					} else {
+						$(this).show();
+					}
+				});
+	        }
+        	return false;
+        }, this));
+    };
+
+    $.fn.mixFilter = function ( options ) {
+        return this.each(function () {
+            new MixFilter( this, options );
+        });
+    };
+
+})( jQuery, window, document );
+
+$(".js-portfolio").mixFilter();
+
+/*
+ * Gall custom script
+*/
+
+;(function ( $, window, document, undefined ) {
+	var defaults = {
+		toggleLink: 'js-showall',
+		toggleList: 'js-galllist',
+		gallControls: 'js-controls',
+		openList: 'is-open'
+	};
+
+	function GallJs( element, options ) {
+		this.options = $.extend( {}, defaults, options) ;
+		this.element = element;
+		this.init();
+	}
+
+	GallJs.prototype.init = function () {
+		var $this = $(this.element),
+			$toggleLink = $this.find('.' + this.options.toggleLink),
+			$toggleList = $this.find('.' + this.options.toggleList),
+			$gallControls = $this.find('.' + this.options.gallControls);
+
+
+		$toggleLink.on('click', $.proxy(function(e){
+			e.preventDefault();
+			var $link = $($(e.target));
+
+			if(!$this.hasClass(this.options.openList)){
+				$link.text('Свернуть');
+				$toggleList.add($this).addClass(this.options.openList);
+				$gallControls.hide();
+			} else {
+				$link.text('Показать всех');
+				$toggleList.add($this).removeClass(this.options.openList);
+				$gallControls.show();
+
+			}
+
+		}, this));
+	};
+
+	$.fn.gallJs = function ( options ) {
+		return this.each(function () {
+			new GallJs( this, options );
+		});
+	};
+
+})( jQuery, window, document );
+
+/*
  * navigation script: sticky nav, anchor smooth scrolling, selecting current nav item
 */
 
@@ -95,7 +203,10 @@
 	    navLink: 'js-link',
 	    navOpen: 'js-navopen',
 	    navClose: 'js-navclose',
-	    openNav: 'is-visible',
+	    topnav: 'js-topnav',
+	    topnavBtn: 'js-topnavbtn',
+	    topnavBg: 'is-bg',
+	    visible: 'is-visible',
 	    activeLink: 'is-active',
 	    state: 'closed'
 	};
@@ -112,6 +223,8 @@
 	    	$navLink = $this.find('.' + this.options.navLink),
 	    	$navOpen = $('.' + this.options.navOpen),
 	    	$navClose = $('.' + this.options.navClose),
+	    	$topnav = $('.' + this.options.topnav),
+	    	$topnavBtn = $('.' + this.options.topnavBtn),
 	    	cond = this.options.state,
 			aArray = [],
 			i;
@@ -119,21 +232,21 @@
 		// Looking for condition from settings, if it closed - add appropriate classes
 		// to icon, menu and container
 		if (! cond || cond == "closed"){
-			$this.removeClass(this.options.openNav);
+			$this.removeClass(this.options.visible);
 		} else{
-		    $this.addClass(this.options.openNav);
+		    $this.addClass(this.options.visible);
 		}
 
 		// Open main menu
 		$navOpen.on('click', $.proxy(function(e){
 		     e.preventDefault();
-		     $this.addClass(this.options.openNav);
+		     $this.addClass(this.options.visible);
 		}, this));
 
 		// Close main menu
 		$navClose.on('click', $.proxy(function(e){
 		     e.preventDefault();
-		     $this.removeClass(this.options.openNav);
+		     $this.removeClass(this.options.visible);
 		}, this));
 
 		// Smooth anchor scroll, targeted to our nav anchors
@@ -165,7 +278,8 @@
 			var windowPos = $(window).scrollTop(), // get the offset of the window from the top of page
 				windowHeight = $(window).height(), // get the height of the window
 				docHeight = $(document).height(),
-				$firstSection = $("section").eq(0);
+				$firstSection = $(".screen").eq(0);
+
 			for (i = 0; i < aArray.length; i += 1) {
 				var theID = aArray[i],
 				sectPos = $(theID).offset().top, // get the offset of the div from the top of page + except nav height
@@ -177,7 +291,8 @@
 					$navLink.filter("[href='" + theID + "']").removeClass(this.options.activeLink);
 				}
 			}
-		//highlight last nav list item on last section
+
+			//highlight last nav list item on last section
 			if (windowPos + windowHeight === docHeight) {
 				if (!$this.find("li").filter(":last-child").find($navLink).hasClass(this.options.activeLink)) {
 					$navLink.filter("." + this.options.activeLink).removeClass(this.options.activeLink);
@@ -185,12 +300,21 @@
 				}
 			}
 
-		//highlight first nav item when first section has some top offset
-		if (windowPos < $firstSection.offset().top) {
+			//highlight first nav item when first section has some top offset
+			if (windowPos < $firstSection.offset().top) {
 				if (!$this.find("li").filter(":first-child").find($navLink).hasClass(this.options.activeLink)) {
 					$navLink.filter("." + this.options.activeLink).removeClass(this.options.activeLink);
 					$this.find("li").filter(":first-child").find($navLink).addClass(this.options.activeLink);
 				}
+			}
+
+			// Show topnav button
+			if (windowPos > windowHeight) {
+				$topnav.addClass(this.options.topnavBg);
+				$topnavBtn.addClass(this.options.visible);
+			} else {
+				$topnav.removeClass(this.options.topnavBg);
+				$topnavBtn.removeClass(this.options.visible);
 			}
 		}, this));
 	};
@@ -202,7 +326,6 @@
 	};
 
 })( jQuery, window, document );
-
 
 function removeClass (index, classNames) {
 	var current_classes = classNames.split(" "), // change the list into an array
@@ -219,14 +342,16 @@ function removeClass (index, classNames) {
 }
 
 /*
- * toggle toggler
+ * toggle content and popups
 */
 
 ;(function ( $, window, document, undefined ) {
 	var defaults = {
 		toggleLink: 'js-togglelink',
 		toggleBg: 'js-togglebg',
+		toggleCorner: 'js-togglecorner',
 		toggleTarget: 'js-toggletarget',
+		togglePopup: 'js-togglepopup',
 		toggleClose: 'js-toggleclose',
 		activeContent: 'is-visible',
 		activeLink: 'is-active'
@@ -242,36 +367,76 @@ function removeClass (index, classNames) {
 		var $this = $(this.element),
 			$toggleLink = $this.find('.' + this.options.toggleLink),
 			$toggleTarget = $this.find('.' + this.options.toggleTarget),
-			$toggleClose = $this.find('.' + this.options.toggleClose)
+			$togglePopup = $this.find('.' + this.options.togglePopup),
+			$toggleClose = $this.find('.' + this.options.toggleClose),
+			$toggleCorner = $this.find('.' + this.options.toggleCorner);
 
 
 		$toggleLink.on('click', $.proxy(function(e){
 			e.preventDefault();
-			var $current = $(e.target),
-				$target = $($current.attr('href')),
-				bgName = e.target.hash.slice(1);
 
-			// Disable actions with selected item
-			if (!$current.hasClass(this.options.activeLink)) {
-				// Hide all targets and remove highlight from links
-				$toggleLink.removeClass(this.options.activeLink);
-				$toggleTarget.fadeOut().removeClass(this.options.activeContent);
+			var catchLink = e.target;
 
-				// Show targets and highlight active link
-				$current.addClass(this.options.activeLink);
-				$target.fadeIn();
+			// Deal with images inside links... catch the link!
+			while (catchLink && catchLink.nodeName !== 'A') {
+			    catchLink = catchLink.parentNode;
+			}
+			if (catchLink) {
+				var $current = $(catchLink),
+					targetCheck = $current.attr('href'),
+					$target = $($current.attr('href'));
 
-				// Change background
-				if($current.hasClass(this.options.toggleBg)) {
-					$this.removeClass(removeClass)
-					$this.addClass('screen_bg_' + bgName)
+				// Disable actions with selected item
+				if (!$current.hasClass(this.options.activeLink)) {
+
+					// Check for target page
+					if(targetCheck !== '#all') {
+
+						// Hide all targets and remove highlight from links
+						$toggleLink.removeClass(this.options.activeLink);
+
+						// Check what we want to toggle: page or popup
+						if($target.hasClass(this.options.toggleTarget)) {
+							$toggleTarget.fadeOut().removeClass(this.options.activeContent);
+
+							// Change background
+							if($current.hasClass(this.options.toggleBg)) {
+								var bgName = catchLink.hash.slice(1)
+								$this.removeClass(removeClass)
+								$this.addClass('screen_bg_' + bgName)
+								// Add corner
+								if($toggleCorner) {
+									$toggleCorner.addClass('is-corner');
+								}
+							} else {
+								$this.removeClass(removeClass)
+								$this.addClass('screen_bg_none')
+								// Remove corner
+								if($toggleCorner) {
+									$toggleCorner.removeClass('is-corner');
+								}
+							}
+						} else {
+							$togglePopup.fadeOut().removeClass(this.options.activeContent);
+						}
+
+						// Show targets and highlight active link
+						$current.addClass(this.options.activeLink);
+						$target.fadeIn().addClass(this.options.activeContent);
+					} else {
+						// Show all
+						$current.addClass(this.options.activeLink);
+						$toggleLink.removeClass(this.options.activeLink);
+						$toggleTarget.fadeIn().removeClass(this.options.activeContent);
+
+					}
 				}
 			}
 		}, this));
 
 		$toggleClose.on('click', $.proxy(function(e){
 			e.preventDefault();
-			$toggleTarget.fadeOut().removeClass(this.options.activeContent);
+			$togglePopup.fadeOut().removeClass(this.options.activeContent);
 		}, this));
 	};
 
@@ -285,37 +450,25 @@ function removeClass (index, classNames) {
 
 $(function() {
 
-	/* jQuery navKit plugin init and settings
-	*
-	* navAnchor: "js-anchor"	anchor class name link for smooth scrolling
-	* navLink: "js-link"		link class name for hightlight on current section
-	* navOpen: "js-navopen"	    icon class name for toggling navbar
-	* navClose: "js-navclose"	icon class name for toggling navbar
-	* openNav: 'is-visible',    class name for visible menu
-	* activeLink: "is-active"	class name of active and highlighted link
-	* state: "closed"			default state of navbar
-	 */
+	/* jQuery navKit plugin init and settings */
 	$('.js-nav').navKit({
 		state: 'closed'
 	});
 
-	/* jQuery anchorScroll plugin init and settings
-	*
-	* navAnchor: "js-anchor"	anchor class name link for smooth scrolling
-	* navLink: "js-link"		link class name for hightlight on current section
-	* activeLink: "is-active"	class name of active and highlighted link
-	 */
+	/* jQuery anchorScroll plugin init and settings */
 	$('.js-switchers').anchorScroll({
 		state: 'closed'
 	});
 
-	/* jQuery tabToggle plugin init and settings
-	*
-	* toggleLink: "js-togglelink"      class name of tab menu item
-	* toggleTarget: "js-toggletarget"  target page
-	* activeTab: "is-visible"    helper class to show target page
-	* activeLink: "is-active"    helper class to highlight tab link
+	/* jQuery toggleContent plugin init and settings */
+	$('.js-toggle').each(function() {
+		$(this).toggleContent();
+	});
 
-	 */
-	$('.js-toggle').toggleContent();
+	/* jQuery gallery plugin init and settings */
+	$('.js-gall').gallJs();
+
+	/* jQuery filter plugin init and settings */
+	$(".js-filter").mixFilter();
+
 });

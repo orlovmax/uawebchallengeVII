@@ -1,4 +1,4 @@
-section#speakers.screen.screen_speak
+section#speakers.screen.screen_speak.js-toggle.js-gall.js-filter
 	.container
 		h2.screen__title.screen__title_speak Спикеры
 
@@ -6,140 +6,140 @@ section#speakers.screen.screen_speak
 		nav.cat.cat_hor
 			ul.cat__list.cat__list_hor_speak
 				li.cat__item.cat__item_hor.cat__item_hor_speak
-					a.cat__link.cat__link_hor.cat__link_hor_speak.is-active(href='#') Все спикеры
+					a.cat__link.cat__link_hor.cat__link_hor_speak.js-filterlink.is-active(href='#' data-filter='all') Все спикеры
 				li.cat__item.cat__item_hor.cat__item_hor_speak
-					a.cat__link.cat__link_hor.cat__link_hor_speak(href='#') Front-end
+					a.cat__link.cat__link_hor.cat__link_hor_speak.js-filterlink(href='#' data-filter='front-end') Front-end
 				li.cat__item.cat__item_hor.cat__item_hor_speak
-					a.cat__link.cat__link_hor.cat__link_hor_speak(href='#') Back-end
+					a.cat__link.cat__link_hor.cat__link_hor_speak.js-filterlink(href='#' data-filter='back-end') Back-end
 				li.cat__item.cat__item_hor.cat__item_hor_speak
-					a.cat__link.cat__link_hor.cat__link_hor_speak(href='#') QA
+					a.cat__link.cat__link_hor.cat__link_hor_speak.js-filterlink(href='#' data-filter='qa') QA
 				li.cat__item.cat__item_hor.cat__item_hor_speak
-					a.cat__link.cat__link_hor.cat__link_hor_speak(href='#') Web-design
+					a.cat__link.cat__link_hor.cat__link_hor_speak.js-filterlink(href='#' data-filter='web-design') Web-design
 
-				li.cat__item.cat__item_hor.cat__item_contr
+				li.cat__item.cat__item_hor.cat__item_contr.js-controls
 					p.cat__item-counter
-						span.js-sp-current -
+						span -
 						| /
-						span.js-sp-total -
-					a.cat__item-btn.iconfont.iconfont_prev.iconfont_ctrl_prev(href='#') Назад
-					a.cat__item-btn.iconfont.iconfont_next.iconfont_ctrl_next(href='#') Вперед
+						span -
+					a.cat__item-btn.iconfont.iconfont_prev.iconfont_ctrl_prev() Назад
+					a.cat__item-btn.iconfont.iconfont_next.iconfont_ctrl_next() Вперед
 
 		// Spoiler-styled speakers list
-		.gall.gall_speak
+		.gall.gall_speak.js-galllist
 			// ok, that's first 6 visible persons...
-			figure.gall-item.gall-item_pers(class='all back-end')
-				a.gall-item__link(href='#sp1')
+			figure.gall-item.gall-item_pers.js-filteritem(data-cat='all back-end')
+				a.gall-item__link.js-togglelink(href='#speaker1')
 					img.gall-item__link-pic(src='img/speakers/sp1.jpg', alt='Speaker')
 				figcaption.gall-item__capt
 					h3.gall-item__capt-title Jean-Baptiste Guerrax
 					p.gall-item__capt-descr розработчик комплексных back-end решений
 
-			figure.gall-item.gall-item_pers(class='all back-end')
-				a.gall-item__link(href='#sp1')
+			figure.gall-item.gall-item_pers.js-filteritem(data-cat='all back-end')
+				a.gall-item__link.js-togglelink(href='#speaker1')
 					img.gall-item__link-pic(src='img/speakers/sp2.jpg', alt='Speaker')
 				figcaption.gall-item__capt
 					h3.gall-item__capt-title Юрий Миколишин
 					p.gall-item__capt-descr розработчик комплексных back-end решений
 
-			figure.gall-item.gall-item_pers(class='all back-end')
-				a.gall-item__link(href='#sp1')
+			figure.gall-item.gall-item_pers.js-filteritem(data-cat='all back-end')
+				a.gall-item__link.js-togglelink(href='#speaker1')
 					img.gall-item__link-pic(src='img/speakers/sp3.jpg', alt='Speaker')
 				figcaption.gall-item__capt
 					h3.gall-item__capt-title Юрий Артюх
 					p.gall-item__capt-descr розработчик комплексных back-end решений
 
-			figure.gall-item.gall-item_pers(class='all back-end')
-				a.gall-item__link(href='#sp1')
+			figure.gall-item.gall-item_pers.js-filteritem(data-cat='all back-end')
+				a.gall-item__link.js-togglelink(href='#speaker1')
 					img.gall-item__link-pic(src='img/speakers/sp4.jpg', alt='Speaker')
 				figcaption.gall-item__capt
 					h3.gall-item__capt-title Александр Майданюк
 					p.gall-item__capt-descr розработчик комплексных back-end решений
 
-			figure.gall-item.gall-item_pers(class='all')
-				a.gall-item__link(href='#sp1')
+			figure.gall-item.gall-item_pers.js-filteritem(data-cat='all qa')
+				a.gall-item__link.js-togglelink(href='#speaker1')
 					img.gall-item__link-pic(src='img/speakers/sp5.jpg', alt='Speaker')
 				figcaption.gall-item__capt
 					h3.gall-item__capt-title Дарья Горницская
 					p.gall-item__capt-descr Віце-президент GlobalLogic. Керівник київського центру інжинірингу компанії
 
-			figure.gall-item.gall-item_pers(class='all back-end')
-				a.gall-item__link(href='#sp1')
+			figure.gall-item.gall-item_pers.js-filteritem(data-cat='all back-end')
+				a.gall-item__link.js-togglelink(href='#speaker1')
 					img.gall-item__link-pic(src='img/speakers/sp6.jpg', alt='Speaker')
 				figcaption.gall-item__capt
 					h3.gall-item__capt-title Андрей Яворский
 					p.gall-item__capt-descr розработчик комплексных back-end решений
 
 			// ... and here comes other speakers
-			figure.gall-item.gall-item_pers(class='all front-end')
-				a.gall-item__link(href='#sp1')
+			figure.gall-item.gall-item_pers.js-filteritem(data-cat='all front-end')
+				a.gall-item__link.js-togglelink(href='#speaker1')
 					img.gall-item__link-pic(src='img/speakers/sp1.jpg', alt='Speaker')
 				figcaption.gall-item__capt
 					h3.gall-item__capt-title Jean-Baptiste Guerrax
 					p.gall-item__capt-descr розработчик комплексных back-end решений
 
-			figure.gall-item.gall-item_pers(class='all back-end')
-				a.gall-item__link(href='#sp1')
+			figure.gall-item.gall-item_pers.js-filteritem(data-cat='all back-end')
+				a.gall-item__link.js-togglelink(href='#speaker1')
 					img.gall-item__link-pic(src='img/speakers/sp3.jpg', alt='Speaker')
 				figcaption.gall-item__capt
 					h3.gall-item__capt-title Юрий Миколишин
 					p.gall-item__capt-descr розработчик комплексных back-end решений
 
-			figure.gall-item.gall-item_pers(class='all web-design front-end')
-				a.gall-item__link(href='#sp1')
+			figure.gall-item.gall-item_pers.js-filteritem(data-cat='all web-design front-end')
+				a.gall-item__link.js-togglelink(href='#speaker1')
 					img.gall-item__link-pic(src='img/speakers/sp2.jpg', alt='Speaker')
 				figcaption.gall-item__capt
 					h3.gall-item__capt-title Юрий Артюх
 					p.gall-item__capt-descr розработчик комплексных back-end решений
 
-			figure.gall-item.gall-item_pers(class='all qa')
-				a.gall-item__link(href='#sp1')
+			figure.gall-item.gall-item_pers.js-filteritem(data-cat='all qa')
+				a.gall-item__link.js-togglelink(href='#speaker1')
 					img.gall-item__link-pic(src='img/speakers/sp6.jpg', alt='Speaker')
 				figcaption.gall-item__capt
 					h3.gall-item__capt-title Александр Майданюк
 					p.gall-item__capt-descr розработчик комплексных back-end решений
 
-			figure.gall-item.gall-item_pers(class='all front-end')
-				a.gall-item__link(href='#sp1')
+			figure.gall-item.gall-item_pers.js-filteritem(data-cat='all front-end')
+				a.gall-item__link.js-togglelink(href='#speaker1')
 					img.gall-item__link-pic(src='img/speakers/sp5.jpg', alt='Speaker')
 				figcaption.gall-item__capt
 					h3.gall-item__capt-title Дарья Горницская
 					p.gall-item__capt-descr Віце-президент GlobalLogic. Керівник київського центру інжинірингу компанії
 
-			figure.gall-item.gall-item_pers(class='all qa web-design')
-				a.gall-item__link(href='#sp1')
+			figure.gall-item.gall-item_pers.js-filteritem(data-cat='all qa web-design')
+				a.gall-item__link.js-togglelink(href='#speaker1')
 					img.gall-item__link-pic(src='img/speakers/sp4.jpg', alt='Speaker')
 				figcaption.gall-item__capt
 					h3.gall-item__capt-title Андрей Яворский
 					p.gall-item__capt-descr розработчик комплексных back-end решений
 
-			figure.gall-item.gall-item_pers(class='all front-end')
-				a.gall-item__link(href='#sp1')
+			figure.gall-item.gall-item_pers.js-filteritem(data-cat='all front-end')
+				a.gall-item__link.js-togglelink(href='#speaker1')
 					img.gall-item__link-pic(src='img/speakers/sp1.jpg', alt='Speaker')
 				figcaption.gall-item__capt
 					h3.gall-item__capt-title Jean-Baptiste Guerrax
 					p.gall-item__capt-descr розработчик комплексных back-end решений
 
-			figure.gall-item.gall-item_pers(class='all back-end')
-				a.gall-item__link(href='#sp1')
+			figure.gall-item.gall-item_pers.js-filteritem(data-cat='all back-end')
+				a.gall-item__link.js-togglelink(href='#speaker1')
 					img.gall-item__link-pic(src='img/speakers/sp3.jpg', alt='Speaker')
 				figcaption.gall-item__capt
 					h3.gall-item__capt-title Юрий Миколишин
 					p.gall-item__capt-descr розработчик комплексных back-end решений
 
-			figure.gall-item.gall-item_pers(class='all web-design front-end')
-				a.gall-item__link(href='#sp1')
+			figure.gall-item.gall-item_pers.js-filteritem(data-cat='all web-design front-end')
+				a.gall-item__link.js-togglelink(href='#speaker1')
 					img.gall-item__link-pic(src='img/speakers/sp2.jpg', alt='Speaker')
 				figcaption.gall-item__capt
 					h3.gall-item__capt-title Юрий Артюх
 					p.gall-item__capt-descr розработчик комплексных back-end решений
 
-		a.btn-link.btn-link_speak(href='#') Показать всех
+		a.btn-link.btn-link_speak.js-showall(href='#') Показать всех
 
 
 	// And here comes popup windows
-	section#sp1.popup
+	section#speaker1.popup.js-togglepopup
 		.container
-			a.popup__close.popup__close_dark.iconfont.iconfont_close(href='#') Close
+			a.popup__close.iconfont.iconfont_close.iconfont_close_popup.js-toggleclose(href='#') Close
 			.popup-content
 				header.popup__header
 					h3.popup__title Build tons of multi-device JavaScript applications, design patterns &amp; high performance UI

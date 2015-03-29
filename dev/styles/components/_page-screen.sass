@@ -40,9 +40,6 @@
 	&_bg_home
 		background-image: url("../img/bg/home-bg.jpg")
 
-		// @media screen and(max-height: 480px), screen and(max-width: 960px)
-		// 	background-image: none
-
 	&_bg_general
 		background-image: url("../img/bg/about-bg1.jpg")
 
@@ -61,7 +58,7 @@
 	&_bg_startupers
 		background-image: url("../img/bg/about-bg6.jpg")
 
-	&_bg_aft
+	&_bg_afterparty
 		background-image: url("../img/bg/after-bg.jpg")
 
 // Common screen title
@@ -78,19 +75,22 @@
 		margin-bottom: 90px
 		float: left
 		+gs-col-12
-		@media screen and(max-width: 960px)
-			text-align: center
 		@media screen and(max-height: 640px), screen and (max-width: 960px)
+			text-align: center
+			font-size: 40px
 			margin-top: 60px
 			margin-bottom: 40px
 		@media screen and(max-height: 480px), screen and (max-width: 800px)
-			font-size: 40px
 			margin-top: 35px
 			margin-bottom: 20px
 
 	&_about
 		margin-top: 70px
 		margin-bottom: 30px
+		@media screen and(max-height: 640px), screen and (max-width: 960px)
+			font-size: 40px
+			margin-top: 40px
+			margin-bottom: 20px
 
 	&_speak
 		margin-top: 75px
@@ -98,25 +98,36 @@
 		float: left
 		color: $c-light
 		+gs-col-12
-		@media screen and(max-width: 960px)
+		@media screen and(max-height: 640px), screen and (max-width: 960px)
 			text-align: center
+			font-size: 40px
+			margin-top: 40px
+			margin-bottom: 30px
 
 	&_progr
 		margin-top: 35px
 		margin-bottom: 20px
+		@media screen and(max-height: 640px), screen and (max-width: 960px)
+			font-size: 40px
 
 	&_vid
 		margin-top: 55px
 		margin-bottom: 70px
 		color: $c-light
-		@media screen and(max-width: 960px)
+		@media screen and(max-height: 640px), screen and (max-width: 960px)
 			text-align: center
+			font-size: 40px
+			margin-top: 30px
+			margin-bottom: 20px
 
 	&_partn
 		margin-top: 60px
 		margin-bottom: 35px
-		@media screen and(max-width: 960px)
+		@media screen and(max-height: 640px), screen and (max-width: 960px)
 			text-align: center
+			font-size: 40px
+			margin-top: 30px
+			margin-bottom: 20px
 
 // Screen aside
 .screen__aside
@@ -152,7 +163,7 @@
 			background-repeat: no-repeat
 			+bg-size(100% 100%)
 			@media screen and(max-height: 640px), screen and(max-width: 960px)
-				display: none
+				display: none !important
 
 		&_light:after
 			background-image: url('../img/crl.png')
@@ -171,7 +182,7 @@
 		background-color: $c-accent
 		+gs-col-3()
 		@media screen and(max-height: 480px), screen and(max-width: 960px)
-			+gs-col-6()
+			+gs-col-4()
 
 		&:before
 			background-color: $c-accent

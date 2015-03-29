@@ -34,16 +34,24 @@
 		position: relative
 		margin-top: 50px
 		margin-bottom: 35px
+		@media screen and(max-height: 640px), screen and (max-width: 960px)
+			margin-top: 30px
+			margin-bottom: 20px
 
 	&__title
 		font-family: $f-boldi
 		font-size: 36px
+		@media screen and(max-height: 640px), screen and (max-width: 960px)
+			font-size: 25px
 
 	&__info
 		position: relative
 		padding-top: 35px
 		padding-bottom: 40px
 		border-bottom: 1px solid $c-popup_divider_dark
+		@media screen and(max-height: 640px), screen and (max-width: 960px)
+			padding-top: 20px
+			margin-bottom: 25px
 		&:before
 			content: ''
 			position: absolute
@@ -105,6 +113,7 @@
 
 	&__social
 		float: right
+		margin-top: 10px
 
 	&_light
 		color: $c-dark

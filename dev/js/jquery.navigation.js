@@ -8,7 +8,10 @@
 	    navLink: 'js-link',
 	    navOpen: 'js-navopen',
 	    navClose: 'js-navclose',
-	    openNav: 'is-visible',
+	    topnav: 'js-topnav',
+	    topnavBtn: 'js-topnavbtn',
+	    topnavBg: 'is-bg',
+	    visible: 'is-visible',
 	    activeLink: 'is-active',
 	    state: 'closed'
 	};
@@ -25,6 +28,8 @@
 	    	$navLink = $this.find('.' + this.options.navLink),
 	    	$navOpen = $('.' + this.options.navOpen),
 	    	$navClose = $('.' + this.options.navClose),
+	    	$topnav = $('.' + this.options.topnav),
+	    	$topnavBtn = $('.' + this.options.topnavBtn),
 	    	cond = this.options.state,
 			aArray = [],
 			i;
@@ -32,21 +37,21 @@
 		// Looking for condition from settings, if it closed - add appropriate classes
 		// to icon, menu and container
 		if (! cond || cond == "closed"){
-			$this.removeClass(this.options.openNav);
+			$this.removeClass(this.options.visible);
 		} else{
-		    $this.addClass(this.options.openNav);
+		    $this.addClass(this.options.visible);
 		}
 
 		// Open main menu
 		$navOpen.on('click', $.proxy(function(e){
 		     e.preventDefault();
-		     $this.addClass(this.options.openNav);
+		     $this.addClass(this.options.visible);
 		}, this));
 
 		// Close main menu
 		$navClose.on('click', $.proxy(function(e){
 		     e.preventDefault();
-		     $this.removeClass(this.options.openNav);
+		     $this.removeClass(this.options.visible);
 		}, this));
 
 		// Smooth anchor scroll, targeted to our nav anchors
@@ -78,7 +83,8 @@
 			var windowPos = $(window).scrollTop(), // get the offset of the window from the top of page
 				windowHeight = $(window).height(), // get the height of the window
 				docHeight = $(document).height(),
-				$firstSection = $("section").eq(0);
+				$firstSection = $(".screen").eq(0);
+
 			for (i = 0; i < aArray.length; i += 1) {
 				var theID = aArray[i],
 				sectPos = $(theID).offset().top, // get the offset of the div from the top of page + except nav height
@@ -90,7 +96,8 @@
 					$navLink.filter("[href='" + theID + "']").removeClass(this.options.activeLink);
 				}
 			}
-		//highlight last nav list item on last section
+
+			//highlight last nav list item on last section
 			if (windowPos + windowHeight === docHeight) {
 				if (!$this.find("li").filter(":last-child").find($navLink).hasClass(this.options.activeLink)) {
 					$navLink.filter("." + this.options.activeLink).removeClass(this.options.activeLink);
@@ -98,12 +105,21 @@
 				}
 			}
 
-		//highlight first nav item when first section has some top offset
-		if (windowPos < $firstSection.offset().top) {
+			//highlight first nav item when first section has some top offset
+			if (windowPos < $firstSection.offset().top) {
 				if (!$this.find("li").filter(":first-child").find($navLink).hasClass(this.options.activeLink)) {
 					$navLink.filter("." + this.options.activeLink).removeClass(this.options.activeLink);
 					$this.find("li").filter(":first-child").find($navLink).addClass(this.options.activeLink);
 				}
+			}
+
+			// Show topnav button
+			if (windowPos > windowHeight) {
+				$topnav.addClass(this.options.topnavBg);
+				$topnavBtn.addClass(this.options.visible);
+			} else {
+				$topnav.removeClass(this.options.topnavBg);
+				$topnavBtn.removeClass(this.options.visible);
 			}
 		}, this));
 	};

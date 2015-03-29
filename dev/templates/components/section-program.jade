@@ -1,50 +1,50 @@
-section#program.screen.screen_progr.screen_bg
+section#program.screen.screen_progr.screen_bg_none.js-toggle.js-filter
 	.container
-		aside.screen__aside.screen__aside_progr.screen__aside_cor.screen__aside_cor_light
+		aside.screen__aside.screen__aside_progr.screen__aside_cor.screen__aside_cor_light.js-togglecorner
 			h2.screen__title.screen__title_progr Программа
 
 			// Sidebar with screen navigation
 			nav.cat.cat_vert.cat_vert_progr
 				ul.cat__list
 					li.cat__item.cat__item_vert
-						a.cat__link.cat__link_vert.is-active(href='#all-events')
+						a.cat__link.cat__link_vert.js-togglelink.is-active(href='#all')
 							span.cat__time
 								time(datetime="2015-04-12") 12.04
 								|  -
 								time(datetime="2015-04-18")  18.04
 							|  Вся программа
 					li.cat__item.cat__item_vert
-						a.cat__link.cat__link_vert(href='#opening')
+						a.cat__link.cat__link_vert.js-togglelink(href='#opening')
 							span.cat__time
 								time(datetime="2015-04-12") 12.04 / вс
 							|  Opening
 					li.cat__item.cat__item_vert
-						a.cat__link.cat__link_vert(href='#front-end-day')
+						a.cat__link.cat__link_vert.js-togglelink(href='#front-end-day')
 							span.cat__time
 								time(datetime="2015-04-13") 13.04 / пн
 							|  Front-end day
 					li.cat__item.cat__item_vert
-						a.cat__link.cat__link_vert(href='#back-end-day')
+						a.cat__link.cat__link_vert.js-togglelink(href='#back-end-day')
 							span.cat__time
 								time(datetime="2015-04-14") 14.04 / вт
 							|  Back-end day
 					li.cat__item.cat__item_vert
-						a.cat__link.cat__link_vert(href='#testers-day')
+						a.cat__link.cat__link_vert.js-togglelink(href='#testers-day')
 							span.cat__time
 								time(datetime="2015-04-15") 15.04 / ср
 							|  QA day
 					li.cat__item.cat__item_vert
-						a.cat__link.cat__link_vert(href='#web-designers-day')
+						a.cat__link.cat__link_vert.js-togglelink(href='#web-designers-day')
 							span.cat__time
 								time(datetime="2015-04-16")  16.04 / чт
 							|  Web-design day
 					li.cat__item.cat__item_vert
-						a.cat__link.cat__link_vert(href='#soft-skills-day')
+						a.cat__link.cat__link_vert.js-togglelink(href='#soft-skills-day')
 							span.cat__time
 								time(datetime="2015-04-17") 17.04 / пт
 							|  Soft skills
 					li.cat__item.cat__item_vert
-						a.cat__link.cat__link_vert(href='#afterparty')
+						a.cat__link.cat__link_vert.js-togglelink.js-togglebg(href='#afterparty')
 							span.cat__time
 								time(datetime="2015-04-18") 18.04 / сб
 							|  Afterparty
@@ -55,13 +55,13 @@ section#program.screen.screen_progr.screen_bg
 		.events-wrap
 			.events-scroll
 				// Opening events
-				#opening.events-page
+				#opening.events-page.js-toggletarget
 					.event.event_day
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-12") 12.04
 							span.event__info Opening day
-					a.event(href="#ev1")
+					a.event.js-togglelink(href="#ev1")
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-12 09:00") 09:00
@@ -70,7 +70,7 @@ section#program.screen.screen_progr.screen_bg
 							span.event__info Александр Трегуб
 						h3.event__title Что будет с индустрией через 5-10 лет
 
-					a.event(href="#ev1")
+					a.event.js-togglelink(href="#ev1")
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-12 10:00") 10:00
@@ -79,7 +79,7 @@ section#program.screen.screen_progr.screen_bg
 							span.event__info Максим Сохацкий
 						h3.event__title Размер ПО как критерий эффективности, надежности и гибкости
 
-					a.event(href="#ev1")
+					a.event.js-togglelink(href="#ev1")
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-12 12:00") 12:00
@@ -96,7 +96,7 @@ section#program.screen.screen_progr.screen_bg
 								time(datetime="2015-04-12 14:00") 14:00
 							span.event__info.event__info_lunch Обед
 
-					a.event(href="#ev1")
+					a.event.js-togglelink(href="#ev1")
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-12 15:00") 15:00
@@ -106,13 +106,13 @@ section#program.screen.screen_progr.screen_bg
 						h3.event__title Размер ПО как критерий эффективности, надежности и гибкости
 
 				// Front-end events
-				#front-end-day.events-page
+				#front-end-day.events-page.js-toggletarget
 					.event.event_day
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-13") 13.04
 							span.event__info Front-end day
-					a.event(href="#ev1")
+					a.event.js-togglelink(href="#ev1")
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-13 09:00") 09:00
@@ -121,7 +121,7 @@ section#program.screen.screen_progr.screen_bg
 							span.event__info Александр Трегуб
 						h3.event__title Что будет с индустрией через 5-10 лет
 
-					a.event(href="#ev1")
+					a.event.js-togglelink(href="#ev1")
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-13 10:00") 10:00
@@ -130,7 +130,7 @@ section#program.screen.screen_progr.screen_bg
 							span.event__info Максим Сохацкий
 						h3.event__title Размер ПО как критерий эффективности, надежности и гибкости
 
-					a.event(href="#ev1")
+					a.event.js-togglelink(href="#ev1")
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-13 11:00") 11:00
@@ -139,7 +139,7 @@ section#program.screen.screen_progr.screen_bg
 							span.event__info Василий Маланка
 						h3.event__title Влияние выхода платформы Magento 2.0 на мир E-commerce
 
-					a.event(href="#ev1")
+					a.event.js-togglelink(href="#ev1")
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-13 12:00") 12:00
@@ -156,7 +156,7 @@ section#program.screen.screen_progr.screen_bg
 								time(datetime="2015-04-13 14:00") 14:00
 							span.event__info.event__info_lunch Обед
 
-					a.event(href="#ev1")
+					a.event.js-togglelink(href="#ev1")
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-13 15:00") 15:00
@@ -165,7 +165,7 @@ section#program.screen.screen_progr.screen_bg
 							span.event__info Максим Сохацкий
 						h3.event__title Размер ПО как критерий эффективности, надежности и гибкости
 
-					a.event(href="#ev1")
+					a.event.js-togglelink(href="#ev1")
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-13 16:00") 16:00
@@ -174,7 +174,7 @@ section#program.screen.screen_progr.screen_bg
 							span.event__info Василий Маланка
 						h3.event__title Влияние выхода платформы Magento 2.0 на мир E-commerce
 
-					a.event(href="#ev1")
+					a.event.js-togglelink(href="#ev1")
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-13 17:00") 17:00
@@ -184,13 +184,13 @@ section#program.screen.screen_progr.screen_bg
 						h3.event__title Место юзабилити в процессе разработки. Мечты и реалии
 
 				// Back-end events
-				#back-end-day.events-page
+				#back-end-day.events-page.js-toggletarget
 					.event.event_day
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-14") 14.04
 							span.event__info Back-end day
-					a.event(href="#ev1")
+					a.event.js-togglelink(href="#ev1")
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-14 09:00") 09:00
@@ -199,7 +199,7 @@ section#program.screen.screen_progr.screen_bg
 							span.event__info Александр Трегуб
 						h3.event__title Что будет с индустрией через 5-10 лет
 
-					a.event(href="#ev1")
+					a.event.js-togglelink(href="#ev1")
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-14 10:00") 10:00
@@ -208,7 +208,7 @@ section#program.screen.screen_progr.screen_bg
 							span.event__info Максим Сохацкий
 						h3.event__title Размер ПО как критерий эффективности, надежности и гибкости
 
-					a.event(href="#ev1")
+					a.event.js-togglelink(href="#ev1")
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-14 11:00") 11:00
@@ -225,7 +225,7 @@ section#program.screen.screen_progr.screen_bg
 								time(datetime="2015-04-14 14:00") 14:00
 							span.event__info.event__info_lunch Обед
 
-					a.event(href="#ev1")
+					a.event.js-togglelink(href="#ev1")
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-14 14:00") 14:00
@@ -234,7 +234,7 @@ section#program.screen.screen_progr.screen_bg
 							span.event__info Jean-Baptiste Guerraz &amp; Igor Uzlov
 						h3.event__title Build tons of multi-device JavaScript applications, design patterns &amp; high performance UI
 
-					a.event(href="#ev1")
+					a.event.js-togglelink(href="#ev1")
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-14 15:00") 15:00
@@ -243,7 +243,7 @@ section#program.screen.screen_progr.screen_bg
 							span.event__info Максим Сохацкий
 						h3.event__title Размер ПО как критерий эффективности, надежности и гибкости
 
-					a.event(href="#ev1")
+					a.event.js-togglelink(href="#ev1")
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-14 17:00") 17:00
@@ -253,13 +253,13 @@ section#program.screen.screen_progr.screen_bg
 						h3.event__title Место юзабилити в процессе разработки. Мечты и реалии
 
 				// Testers events
-				#testers-day.events-page
+				#testers-day.events-page.js-toggletarget
 					.event.event_day
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-15") 15.04
 							span.event__info Testers day
-					a.event(href="#ev1")
+					a.event.js-togglelink(href="#ev1")
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-15 10:00") 10:00
@@ -268,7 +268,7 @@ section#program.screen.screen_progr.screen_bg
 							span.event__info Максим Сохацкий
 						h3.event__title Размер ПО как критерий эффективности, надежности и гибкости
 
-					a.event(href="#ev1")
+					a.event.js-togglelink(href="#ev1")
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-15 11:00") 11:00
@@ -277,7 +277,7 @@ section#program.screen.screen_progr.screen_bg
 							span.event__info Василий Маланка
 						h3.event__title Влияние выхода платформы Magento 2.0 на мир E-commerce
 
-					a.event(href="#ev1")
+					a.event.js-togglelink(href="#ev1")
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-15 12:00") 12:00
@@ -294,7 +294,7 @@ section#program.screen.screen_progr.screen_bg
 								time(datetime="2015-04-15 14:00") 14:00
 							span.event__info.event__info_lunch Обед
 
-					a.event(href="#ev1")
+					a.event.js-togglelink(href="#ev1")
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-15 14:00") 14:00
@@ -303,7 +303,7 @@ section#program.screen.screen_progr.screen_bg
 							span.event__info Jean-Baptiste Guerraz &amp; Igor Uzlov
 						h3.event__title Build tons of multi-device JavaScript applications, design patterns &amp; high performance UI
 
-					a.event(href="#ev1")
+					a.event.js-togglelink(href="#ev1")
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-15 15:00") 15:00
@@ -312,7 +312,7 @@ section#program.screen.screen_progr.screen_bg
 							span.event__info Максим Сохацкий
 						h3.event__title Размер ПО как критерий эффективности, надежности и гибкости
 
-					a.event(href="#ev1")
+					a.event.js-togglelink(href="#ev1")
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-15 16:00") 16:00
@@ -322,13 +322,13 @@ section#program.screen.screen_progr.screen_bg
 						h3.event__title Влияние выхода платформы Magento 2.0 на мир E-commerce
 
 				// Web-design events
-				#web-designers-day.events-page
+				#web-designers-day.events-page.js-toggletarget
 					.event.event_day
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-16") 16.04
 							span.event__info Web-design day
-					a.event(href="#ev1")
+					a.event.js-togglelink(href="#ev1")
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-16 09:00") 09:00
@@ -337,7 +337,7 @@ section#program.screen.screen_progr.screen_bg
 							span.event__info Александр Трегуб
 						h3.event__title Что будет с индустрией через 5-10 лет
 
-					a.event(href="#ev1")
+					a.event.js-togglelink(href="#ev1")
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-16 10:00") 10:00
@@ -346,7 +346,7 @@ section#program.screen.screen_progr.screen_bg
 							span.event__info Максим Сохацкий
 						h3.event__title Размер ПО как критерий эффективности, надежности и гибкости
 
-					a.event(href="#ev1")
+					a.event.js-togglelink(href="#ev1")
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-16 11:00") 11:00
@@ -355,7 +355,7 @@ section#program.screen.screen_progr.screen_bg
 							span.event__info Василий Маланка
 						h3.event__title Влияние выхода платформы Magento 2.0 на мир E-commerce
 
-					a.event(href="#ev1")
+					a.event.js-togglelink(href="#ev1")
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-16 12:00") 12:00
@@ -372,7 +372,7 @@ section#program.screen.screen_progr.screen_bg
 								time(datetime="2015-04-16 14:00") 14:00
 							span.event__info.event__info_lunch Обед
 
-					a.event(href="#ev1")
+					a.event.js-togglelink(href="#ev1")
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-16 14:00") 14:00
@@ -381,7 +381,7 @@ section#program.screen.screen_progr.screen_bg
 							span.event__info Jean-Baptiste Guerraz &amp; Igor Uzlov
 						h3.event__title Build tons of multi-device JavaScript applications, design patterns &amp; high performance UI
 
-					a.event(href="#ev1")
+					a.event.js-togglelink(href="#ev1")
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-16 15:00") 15:00
@@ -390,7 +390,7 @@ section#program.screen.screen_progr.screen_bg
 							span.event__info Максим Сохацкий
 						h3.event__title Размер ПО как критерий эффективности, надежности и гибкости
 
-					a.event(href="#ev1")
+					a.event.js-togglelink(href="#ev1")
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-16 16:00") 16:00
@@ -399,7 +399,7 @@ section#program.screen.screen_progr.screen_bg
 							span.event__info Василий Маланка
 						h3.event__title Влияние выхода платформы Magento 2.0 на мир E-commerce
 
-					a.event(href="#ev1")
+					a.event.js-togglelink(href="#ev1")
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-16 17:00") 17:00
@@ -409,13 +409,13 @@ section#program.screen.screen_progr.screen_bg
 						h3.event__title Место юзабилити в процессе разработки. Мечты и реалии
 
 				// Soft skills events
-				#soft-skills-day.events-page
+				#soft-skills-day.events-page.js-toggletarget
 					.event.event_day
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-17") 17.04
 							span.event__info Soft skills day
-					a.event(href="#ev1")
+					a.event.js-togglelink(href="#ev1")
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-17 09:00") 09:00
@@ -424,7 +424,7 @@ section#program.screen.screen_progr.screen_bg
 							span.event__info Александр Трегуб
 						h3.event__title Что будет с индустрией через 5-10 лет
 
-					a.event(href="#ev1")
+					a.event.js-togglelink(href="#ev1")
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-17 10:00") 10:00
@@ -433,7 +433,7 @@ section#program.screen.screen_progr.screen_bg
 							span.event__info Максим Сохацкий
 						h3.event__title Размер ПО как критерий эффективности, надежности и гибкости
 
-					a.event(href="#ev1")
+					a.event.js-togglelink(href="#ev1")
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-17 11:00") 11:00
@@ -442,7 +442,7 @@ section#program.screen.screen_progr.screen_bg
 							span.event__info Василий Маланка
 						h3.event__title Влияние выхода платформы Magento 2.0 на мир E-commerce
 
-					a.event(href="#ev1")
+					a.event.js-togglelink(href="#ev1")
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-17 12:00") 12:00
@@ -459,7 +459,7 @@ section#program.screen.screen_progr.screen_bg
 								time(datetime="2015-04-17 14:00") 14:00
 							span.event__info.event__info_lunch Обед
 
-					a.event(href="#ev1")
+					a.event.js-togglelink(href="#ev1")
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-17 14:00") 14:00
@@ -468,7 +468,7 @@ section#program.screen.screen_progr.screen_bg
 							span.event__info Jean-Baptiste Guerraz &amp; Igor Uzlov
 						h3.event__title Build tons of multi-device JavaScript applications, design patterns &amp; high performance UI
 
-					a.event(href="#ev1")
+					a.event.js-togglelink(href="#ev1")
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-17 15:00") 15:00
@@ -477,7 +477,7 @@ section#program.screen.screen_progr.screen_bg
 							span.event__info Максим Сохацкий
 						h3.event__title Размер ПО как критерий эффективности, надежности и гибкости
 
-					a.event(href="#ev1")
+					a.event.js-togglelink(href="#ev1")
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-17 16:00") 16:00
@@ -486,7 +486,7 @@ section#program.screen.screen_progr.screen_bg
 							span.event__info Василий Маланка
 						h3.event__title Влияние выхода платформы Magento 2.0 на мир E-commerce
 
-					a.event(href="#ev1")
+					a.event.js-togglelink(href="#ev1")
 						p.event__meta
 							span.event__time
 								time(datetime="2015-04-17 17:00") 17:00
@@ -496,7 +496,7 @@ section#program.screen.screen_progr.screen_bg
 						h3.event__title Место юзабилити в процессе разработки. Мечты и реалии
 
 				// Afterparty
-				#afterparty.afterparty.icon.icon_ev-aft
+				#afterparty.afterparty.icon.icon_ev-aft.js-toggletarget
 					p.afterparty__text
 						| Душевное автепати в конце недельной конференции.
 						br
@@ -509,9 +509,9 @@ section#program.screen.screen_progr.screen_bg
 
 
 	// And here comes popup windows
-	section#ev1.popup.popup_light
+	section#ev1.popup.popup_light.js-togglepopup
 		.container
-			a.popup__close.popup__close_dark.iconfont.iconfont_close(href='#') Close
+			a.popup__close.iconfont.iconfont_close.iconfont_close_popup.js-toggleclose(href='#') Close
 			.popup-content
 				header.popup__header
 					h3.popup__title Build tons of multi-device JavaScript applications, design patterns &amp; high performance UI
