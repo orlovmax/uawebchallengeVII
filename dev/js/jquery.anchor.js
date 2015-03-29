@@ -1,53 +1,22 @@
-/*
- * navigation script: sticky nav, anchor smooth scrolling, selecting current nav item
-*/
-
 ;(function ( $, window, document, undefined ) {
 	var defaults = {
 		navAnchor: 'js-anchor',
 	    navLink: 'js-link',
-	    navOpen: 'js-navopen',
-	    navClose: 'js-navclose',
-	    openNav: 'is-visible',
 	    activeLink: 'is-active',
-	    state: 'closed'
 	};
 
-	function NavKit( element, options ) {
+	function AnchorScroll( element, options ) {
 		this.options = $.extend( {}, defaults, options) ;
 		this.element = element;
 		this.init();
 	}
 
-	NavKit.prototype.init = function () {
+	AnchorScroll.prototype.init = function () {
 		var $this = $(this.element),
 			$navAnchor = $this.find('.' + this.options.navAnchor),
 	    	$navLink = $this.find('.' + this.options.navLink),
-	    	$navOpen = $('.' + this.options.navOpen),
-	    	$navClose = $('.' + this.options.navClose),
-	    	cond = this.options.state,
 			aArray = [],
 			i;
-
-		// Looking for condition from settings, if it closed - add appropriate classes
-		// to icon, menu and container
-		if (! cond || cond == "closed"){
-			$this.removeClass(this.options.openNav);
-		} else{
-		    $this.addClass(this.options.openNav);
-		}
-
-		// Open main menu
-		$navOpen.on('click', $.proxy(function(e){
-		     e.preventDefault();
-		     $this.addClass(this.options.openNav);
-		}, this));
-
-		// Close main menu
-		$navClose.on('click', $.proxy(function(e){
-		     e.preventDefault();
-		     $this.removeClass(this.options.openNav);
-		}, this));
 
 		// Smooth anchor scroll, targeted to our nav anchors
 		// Actually this thing was modified on csstricks
@@ -108,9 +77,9 @@
 		}, this));
 	};
 
-	$.fn.navKit = function ( options ) {
+	$.fn.anchorScroll = function ( options ) {
 		return this.each(function () {
-			new NavKit( this, options );
+			new AnchorScroll( this, options );
 		});
 	};
 

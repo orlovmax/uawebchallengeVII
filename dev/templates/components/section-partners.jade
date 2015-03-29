@@ -1,4 +1,4 @@
-section#partners.screen.screen_partn
+section#partners.screen.screen_partn.js-toggle
 	.container
 		h2.screen__title.screen__title_partn Партнеры
 
@@ -6,13 +6,13 @@ section#partners.screen.screen_partn
 		nav.cat.cat_hor
 			ul.cat__list
 				li.cat__item.cat__item_hor.cat__item_hor_partn
-					a.cat__link.cat__link_hor.cat__link_hor_partn.is-active(href='#partners') Партнеры
+					a.cat__link.cat__link_hor.cat__link_hor_partn.js-togglelink.is-active(href='#main-partners') Партнеры
 				li.cat__item.cat__item_hor.cat__item_hor_partn
-					a.cat__link.cat__link_hor.cat__link_hor_partn(href='#info-partners') Инфо-партнеры
+					a.cat__link.cat__link_hor.cat__link_hor_partn.js-togglelink(href='#info-partners') Инфо-партнеры
 
 		.partners
 			// Target information
-			#partners.partners-page.is-visible
+			#main-partners.partners-page.js-toggletarget.is-visible
 				a.partners-page__item.partners-page__item_general(href='#')
 					span.partners-page__item-status Генеральный партнер
 					img.partners-page__item-logo(src='img/partners/par1.png', alt='Partner1')
@@ -41,7 +41,7 @@ section#partners.screen.screen_partn
 				a.partners-page__item(href='#')
 					img.partners-page__item-logo(src='img/partners/par3.png', alt='Partner9')
 
-			#info-partners.partners-page
+			#info-partners.partners-page.js-toggletarget
 				a.partners-page__item(href='#')
 					img.partners-page__item-logo(src='img/partners/par6.png', alt='Partner6')
 

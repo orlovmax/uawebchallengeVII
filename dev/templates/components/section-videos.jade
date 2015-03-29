@@ -1,67 +1,67 @@
-section#videos.screen.screen_vid
+section#videos.screen.screen_vid.js-toggle
 	.container
 		h2.screen__title.screen__title_vid Видео
 
 		// Video gallery
 		.gall.gall_vid
 			figure.gall-item.gall-item_vid
-				a.gall-item__link.gall-item__link_vid.icon.icon_play(href='#vid1')
+				a.gall-item__link.gall-item__link_vid.icon.icon_play.js-togglelink(href='#vid1')
 					img.gall-item__link-pic(src='img/vid_thumb/vid1.jpg', alt='Video thumb')
 				figcaption.gall-item__capt
 					h3.gall-item__capt-title Jean-Baptiste Guerrax
 
 			figure.gall-item.gall-item_vid
-				a.gall-item__link.gall-item__link_vid.icon.icon_play(href='#vid1')
+				a.gall-item__link.gall-item__link_vid.icon.icon_play.js-togglelink(href='#vid1')
 					img.gall-item__link-pic(src='img/vid_thumb/vid2.jpg', alt='Video thumb')
 				figcaption.gall-item__capt
 					h3.gall-item__capt-title Jean-Baptiste Guerrax
 
 			figure.gall-item.gall-item_vid
-				a.gall-item__link.gall-item__link_vid.icon.icon_play(href='#vid1')
+				a.gall-item__link.gall-item__link_vid.icon.icon_play.js-togglelink(href='#vid1')
 					img.gall-item__link-pic(src='img/vid_thumb/vid3.jpg', alt='Video thumb')
 				figcaption.gall-item__capt
 					h3.gall-item__capt-title Jean-Baptiste Guerrax
 
 			figure.gall-item.gall-item_vid
-				a.gall-item__link.gall-item__link_vid.icon.icon_play(href='#vid1')
+				a.gall-item__link.gall-item__link_vid.icon.icon_play.js-togglelink(href='#vid1')
 					img.gall-item__link-pic(src='img/vid_thumb/vid4.jpg', alt='Video thumb')
 				figcaption.gall-item__capt
 					h3.gall-item__capt-title Jean-Baptiste Guerrax
 			figure.gall-item.gall-item_vid
-				a.gall-item__link.gall-item__link_vid.icon.icon_play(href='#vid1')
+				a.gall-item__link.gall-item__link_vid.icon.icon_play.js-togglelink(href='#vid1')
 					img.gall-item__link-pic(src='img/vid_thumb/vid1.jpg', alt='Video thumb')
 				figcaption.gall-item__capt
 					h3.gall-item__capt-title Jean-Baptiste Guerrax
 
 			figure.gall-item.gall-item_vid
-				a.gall-item__link.gall-item__link_vid.icon.icon_play(href='#vid1')
+				a.gall-item__link.gall-item__link_vid.icon.icon_play.js-togglelink(href='#vid1')
 					img.gall-item__link-pic(src='img/vid_thumb/vid2.jpg', alt='Video thumb')
 				figcaption.gall-item__capt
 					h3.gall-item__capt-title Jean-Baptiste Guerrax
 
 			figure.gall-item.gall-item_vid
-				a.gall-item__link.gall-item__link_vid.icon.icon_play(href='#vid1')
+				a.gall-item__link.gall-item__link_vid.icon.icon_play.js-togglelink(href='#vid1')
 					img.gall-item__link-pic(src='img/vid_thumb/vid3.jpg', alt='Video thumb')
 				figcaption.gall-item__capt
 					h3.gall-item__capt-title Jean-Baptiste Guerrax
 
 			figure.gall-item.gall-item_vid
-				a.gall-item__link.gall-item__link_vid.icon.icon_play(href='#vid1')
+				a.gall-item__link.gall-item__link_vid.icon.icon_play.js-togglelink(href='#vid1')
 					img.gall-item__link-pic(src='img/vid_thumb/vid4.jpg', alt='Video thumb')
 				figcaption.gall-item__capt
 					h3.gall-item__capt-title Jean-Baptiste Guerrax
 
 	// And here comes target popup windows
-	section#sp1.popup
+	section#vid1.popup.js-toggletarget
 		.container
-			a.popup__close.popup__close_dark.iconfont.iconfont_close(href='#') Close
+			a.popup__close.popup__close_dark.iconfont.iconfont_close.js-toggleclose(href='#') Close
 			.popup-content
 				header.popup__header
 					h3.popup__title Build tons of multi-device JavaScript applications, design patterns &amp; high performance UI
 
 				.popup__info
 					.popup__video
-						iframe(width="800" height="400" src="https://www.youtube.com/embed/kPDnw3_1GOI" frameborder="0" allowfullscreen)
+						iframe(width='800' height='400' src='//www.youtube.com/embed/kPDnw3_1GOI?html5=1' frameborder='0' allowfullscreen)
 
 				footer.popup__footer
 					ul.popup__social.social

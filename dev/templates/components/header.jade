@@ -2,7 +2,7 @@ header.main-header
 	.container
 		// Fixed header elements
 		.top-nav
-			a.top-nav__navicon.iconfont.iconfont_menu(href='#') Open
+			a.top-nav__navicon.iconfont.iconfont_menu.js-navopen(href='#') Menu
 
 			ul.languages
 				li.languages__item
@@ -15,43 +15,43 @@ header.main-header
 			a.btn-link.btn-link_header.is-hidden(href='#') Купить билет
 
 // Main navigation
-nav.main-nav
+nav.main-nav.js-nav
 	.container
 		.main-nav__wrap
-			a.iconfont.iconfont_close(href='#') Close
+			a.iconfont.iconfont_close.js-navclose(href='#') Close
 			ul.main-nav__list
 				li.main-nav__item
-					a.main-nav__link.is-active(href='#home') Главная
+					a.main-nav__link.js-anchor.js-link.is-active(href='#home') Главная
 				li.main-nav__item
-					a.main-nav__link(href='#news') Что нового?
+					a.main-nav__link.js-anchor.js-link(href='#news') Что нового?
 				li.main-nav__item
-					a.main-nav__link(href='#about') Для кого?
+					a.main-nav__link.js-anchor.js-link(href='#about') Для кого?
 				li.main-nav__item
-					a.main-nav__link(href='#speakers') Спикеры
+					a.main-nav__link.js-anchor.js-link(href='#speakers') Спикеры
 				li.main-nav__item
-					a.main-nav__link(href='#program') Программа
+					a.main-nav__link.js-anchor.js-link(href='#program') Программа
 				li.main-nav__item
-					a.main-nav__link(href='#tickets') Билеты
+					a.main-nav__link.js-anchor.js-link(href='#tickets') Билеты
 				li.main-nav__item
-					a.main-nav__link(href='#videos') Видео
+					a.main-nav__link.js-anchor.js-link(href='#videos') Видео
 				li.main-nav__item
-					a.main-nav__link(href='#partners') Партеры
+					a.main-nav__link.js-anchor.js-link(href='#partners') Партеры
 
 // Screen switchers
-ul.switchers
+ul.switchers.js-switchers
 	li.switchers__item
-		a.switchers__link.is-active(href='#home') Главная
+		a.switchers__link.js-anchor.js-link.is-active(href='#home') Главная
 	li.switchers__item
-		a.switchers__link(href='#news') Что нового?
+		a.switchers__link.js-anchor.js-link(href='#news') Что нового?
 	li.switchers__item
-		a.switchers__link(href='#about') Для кого?
+		a.switchers__link.js-anchor.js-link(href='#about') Для кого?
 	li.switchers__item
-		a.switchers__link(href='#speakers') Спикеры
+		a.switchers__link.js-anchor.js-link(href='#speakers') Спикеры
 	li.switchers__item
-		a.switchers__link(href='#program') Программа
+		a.switchers__link.js-anchor.js-link(href='#program') Программа
 	li.switchers__item
-		a.switchers__link(href='#tickets') Билеты
+		a.switchers__link.js-anchor.js-link(href='#tickets') Билеты
 	li.switchers__item
-		a.switchers__link(href='#videos') Видео
+		a.switchers__link.js-anchor.js-link(href='#videos') Видео
 	li.switchers__item
-		a.switchers__link(href='#partners') Партеры
+		a.switchers__link.js-anchor.js-link(href='#partners') Партеры

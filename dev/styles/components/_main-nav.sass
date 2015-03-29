@@ -1,3 +1,4 @@
+// Side menu
 .main-nav
 	position: fixed
 	top: 0
@@ -7,12 +8,11 @@
 	width: 100%
 	height: 100%
 	text-align: right
-	visibility: hidden
-	+transition(all, 1.5s)
+	+transition(all, 1s)
 
+	// Helper class that allows us to toggle visibility
 	&.is-visible
 		right: 0
-		visibility: visible
 
 	&:before
 		content: ''
