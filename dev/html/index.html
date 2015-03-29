@@ -82,7 +82,7 @@
     <section id="home" class="screen screen_home screen_bg_home">
       <div class="container">
         <!-- Main info-->
-        <aside class="screen__aside screen__aside_home screen__aside_cor">
+        <aside class="screen__aside screen__aside_home screen__aside_cor is-corner">
           <div class="home-info">
             <h1 class="home-info__title"><span class="home-info__title-thin">It</span><span class="home-info__title-br">Confe</span><span class="home-info__title-spacing">rence</span><span class="home-info__title-thin"> И</span><span class="home-info__title-pos"> Я</span></h1>
             <p class="home-info__date">
@@ -123,7 +123,7 @@
     <!-- About section-->
     <section id="about" class="screen screen_about screen_bg_general">
       <div class="container">
-        <aside class="screen__aside screen__aside_about screen__aside_cor">
+        <aside class="screen__aside screen__aside_about screen__aside_cor is-corner">
           <h2 class="screen__title screen__title_about">Для кого?</h2>
           <!-- Sidebar with screen navigation-->
           <nav class="cat cat_vert cat_vert_about">
@@ -324,9 +324,9 @@
       </section>
     </section>
     <!-- Program section-->
-    <section id="program" class="screen screen_progr screen_bg_color">
+    <section id="program" class="screen screen_progr screen_bg">
       <div class="container">
-        <aside class="screen__aside screen__aside_progr">
+        <aside class="screen__aside screen__aside_progr screen__aside_cor screen__aside_cor_light">
           <h2 class="screen__title screen__title_progr">Программа</h2>
           <!-- Sidebar with screen navigation-->
           <nav class="cat cat_vert cat_vert_progr">
@@ -354,240 +354,241 @@
         <!-- Target information-->
         <!-- All events-->
         <div class="events-wrap">
-          <div id="all-events" class="events"></div>
-          <!-- Opening events-->
-          <div id="opening" class="events all">
-            <div class="event event_extra">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-12">12.04</time></span><span class="event__info">Opening day</span></p>
-            </div><a href="#ev1" class="event">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-12 09:00">09:00</time>-
-                  <time datetime="2015-04-12 10:00">10:00</time></span><span class="event__info">Александр Трегуб</span></p>
-              <h3 class="event__title">Что будет с индустрией через 5-10 лет</h3></a><a href="#ev1" class="event">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-12 10:00">10:00</time>-
-                  <time datetime="2015-04-12 11:00">11:00</time></span><span class="event__info">Максим Сохацкий</span></p>
-              <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-12 12:00">12:00</time>-
-                  <time datetime="2015-04-12 13:00">13:00</time></span><span class="event__info">Артем костенко</span></p>
-              <h3 class="event__title">Место юзабилити в процессе разработки. Мечты и реалии</h3></a>
-            <div class="event event_lunch">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-12 13:00">13:00</time>-
-                  <time datetime="2015-04-12 14:00">14:00</time></span><span class="event__info event__info_lunch">Обед</span></p>
-            </div><a href="#ev1" class="event">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-12 15:00">15:00</time>-
-                  <time datetime="2015-04-12 16:00">16:00</time></span><span class="event__info">Максим Сохацкий</span></p>
-              <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a>
-          </div>
-          <!-- Front-end events-->
-          <div id="front-end-day" class="events all">
-            <div class="event event_extra">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-13">13.04</time></span><span class="event__info">Front-end day</span></p>
-            </div><a href="#ev1" class="event">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-13 09:00">09:00</time>-
-                  <time datetime="2015-04-13 10:00">10:00</time></span><span class="event__info">Александр Трегуб</span></p>
-              <h3 class="event__title">Что будет с индустрией через 5-10 лет</h3></a><a href="#ev1" class="event">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-13 10:00">10:00</time>-
-                  <time datetime="2015-04-13 11:00">11:00</time></span><span class="event__info">Максим Сохацкий</span></p>
-              <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-13 11:00">11:00</time>-
-                  <time datetime="2015-04-13 12:00">12:00</time></span><span class="event__info">Василий Маланка</span></p>
-              <h3 class="event__title">Влияние выхода платформы Magento 2.0 на мир E-commerce</h3></a><a href="#ev1" class="event">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-13 12:00">12:00</time>-
-                  <time datetime="2015-04-13 13:00">13:00</time></span><span class="event__info">Артем костенко</span></p>
-              <h3 class="event__title">Место юзабилити в процессе разработки. Мечты и реалии</h3></a>
-            <div class="event event_lunch">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-13 13:00">13:00</time>-
-                  <time datetime="2015-04-13 14:00">14:00</time></span><span class="event__info event__info_lunch">Обед</span></p>
-            </div><a href="#ev1" class="event">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-13 15:00">15:00</time>-
-                  <time datetime="2015-04-13 16:00">16:00</time></span><span class="event__info">Максим Сохацкий</span></p>
-              <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-13 16:00">16:00</time>-
-                  <time datetime="2015-04-13 17:00">17:00</time></span><span class="event__info">Василий Маланка</span></p>
-              <h3 class="event__title">Влияние выхода платформы Magento 2.0 на мир E-commerce</h3></a><a href="#ev1" class="event">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-13 17:00">17:00</time>-
-                  <time datetime="2015-04-13 18:00">18:00</time></span><span class="event__info">Артем костенко</span></p>
-              <h3 class="event__title">Место юзабилити в процессе разработки. Мечты и реалии</h3></a>
-          </div>
-          <!-- Back-end events-->
-          <div id="back-end-day" class="events all">
-            <div class="event event_extra">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-14">14.04</time></span><span class="event__info">Back-end day</span></p>
-            </div><a href="#ev1" class="event">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-14 09:00">09:00</time>-
-                  <time datetime="2015-04-14 10:00">10:00</time></span><span class="event__info">Александр Трегуб</span></p>
-              <h3 class="event__title">Что будет с индустрией через 5-10 лет</h3></a><a href="#ev1" class="event">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-14 10:00">10:00</time>-
-                  <time datetime="2015-04-14 11:00">11:00</time></span><span class="event__info">Максим Сохацкий</span></p>
-              <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-14 11:00">11:00</time>-
-                  <time datetime="2015-04-14 12:00">12:00</time></span><span class="event__info">Василий Маланка</span></p>
-              <h3 class="event__title">Влияние выхода платформы Magento 2.0 на мир E-commerce</h3></a>
-            <div class="event event_lunch">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-14 13:00">13:00</time>-
-                  <time datetime="2015-04-14 14:00">14:00</time></span><span class="event__info event__info_lunch">Обед</span></p>
-            </div><a href="#ev1" class="event">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-14 14:00">14:00</time>-
-                  <time datetime="2015-04-14 15:00">15:00</time></span><span class="event__info">Jean-Baptiste Guerraz &amp; Igor Uzlov</span></p>
-              <h3 class="event__title">Build tons of multi-device JavaScript applications, design patterns &amp; high performance UI</h3></a><a href="#ev1" class="event">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-14 15:00">15:00</time>-
-                  <time datetime="2015-04-14 16:00">16:00</time></span><span class="event__info">Максим Сохацкий</span></p>
-              <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-14 17:00">17:00</time>-
-                  <time datetime="2015-04-14 18:00">18:00</time></span><span class="event__info">Артем костенко</span></p>
-              <h3 class="event__title">Место юзабилити в процессе разработки. Мечты и реалии</h3></a>
-          </div>
-          <!-- Testers events-->
-          <div id="testers-day" class="events all">
-            <div class="event event_extra">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-15">15.04</time></span><span class="event__info">Testers day</span></p>
-            </div><a href="#ev1" class="event">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-15 10:00">10:00</time>-
-                  <time datetime="2015-04-15 11:00">11:00</time></span><span class="event__info">Максим Сохацкий</span></p>
-              <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-15 11:00">11:00</time>-
-                  <time datetime="2015-04-15 12:00">12:00</time></span><span class="event__info">Василий Маланка</span></p>
-              <h3 class="event__title">Влияние выхода платформы Magento 2.0 на мир E-commerce</h3></a><a href="#ev1" class="event">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-15 12:00">12:00</time>-
-                  <time datetime="2015-04-15 13:00">13:00</time></span><span class="event__info">Артем костенко</span></p>
-              <h3 class="event__title">Место юзабилити в процессе разработки. Мечты и реалии</h3></a>
-            <div class="event event_lunch">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-15 13:00">13:00</time>-
-                  <time datetime="2015-04-15 14:00">14:00</time></span><span class="event__info event__info_lunch">Обед</span></p>
-            </div><a href="#ev1" class="event">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-15 14:00">14:00</time>-
-                  <time datetime="2015-04-15 15:00">15:00</time></span><span class="event__info">Jean-Baptiste Guerraz &amp; Igor Uzlov</span></p>
-              <h3 class="event__title">Build tons of multi-device JavaScript applications, design patterns &amp; high performance UI</h3></a><a href="#ev1" class="event">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-15 15:00">15:00</time>-
-                  <time datetime="2015-04-15 16:00">16:00</time></span><span class="event__info">Максим Сохацкий</span></p>
-              <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-15 16:00">16:00</time>-
-                  <time datetime="2015-04-15 17:00">17:00</time></span><span class="event__info">Василий Маланка</span></p>
-              <h3 class="event__title">Влияние выхода платформы Magento 2.0 на мир E-commerce</h3></a>
-          </div>
-          <!-- Web-design events-->
-          <div id="web-designers-day" class="events is-active all">
-            <div class="event event_extra">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-16">16.04</time></span><span class="event__info">Web-design day</span></p>
-            </div><a href="#ev1" class="event">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-16 09:00">09:00</time>-
-                  <time datetime="2015-04-16 10:00">10:00</time></span><span class="event__info">Александр Трегуб</span></p>
-              <h3 class="event__title">Что будет с индустрией через 5-10 лет</h3></a><a href="#ev1" class="event">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-16 10:00">10:00</time>-
-                  <time datetime="2015-04-16 11:00">11:00</time></span><span class="event__info">Максим Сохацкий</span></p>
-              <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-16 11:00">11:00</time>-
-                  <time datetime="2015-04-16 12:00">12:00</time></span><span class="event__info">Василий Маланка</span></p>
-              <h3 class="event__title">Влияние выхода платформы Magento 2.0 на мир E-commerce</h3></a><a href="#ev1" class="event">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-16 12:00">12:00</time>-
-                  <time datetime="2015-04-16 13:00">13:00</time></span><span class="event__info">Артем костенко</span></p>
-              <h3 class="event__title">Место юзабилити в процессе разработки. Мечты и реалии</h3></a>
-            <div class="event event_lunch">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-16 13:00">13:00</time>-
-                  <time datetime="2015-04-16 14:00">14:00</time></span><span class="event__info event__info_lunch">Обед</span></p>
-            </div><a href="#ev1" class="event">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-16 14:00">14:00</time>-
-                  <time datetime="2015-04-16 15:00">15:00</time></span><span class="event__info">Jean-Baptiste Guerraz &amp; Igor Uzlov</span></p>
-              <h3 class="event__title">Build tons of multi-device JavaScript applications, design patterns &amp; high performance UI</h3></a><a href="#ev1" class="event">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-16 15:00">15:00</time>-
-                  <time datetime="2015-04-16 16:00">16:00</time></span><span class="event__info">Максим Сохацкий</span></p>
-              <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-16 16:00">16:00</time>-
-                  <time datetime="2015-04-16 17:00">17:00</time></span><span class="event__info">Василий Маланка</span></p>
-              <h3 class="event__title">Влияние выхода платформы Magento 2.0 на мир E-commerce</h3></a><a href="#ev1" class="event">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-16 17:00">17:00</time>-
-                  <time datetime="2015-04-16 18:00">18:00</time></span><span class="event__info">Артем костенко</span></p>
-              <h3 class="event__title">Место юзабилити в процессе разработки. Мечты и реалии</h3></a>
-          </div>
-          <!-- Soft skills events-->
-          <div id="soft-skills-day" class="events all">
-            <div class="event event_extra">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-17">17.04</time></span><span class="event__info">Soft skills day</span></p>
-            </div><a href="#ev1" class="event">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-17 09:00">09:00</time>-
-                  <time datetime="2015-04-17 10:00">10:00</time></span><span class="event__info">Александр Трегуб</span></p>
-              <h3 class="event__title">Что будет с индустрией через 5-10 лет</h3></a><a href="#ev1" class="event">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-17 10:00">10:00</time>-
-                  <time datetime="2015-04-17 11:00">11:00</time></span><span class="event__info">Максим Сохацкий</span></p>
-              <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-17 11:00">11:00</time>-
-                  <time datetime="2015-04-17 12:00">12:00</time></span><span class="event__info">Василий Маланка</span></p>
-              <h3 class="event__title">Влияние выхода платформы Magento 2.0 на мир E-commerce</h3></a><a href="#ev1" class="event">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-17 12:00">12:00</time>-
-                  <time datetime="2015-04-17 13:00">13:00</time></span><span class="event__info">Артем костенко</span></p>
-              <h3 class="event__title">Место юзабилити в процессе разработки. Мечты и реалии</h3></a>
-            <div class="event event_lunch">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-17 13:00">13:00</time>-
-                  <time datetime="2015-04-17 14:00">14:00</time></span><span class="event__info event__info_lunch">Обед</span></p>
-            </div><a href="#ev1" class="event">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-17 14:00">14:00</time>-
-                  <time datetime="2015-04-17 15:00">15:00</time></span><span class="event__info">Jean-Baptiste Guerraz &amp; Igor Uzlov</span></p>
-              <h3 class="event__title">Build tons of multi-device JavaScript applications, design patterns &amp; high performance UI</h3></a><a href="#ev1" class="event">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-17 15:00">15:00</time>-
-                  <time datetime="2015-04-17 16:00">16:00</time></span><span class="event__info">Максим Сохацкий</span></p>
-              <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-17 16:00">16:00</time>-
-                  <time datetime="2015-04-17 17:00">17:00</time></span><span class="event__info">Василий Маланка</span></p>
-              <h3 class="event__title">Влияние выхода платформы Magento 2.0 на мир E-commerce</h3></a><a href="#ev1" class="event">
-              <p class="event__meta"><span class="event__time">
-                  <time datetime="2015-04-17 17:00">17:00</time>-
-                  <time datetime="2015-04-17 18:00">18:00</time></span><span class="event__info">Артем костенко</span></p>
-              <h3 class="event__title">Место юзабилити в процессе разработки. Мечты и реалии</h3></a>
-          </div>
-          <!-- Afterparty-->
-          <div id="afterparty" class="afterparty icon icon_ev-aft">
-            <p class="afterparty__text">Душевное автепати в конце недельной конференции.<br>Живая музыка, море напитков и угощений. Лёгкая атмосфера для общения и знакомств.</p>
-            <p class="afterparty__text afterparty__text_note">Вечеринка будет закрытой: только участники и спикеры ІТ-Конференции.</p>
-            <p class="afterparty__text">Стоимость:<span class="afterparty__price"> 300</span> грн.</p>
+          <div class="events-scroll">
+            <!-- Opening events-->
+            <div id="opening" class="events-page">
+              <div class="event event_day">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-12">12.04</time></span><span class="event__info">Opening day</span></p>
+              </div><a href="#ev1" class="event">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-12 09:00">09:00</time>-
+                    <time datetime="2015-04-12 10:00">10:00</time></span><span class="event__info">Александр Трегуб</span></p>
+                <h3 class="event__title">Что будет с индустрией через 5-10 лет</h3></a><a href="#ev1" class="event">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-12 10:00">10:00</time>-
+                    <time datetime="2015-04-12 11:00">11:00</time></span><span class="event__info">Максим Сохацкий</span></p>
+                <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-12 12:00">12:00</time>-
+                    <time datetime="2015-04-12 13:00">13:00</time></span><span class="event__info">Артем костенко</span></p>
+                <h3 class="event__title">Место юзабилити в процессе разработки. Мечты и реалии</h3></a>
+              <div class="event event_lunch">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-12 13:00">13:00</time>-
+                    <time datetime="2015-04-12 14:00">14:00</time></span><span class="event__info event__info_lunch">Обед</span></p>
+              </div><a href="#ev1" class="event">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-12 15:00">15:00</time>-
+                    <time datetime="2015-04-12 16:00">16:00</time></span><span class="event__info">Максим Сохацкий</span></p>
+                <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a>
+            </div>
+            <!-- Front-end events-->
+            <div id="front-end-day" class="events-page">
+              <div class="event event_day">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-13">13.04</time></span><span class="event__info">Front-end day</span></p>
+              </div><a href="#ev1" class="event">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-13 09:00">09:00</time>-
+                    <time datetime="2015-04-13 10:00">10:00</time></span><span class="event__info">Александр Трегуб</span></p>
+                <h3 class="event__title">Что будет с индустрией через 5-10 лет</h3></a><a href="#ev1" class="event">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-13 10:00">10:00</time>-
+                    <time datetime="2015-04-13 11:00">11:00</time></span><span class="event__info">Максим Сохацкий</span></p>
+                <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-13 11:00">11:00</time>-
+                    <time datetime="2015-04-13 12:00">12:00</time></span><span class="event__info">Василий Маланка</span></p>
+                <h3 class="event__title">Влияние выхода платформы Magento 2.0 на мир E-commerce</h3></a><a href="#ev1" class="event">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-13 12:00">12:00</time>-
+                    <time datetime="2015-04-13 13:00">13:00</time></span><span class="event__info">Артем костенко</span></p>
+                <h3 class="event__title">Место юзабилити в процессе разработки. Мечты и реалии</h3></a>
+              <div class="event event_lunch">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-13 13:00">13:00</time>-
+                    <time datetime="2015-04-13 14:00">14:00</time></span><span class="event__info event__info_lunch">Обед</span></p>
+              </div><a href="#ev1" class="event">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-13 15:00">15:00</time>-
+                    <time datetime="2015-04-13 16:00">16:00</time></span><span class="event__info">Максим Сохацкий</span></p>
+                <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-13 16:00">16:00</time>-
+                    <time datetime="2015-04-13 17:00">17:00</time></span><span class="event__info">Василий Маланка</span></p>
+                <h3 class="event__title">Влияние выхода платформы Magento 2.0 на мир E-commerce</h3></a><a href="#ev1" class="event">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-13 17:00">17:00</time>-
+                    <time datetime="2015-04-13 18:00">18:00</time></span><span class="event__info">Артем костенко</span></p>
+                <h3 class="event__title">Место юзабилити в процессе разработки. Мечты и реалии</h3></a>
+            </div>
+            <!-- Back-end events-->
+            <div id="back-end-day" class="events-page">
+              <div class="event event_day">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-14">14.04</time></span><span class="event__info">Back-end day</span></p>
+              </div><a href="#ev1" class="event">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-14 09:00">09:00</time>-
+                    <time datetime="2015-04-14 10:00">10:00</time></span><span class="event__info">Александр Трегуб</span></p>
+                <h3 class="event__title">Что будет с индустрией через 5-10 лет</h3></a><a href="#ev1" class="event">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-14 10:00">10:00</time>-
+                    <time datetime="2015-04-14 11:00">11:00</time></span><span class="event__info">Максим Сохацкий</span></p>
+                <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-14 11:00">11:00</time>-
+                    <time datetime="2015-04-14 12:00">12:00</time></span><span class="event__info">Василий Маланка</span></p>
+                <h3 class="event__title">Влияние выхода платформы Magento 2.0 на мир E-commerce</h3></a>
+              <div class="event event_lunch">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-14 13:00">13:00</time>-
+                    <time datetime="2015-04-14 14:00">14:00</time></span><span class="event__info event__info_lunch">Обед</span></p>
+              </div><a href="#ev1" class="event">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-14 14:00">14:00</time>-
+                    <time datetime="2015-04-14 15:00">15:00</time></span><span class="event__info">Jean-Baptiste Guerraz &amp; Igor Uzlov</span></p>
+                <h3 class="event__title">Build tons of multi-device JavaScript applications, design patterns &amp; high performance UI</h3></a><a href="#ev1" class="event">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-14 15:00">15:00</time>-
+                    <time datetime="2015-04-14 16:00">16:00</time></span><span class="event__info">Максим Сохацкий</span></p>
+                <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-14 17:00">17:00</time>-
+                    <time datetime="2015-04-14 18:00">18:00</time></span><span class="event__info">Артем костенко</span></p>
+                <h3 class="event__title">Место юзабилити в процессе разработки. Мечты и реалии</h3></a>
+            </div>
+            <!-- Testers events-->
+            <div id="testers-day" class="events-page">
+              <div class="event event_day">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-15">15.04</time></span><span class="event__info">Testers day</span></p>
+              </div><a href="#ev1" class="event">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-15 10:00">10:00</time>-
+                    <time datetime="2015-04-15 11:00">11:00</time></span><span class="event__info">Максим Сохацкий</span></p>
+                <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-15 11:00">11:00</time>-
+                    <time datetime="2015-04-15 12:00">12:00</time></span><span class="event__info">Василий Маланка</span></p>
+                <h3 class="event__title">Влияние выхода платформы Magento 2.0 на мир E-commerce</h3></a><a href="#ev1" class="event">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-15 12:00">12:00</time>-
+                    <time datetime="2015-04-15 13:00">13:00</time></span><span class="event__info">Артем костенко</span></p>
+                <h3 class="event__title">Место юзабилити в процессе разработки. Мечты и реалии</h3></a>
+              <div class="event event_lunch">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-15 13:00">13:00</time>-
+                    <time datetime="2015-04-15 14:00">14:00</time></span><span class="event__info event__info_lunch">Обед</span></p>
+              </div><a href="#ev1" class="event">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-15 14:00">14:00</time>-
+                    <time datetime="2015-04-15 15:00">15:00</time></span><span class="event__info">Jean-Baptiste Guerraz &amp; Igor Uzlov</span></p>
+                <h3 class="event__title">Build tons of multi-device JavaScript applications, design patterns &amp; high performance UI</h3></a><a href="#ev1" class="event">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-15 15:00">15:00</time>-
+                    <time datetime="2015-04-15 16:00">16:00</time></span><span class="event__info">Максим Сохацкий</span></p>
+                <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-15 16:00">16:00</time>-
+                    <time datetime="2015-04-15 17:00">17:00</time></span><span class="event__info">Василий Маланка</span></p>
+                <h3 class="event__title">Влияние выхода платформы Magento 2.0 на мир E-commerce</h3></a>
+            </div>
+            <!-- Web-design events-->
+            <div id="web-designers-day" class="events-page">
+              <div class="event event_day">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-16">16.04</time></span><span class="event__info">Web-design day</span></p>
+              </div><a href="#ev1" class="event">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-16 09:00">09:00</time>-
+                    <time datetime="2015-04-16 10:00">10:00</time></span><span class="event__info">Александр Трегуб</span></p>
+                <h3 class="event__title">Что будет с индустрией через 5-10 лет</h3></a><a href="#ev1" class="event">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-16 10:00">10:00</time>-
+                    <time datetime="2015-04-16 11:00">11:00</time></span><span class="event__info">Максим Сохацкий</span></p>
+                <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-16 11:00">11:00</time>-
+                    <time datetime="2015-04-16 12:00">12:00</time></span><span class="event__info">Василий Маланка</span></p>
+                <h3 class="event__title">Влияние выхода платформы Magento 2.0 на мир E-commerce</h3></a><a href="#ev1" class="event">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-16 12:00">12:00</time>-
+                    <time datetime="2015-04-16 13:00">13:00</time></span><span class="event__info">Артем костенко</span></p>
+                <h3 class="event__title">Место юзабилити в процессе разработки. Мечты и реалии</h3></a>
+              <div class="event event_lunch">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-16 13:00">13:00</time>-
+                    <time datetime="2015-04-16 14:00">14:00</time></span><span class="event__info event__info_lunch">Обед</span></p>
+              </div><a href="#ev1" class="event">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-16 14:00">14:00</time>-
+                    <time datetime="2015-04-16 15:00">15:00</time></span><span class="event__info">Jean-Baptiste Guerraz &amp; Igor Uzlov</span></p>
+                <h3 class="event__title">Build tons of multi-device JavaScript applications, design patterns &amp; high performance UI</h3></a><a href="#ev1" class="event">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-16 15:00">15:00</time>-
+                    <time datetime="2015-04-16 16:00">16:00</time></span><span class="event__info">Максим Сохацкий</span></p>
+                <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-16 16:00">16:00</time>-
+                    <time datetime="2015-04-16 17:00">17:00</time></span><span class="event__info">Василий Маланка</span></p>
+                <h3 class="event__title">Влияние выхода платформы Magento 2.0 на мир E-commerce</h3></a><a href="#ev1" class="event">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-16 17:00">17:00</time>-
+                    <time datetime="2015-04-16 18:00">18:00</time></span><span class="event__info">Артем костенко</span></p>
+                <h3 class="event__title">Место юзабилити в процессе разработки. Мечты и реалии</h3></a>
+            </div>
+            <!-- Soft skills events-->
+            <div id="soft-skills-day" class="events-page">
+              <div class="event event_day">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-17">17.04</time></span><span class="event__info">Soft skills day</span></p>
+              </div><a href="#ev1" class="event">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-17 09:00">09:00</time>-
+                    <time datetime="2015-04-17 10:00">10:00</time></span><span class="event__info">Александр Трегуб</span></p>
+                <h3 class="event__title">Что будет с индустрией через 5-10 лет</h3></a><a href="#ev1" class="event">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-17 10:00">10:00</time>-
+                    <time datetime="2015-04-17 11:00">11:00</time></span><span class="event__info">Максим Сохацкий</span></p>
+                <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-17 11:00">11:00</time>-
+                    <time datetime="2015-04-17 12:00">12:00</time></span><span class="event__info">Василий Маланка</span></p>
+                <h3 class="event__title">Влияние выхода платформы Magento 2.0 на мир E-commerce</h3></a><a href="#ev1" class="event">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-17 12:00">12:00</time>-
+                    <time datetime="2015-04-17 13:00">13:00</time></span><span class="event__info">Артем костенко</span></p>
+                <h3 class="event__title">Место юзабилити в процессе разработки. Мечты и реалии</h3></a>
+              <div class="event event_lunch">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-17 13:00">13:00</time>-
+                    <time datetime="2015-04-17 14:00">14:00</time></span><span class="event__info event__info_lunch">Обед</span></p>
+              </div><a href="#ev1" class="event">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-17 14:00">14:00</time>-
+                    <time datetime="2015-04-17 15:00">15:00</time></span><span class="event__info">Jean-Baptiste Guerraz &amp; Igor Uzlov</span></p>
+                <h3 class="event__title">Build tons of multi-device JavaScript applications, design patterns &amp; high performance UI</h3></a><a href="#ev1" class="event">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-17 15:00">15:00</time>-
+                    <time datetime="2015-04-17 16:00">16:00</time></span><span class="event__info">Максим Сохацкий</span></p>
+                <h3 class="event__title">Размер ПО как критерий эффективности, надежности и гибкости</h3></a><a href="#ev1" class="event">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-17 16:00">16:00</time>-
+                    <time datetime="2015-04-17 17:00">17:00</time></span><span class="event__info">Василий Маланка</span></p>
+                <h3 class="event__title">Влияние выхода платформы Magento 2.0 на мир E-commerce</h3></a><a href="#ev1" class="event">
+                <p class="event__meta"><span class="event__time">
+                    <time datetime="2015-04-17 17:00">17:00</time>-
+                    <time datetime="2015-04-17 18:00">18:00</time></span><span class="event__info">Артем костенко</span></p>
+                <h3 class="event__title">Место юзабилити в процессе разработки. Мечты и реалии</h3></a>
+            </div>
+            <!-- Afterparty-->
+            <div id="afterparty" class="afterparty icon icon_ev-aft">
+              <p class="afterparty__text">Душевное автепати в конце недельной конференции.<br>Живая музыка, море напитков и угощений. Лёгкая атмосфера для общения и знакомств.</p>
+              <p class="afterparty__text afterparty__text_note">Вечеринка будет закрытой: только участники и спикеры ІТ-Конференции.</p>
+              <p class="afterparty__text">Стоимость:<span class="afterparty__price"> 300</span> грн.</p>
+            </div>
           </div>
         </div>
       </div>

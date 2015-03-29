@@ -13,13 +13,26 @@
 // Reset.........................Reset defaults
 // Fonts.........................Fonts
 // General styles................Abstract styles
-// Header styles.................Header and top nav
-// Main navigation...............Main anchor menu
-// Switchers.....................Screen slider bullet-styled switchers
-// Screen........................Page screen sized sections
-// Iconic fonts..................Some icons from iconic fonts
-// Button links..................Button styled links
-// Home-info.....................Home screen info: title, etc
+//
+// Screen........................Common screen
+// Switchers.....................Side screen switchers
+// Font icons....................Iconic font
+// Sprite icons..................Icons from sprite
+// Button link...................Common button-styled link
+// Category navigation...........Category and filter navigation
+// Social buttons................Social buttons
+// Gallery.......................Speakers and video gallery
+// Popup.........................Popup screen
+//
+// Main header...................Top header with nav btn
+// Main nav......................Main side menu
+// Home information..............Home screen: title, etc
+// News..........................News screen
+// About information.............About screen subpages
+// Events list...................Events lists
+// Tickets.......................Tickets section
+// Partners links................Partners gallery
+// Footer........................Footer: contact info, social btns, copyrights
 
 
 ///////////////////////////////// HELPERS AND LIBS
@@ -146,6 +159,11 @@
 @import components/_about-info
 
 // ==============================
+// $Events list
+// ==============================
+@import components/_events
+
+// ==============================
 // $Tickets
 // ==============================
 @import components/_tickets
@@ -159,16 +177,3 @@
 // $Footer
 // ==============================
 @import components/_main-footer
-
-
-/////////////////////////////////// EVENTS
-
-
-.events
-	display: none
-
-	&.is-active
-		display: block
-
-.afterparty
-	display: none

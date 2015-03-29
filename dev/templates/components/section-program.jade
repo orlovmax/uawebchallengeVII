@@ -1,6 +1,6 @@
-section#program.screen.screen_progr.screen_bg_color
+section#program.screen.screen_progr.screen_bg
 	.container
-		aside.screen__aside.screen__aside_progr
+		aside.screen__aside.screen__aside_progr.screen__aside_cor.screen__aside_cor_light
 			h2.screen__title.screen__title_progr Программа
 
 			// Sidebar with screen navigation
@@ -53,461 +53,459 @@ section#program.screen.screen_progr.screen_bg_color
 		// Target information
 		// All events
 		.events-wrap
-			#all-events.events
+			.events-scroll
+				// Opening events
+				#opening.events-page
+					.event.event_day
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-12") 12.04
+							span.event__info Opening day
+					a.event(href="#ev1")
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-12 09:00") 09:00
+								| -
+								time(datetime="2015-04-12 10:00") 10:00
+							span.event__info Александр Трегуб
+						h3.event__title Что будет с индустрией через 5-10 лет
 
+					a.event(href="#ev1")
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-12 10:00") 10:00
+								| -
+								time(datetime="2015-04-12 11:00") 11:00
+							span.event__info Максим Сохацкий
+						h3.event__title Размер ПО как критерий эффективности, надежности и гибкости
 
-			// Opening events
-			#opening.events(class="all")
-				.event.event_extra
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-12") 12.04
-						span.event__info Opening day
-				a.event(href="#ev1")
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-12 09:00") 09:00
-							| -
-							time(datetime="2015-04-12 10:00") 10:00
-						span.event__info Александр Трегуб
-					h3.event__title Что будет с индустрией через 5-10 лет
+					a.event(href="#ev1")
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-12 12:00") 12:00
+								| -
+								time(datetime="2015-04-12 13:00") 13:00
+							span.event__info Артем костенко
+						h3.event__title Место юзабилити в процессе разработки. Мечты и реалии
 
-				a.event(href="#ev1")
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-12 10:00") 10:00
-							| -
-							time(datetime="2015-04-12 11:00") 11:00
-						span.event__info Максим Сохацкий
-					h3.event__title Размер ПО как критерий эффективности, надежности и гибкости
+					.event.event_lunch
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-12 13:00") 13:00
+								| -
+								time(datetime="2015-04-12 14:00") 14:00
+							span.event__info.event__info_lunch Обед
 
-				a.event(href="#ev1")
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-12 12:00") 12:00
-							| -
-							time(datetime="2015-04-12 13:00") 13:00
-						span.event__info Артем костенко
-					h3.event__title Место юзабилити в процессе разработки. Мечты и реалии
+					a.event(href="#ev1")
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-12 15:00") 15:00
+								| -
+								time(datetime="2015-04-12 16:00") 16:00
+							span.event__info Максим Сохацкий
+						h3.event__title Размер ПО как критерий эффективности, надежности и гибкости
 
-				.event.event_lunch
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-12 13:00") 13:00
-							| -
-							time(datetime="2015-04-12 14:00") 14:00
-						span.event__info.event__info_lunch Обед
+				// Front-end events
+				#front-end-day.events-page
+					.event.event_day
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-13") 13.04
+							span.event__info Front-end day
+					a.event(href="#ev1")
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-13 09:00") 09:00
+								| -
+								time(datetime="2015-04-13 10:00") 10:00
+							span.event__info Александр Трегуб
+						h3.event__title Что будет с индустрией через 5-10 лет
 
-				a.event(href="#ev1")
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-12 15:00") 15:00
-							| -
-							time(datetime="2015-04-12 16:00") 16:00
-						span.event__info Максим Сохацкий
-					h3.event__title Размер ПО как критерий эффективности, надежности и гибкости
+					a.event(href="#ev1")
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-13 10:00") 10:00
+								| -
+								time(datetime="2015-04-13 11:00") 11:00
+							span.event__info Максим Сохацкий
+						h3.event__title Размер ПО как критерий эффективности, надежности и гибкости
 
-			// Front-end events
-			#front-end-day.events(class="all")
-				.event.event_extra
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-13") 13.04
-						span.event__info Front-end day
-				a.event(href="#ev1")
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-13 09:00") 09:00
-							| -
-							time(datetime="2015-04-13 10:00") 10:00
-						span.event__info Александр Трегуб
-					h3.event__title Что будет с индустрией через 5-10 лет
+					a.event(href="#ev1")
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-13 11:00") 11:00
+								| -
+								time(datetime="2015-04-13 12:00") 12:00
+							span.event__info Василий Маланка
+						h3.event__title Влияние выхода платформы Magento 2.0 на мир E-commerce
 
-				a.event(href="#ev1")
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-13 10:00") 10:00
-							| -
-							time(datetime="2015-04-13 11:00") 11:00
-						span.event__info Максим Сохацкий
-					h3.event__title Размер ПО как критерий эффективности, надежности и гибкости
+					a.event(href="#ev1")
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-13 12:00") 12:00
+								| -
+								time(datetime="2015-04-13 13:00") 13:00
+							span.event__info Артем костенко
+						h3.event__title Место юзабилити в процессе разработки. Мечты и реалии
 
-				a.event(href="#ev1")
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-13 11:00") 11:00
-							| -
-							time(datetime="2015-04-13 12:00") 12:00
-						span.event__info Василий Маланка
-					h3.event__title Влияние выхода платформы Magento 2.0 на мир E-commerce
+					.event.event_lunch
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-13 13:00") 13:00
+								| -
+								time(datetime="2015-04-13 14:00") 14:00
+							span.event__info.event__info_lunch Обед
 
-				a.event(href="#ev1")
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-13 12:00") 12:00
-							| -
-							time(datetime="2015-04-13 13:00") 13:00
-						span.event__info Артем костенко
-					h3.event__title Место юзабилити в процессе разработки. Мечты и реалии
+					a.event(href="#ev1")
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-13 15:00") 15:00
+								| -
+								time(datetime="2015-04-13 16:00") 16:00
+							span.event__info Максим Сохацкий
+						h3.event__title Размер ПО как критерий эффективности, надежности и гибкости
 
-				.event.event_lunch
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-13 13:00") 13:00
-							| -
-							time(datetime="2015-04-13 14:00") 14:00
-						span.event__info.event__info_lunch Обед
+					a.event(href="#ev1")
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-13 16:00") 16:00
+								| -
+								time(datetime="2015-04-13 17:00") 17:00
+							span.event__info Василий Маланка
+						h3.event__title Влияние выхода платформы Magento 2.0 на мир E-commerce
 
-				a.event(href="#ev1")
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-13 15:00") 15:00
-							| -
-							time(datetime="2015-04-13 16:00") 16:00
-						span.event__info Максим Сохацкий
-					h3.event__title Размер ПО как критерий эффективности, надежности и гибкости
+					a.event(href="#ev1")
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-13 17:00") 17:00
+								| -
+								time(datetime="2015-04-13 18:00") 18:00
+							span.event__info Артем костенко
+						h3.event__title Место юзабилити в процессе разработки. Мечты и реалии
 
-				a.event(href="#ev1")
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-13 16:00") 16:00
-							| -
-							time(datetime="2015-04-13 17:00") 17:00
-						span.event__info Василий Маланка
-					h3.event__title Влияние выхода платформы Magento 2.0 на мир E-commerce
+				// Back-end events
+				#back-end-day.events-page
+					.event.event_day
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-14") 14.04
+							span.event__info Back-end day
+					a.event(href="#ev1")
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-14 09:00") 09:00
+								| -
+								time(datetime="2015-04-14 10:00") 10:00
+							span.event__info Александр Трегуб
+						h3.event__title Что будет с индустрией через 5-10 лет
 
-				a.event(href="#ev1")
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-13 17:00") 17:00
-							| -
-							time(datetime="2015-04-13 18:00") 18:00
-						span.event__info Артем костенко
-					h3.event__title Место юзабилити в процессе разработки. Мечты и реалии
+					a.event(href="#ev1")
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-14 10:00") 10:00
+								| -
+								time(datetime="2015-04-14 11:00") 11:00
+							span.event__info Максим Сохацкий
+						h3.event__title Размер ПО как критерий эффективности, надежности и гибкости
 
-			// Back-end events
-			#back-end-day.events(class="all")
-				.event.event_extra
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-14") 14.04
-						span.event__info Back-end day
-				a.event(href="#ev1")
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-14 09:00") 09:00
-							| -
-							time(datetime="2015-04-14 10:00") 10:00
-						span.event__info Александр Трегуб
-					h3.event__title Что будет с индустрией через 5-10 лет
+					a.event(href="#ev1")
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-14 11:00") 11:00
+								| -
+								time(datetime="2015-04-14 12:00") 12:00
+							span.event__info Василий Маланка
+						h3.event__title Влияние выхода платформы Magento 2.0 на мир E-commerce
 
-				a.event(href="#ev1")
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-14 10:00") 10:00
-							| -
-							time(datetime="2015-04-14 11:00") 11:00
-						span.event__info Максим Сохацкий
-					h3.event__title Размер ПО как критерий эффективности, надежности и гибкости
+					.event.event_lunch
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-14 13:00") 13:00
+								| -
+								time(datetime="2015-04-14 14:00") 14:00
+							span.event__info.event__info_lunch Обед
 
-				a.event(href="#ev1")
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-14 11:00") 11:00
-							| -
-							time(datetime="2015-04-14 12:00") 12:00
-						span.event__info Василий Маланка
-					h3.event__title Влияние выхода платформы Magento 2.0 на мир E-commerce
+					a.event(href="#ev1")
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-14 14:00") 14:00
+								| -
+								time(datetime="2015-04-14 15:00") 15:00
+							span.event__info Jean-Baptiste Guerraz &amp; Igor Uzlov
+						h3.event__title Build tons of multi-device JavaScript applications, design patterns &amp; high performance UI
 
-				.event.event_lunch
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-14 13:00") 13:00
-							| -
-							time(datetime="2015-04-14 14:00") 14:00
-						span.event__info.event__info_lunch Обед
+					a.event(href="#ev1")
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-14 15:00") 15:00
+								| -
+								time(datetime="2015-04-14 16:00") 16:00
+							span.event__info Максим Сохацкий
+						h3.event__title Размер ПО как критерий эффективности, надежности и гибкости
 
-				a.event(href="#ev1")
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-14 14:00") 14:00
-							| -
-							time(datetime="2015-04-14 15:00") 15:00
-						span.event__info Jean-Baptiste Guerraz &amp; Igor Uzlov
-					h3.event__title Build tons of multi-device JavaScript applications, design patterns &amp; high performance UI
+					a.event(href="#ev1")
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-14 17:00") 17:00
+								| -
+								time(datetime="2015-04-14 18:00") 18:00
+							span.event__info Артем костенко
+						h3.event__title Место юзабилити в процессе разработки. Мечты и реалии
 
-				a.event(href="#ev1")
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-14 15:00") 15:00
-							| -
-							time(datetime="2015-04-14 16:00") 16:00
-						span.event__info Максим Сохацкий
-					h3.event__title Размер ПО как критерий эффективности, надежности и гибкости
+				// Testers events
+				#testers-day.events-page
+					.event.event_day
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-15") 15.04
+							span.event__info Testers day
+					a.event(href="#ev1")
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-15 10:00") 10:00
+								| -
+								time(datetime="2015-04-15 11:00") 11:00
+							span.event__info Максим Сохацкий
+						h3.event__title Размер ПО как критерий эффективности, надежности и гибкости
 
-				a.event(href="#ev1")
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-14 17:00") 17:00
-							| -
-							time(datetime="2015-04-14 18:00") 18:00
-						span.event__info Артем костенко
-					h3.event__title Место юзабилити в процессе разработки. Мечты и реалии
+					a.event(href="#ev1")
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-15 11:00") 11:00
+								| -
+								time(datetime="2015-04-15 12:00") 12:00
+							span.event__info Василий Маланка
+						h3.event__title Влияние выхода платформы Magento 2.0 на мир E-commerce
 
-			// Testers events
-			#testers-day.events(class="all")
-				.event.event_extra
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-15") 15.04
-						span.event__info Testers day
-				a.event(href="#ev1")
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-15 10:00") 10:00
-							| -
-							time(datetime="2015-04-15 11:00") 11:00
-						span.event__info Максим Сохацкий
-					h3.event__title Размер ПО как критерий эффективности, надежности и гибкости
+					a.event(href="#ev1")
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-15 12:00") 12:00
+								| -
+								time(datetime="2015-04-15 13:00") 13:00
+							span.event__info Артем костенко
+						h3.event__title Место юзабилити в процессе разработки. Мечты и реалии
 
-				a.event(href="#ev1")
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-15 11:00") 11:00
-							| -
-							time(datetime="2015-04-15 12:00") 12:00
-						span.event__info Василий Маланка
-					h3.event__title Влияние выхода платформы Magento 2.0 на мир E-commerce
+					.event.event_lunch
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-15 13:00") 13:00
+								| -
+								time(datetime="2015-04-15 14:00") 14:00
+							span.event__info.event__info_lunch Обед
 
-				a.event(href="#ev1")
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-15 12:00") 12:00
-							| -
-							time(datetime="2015-04-15 13:00") 13:00
-						span.event__info Артем костенко
-					h3.event__title Место юзабилити в процессе разработки. Мечты и реалии
+					a.event(href="#ev1")
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-15 14:00") 14:00
+								| -
+								time(datetime="2015-04-15 15:00") 15:00
+							span.event__info Jean-Baptiste Guerraz &amp; Igor Uzlov
+						h3.event__title Build tons of multi-device JavaScript applications, design patterns &amp; high performance UI
 
-				.event.event_lunch
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-15 13:00") 13:00
-							| -
-							time(datetime="2015-04-15 14:00") 14:00
-						span.event__info.event__info_lunch Обед
+					a.event(href="#ev1")
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-15 15:00") 15:00
+								| -
+								time(datetime="2015-04-15 16:00") 16:00
+							span.event__info Максим Сохацкий
+						h3.event__title Размер ПО как критерий эффективности, надежности и гибкости
 
-				a.event(href="#ev1")
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-15 14:00") 14:00
-							| -
-							time(datetime="2015-04-15 15:00") 15:00
-						span.event__info Jean-Baptiste Guerraz &amp; Igor Uzlov
-					h3.event__title Build tons of multi-device JavaScript applications, design patterns &amp; high performance UI
+					a.event(href="#ev1")
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-15 16:00") 16:00
+								| -
+								time(datetime="2015-04-15 17:00") 17:00
+							span.event__info Василий Маланка
+						h3.event__title Влияние выхода платформы Magento 2.0 на мир E-commerce
 
-				a.event(href="#ev1")
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-15 15:00") 15:00
-							| -
-							time(datetime="2015-04-15 16:00") 16:00
-						span.event__info Максим Сохацкий
-					h3.event__title Размер ПО как критерий эффективности, надежности и гибкости
+				// Web-design events
+				#web-designers-day.events-page
+					.event.event_day
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-16") 16.04
+							span.event__info Web-design day
+					a.event(href="#ev1")
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-16 09:00") 09:00
+								| -
+								time(datetime="2015-04-16 10:00") 10:00
+							span.event__info Александр Трегуб
+						h3.event__title Что будет с индустрией через 5-10 лет
 
-				a.event(href="#ev1")
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-15 16:00") 16:00
-							| -
-							time(datetime="2015-04-15 17:00") 17:00
-						span.event__info Василий Маланка
-					h3.event__title Влияние выхода платформы Magento 2.0 на мир E-commerce
+					a.event(href="#ev1")
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-16 10:00") 10:00
+								| -
+								time(datetime="2015-04-16 11:00") 11:00
+							span.event__info Максим Сохацкий
+						h3.event__title Размер ПО как критерий эффективности, надежности и гибкости
 
-			// Web-design events
-			#web-designers-day.events.is-active(class="all")
-				.event.event_extra
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-16") 16.04
-						span.event__info Web-design day
-				a.event(href="#ev1")
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-16 09:00") 09:00
-							| -
-							time(datetime="2015-04-16 10:00") 10:00
-						span.event__info Александр Трегуб
-					h3.event__title Что будет с индустрией через 5-10 лет
+					a.event(href="#ev1")
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-16 11:00") 11:00
+								| -
+								time(datetime="2015-04-16 12:00") 12:00
+							span.event__info Василий Маланка
+						h3.event__title Влияние выхода платформы Magento 2.0 на мир E-commerce
 
-				a.event(href="#ev1")
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-16 10:00") 10:00
-							| -
-							time(datetime="2015-04-16 11:00") 11:00
-						span.event__info Максим Сохацкий
-					h3.event__title Размер ПО как критерий эффективности, надежности и гибкости
+					a.event(href="#ev1")
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-16 12:00") 12:00
+								| -
+								time(datetime="2015-04-16 13:00") 13:00
+							span.event__info Артем костенко
+						h3.event__title Место юзабилити в процессе разработки. Мечты и реалии
 
-				a.event(href="#ev1")
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-16 11:00") 11:00
-							| -
-							time(datetime="2015-04-16 12:00") 12:00
-						span.event__info Василий Маланка
-					h3.event__title Влияние выхода платформы Magento 2.0 на мир E-commerce
+					.event.event_lunch
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-16 13:00") 13:00
+								| -
+								time(datetime="2015-04-16 14:00") 14:00
+							span.event__info.event__info_lunch Обед
 
-				a.event(href="#ev1")
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-16 12:00") 12:00
-							| -
-							time(datetime="2015-04-16 13:00") 13:00
-						span.event__info Артем костенко
-					h3.event__title Место юзабилити в процессе разработки. Мечты и реалии
+					a.event(href="#ev1")
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-16 14:00") 14:00
+								| -
+								time(datetime="2015-04-16 15:00") 15:00
+							span.event__info Jean-Baptiste Guerraz &amp; Igor Uzlov
+						h3.event__title Build tons of multi-device JavaScript applications, design patterns &amp; high performance UI
 
-				.event.event_lunch
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-16 13:00") 13:00
-							| -
-							time(datetime="2015-04-16 14:00") 14:00
-						span.event__info.event__info_lunch Обед
+					a.event(href="#ev1")
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-16 15:00") 15:00
+								| -
+								time(datetime="2015-04-16 16:00") 16:00
+							span.event__info Максим Сохацкий
+						h3.event__title Размер ПО как критерий эффективности, надежности и гибкости
 
-				a.event(href="#ev1")
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-16 14:00") 14:00
-							| -
-							time(datetime="2015-04-16 15:00") 15:00
-						span.event__info Jean-Baptiste Guerraz &amp; Igor Uzlov
-					h3.event__title Build tons of multi-device JavaScript applications, design patterns &amp; high performance UI
+					a.event(href="#ev1")
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-16 16:00") 16:00
+								| -
+								time(datetime="2015-04-16 17:00") 17:00
+							span.event__info Василий Маланка
+						h3.event__title Влияние выхода платформы Magento 2.0 на мир E-commerce
 
-				a.event(href="#ev1")
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-16 15:00") 15:00
-							| -
-							time(datetime="2015-04-16 16:00") 16:00
-						span.event__info Максим Сохацкий
-					h3.event__title Размер ПО как критерий эффективности, надежности и гибкости
+					a.event(href="#ev1")
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-16 17:00") 17:00
+								| -
+								time(datetime="2015-04-16 18:00") 18:00
+							span.event__info Артем костенко
+						h3.event__title Место юзабилити в процессе разработки. Мечты и реалии
 
-				a.event(href="#ev1")
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-16 16:00") 16:00
-							| -
-							time(datetime="2015-04-16 17:00") 17:00
-						span.event__info Василий Маланка
-					h3.event__title Влияние выхода платформы Magento 2.0 на мир E-commerce
+				// Soft skills events
+				#soft-skills-day.events-page
+					.event.event_day
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-17") 17.04
+							span.event__info Soft skills day
+					a.event(href="#ev1")
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-17 09:00") 09:00
+								| -
+								time(datetime="2015-04-17 10:00") 10:00
+							span.event__info Александр Трегуб
+						h3.event__title Что будет с индустрией через 5-10 лет
 
-				a.event(href="#ev1")
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-16 17:00") 17:00
-							| -
-							time(datetime="2015-04-16 18:00") 18:00
-						span.event__info Артем костенко
-					h3.event__title Место юзабилити в процессе разработки. Мечты и реалии
+					a.event(href="#ev1")
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-17 10:00") 10:00
+								| -
+								time(datetime="2015-04-17 11:00") 11:00
+							span.event__info Максим Сохацкий
+						h3.event__title Размер ПО как критерий эффективности, надежности и гибкости
 
-			// Soft skills events
-			#soft-skills-day.events(class="all")
-				.event.event_extra
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-17") 17.04
-						span.event__info Soft skills day
-				a.event(href="#ev1")
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-17 09:00") 09:00
-							| -
-							time(datetime="2015-04-17 10:00") 10:00
-						span.event__info Александр Трегуб
-					h3.event__title Что будет с индустрией через 5-10 лет
+					a.event(href="#ev1")
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-17 11:00") 11:00
+								| -
+								time(datetime="2015-04-17 12:00") 12:00
+							span.event__info Василий Маланка
+						h3.event__title Влияние выхода платформы Magento 2.0 на мир E-commerce
 
-				a.event(href="#ev1")
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-17 10:00") 10:00
-							| -
-							time(datetime="2015-04-17 11:00") 11:00
-						span.event__info Максим Сохацкий
-					h3.event__title Размер ПО как критерий эффективности, надежности и гибкости
+					a.event(href="#ev1")
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-17 12:00") 12:00
+								| -
+								time(datetime="2015-04-17 13:00") 13:00
+							span.event__info Артем костенко
+						h3.event__title Место юзабилити в процессе разработки. Мечты и реалии
 
-				a.event(href="#ev1")
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-17 11:00") 11:00
-							| -
-							time(datetime="2015-04-17 12:00") 12:00
-						span.event__info Василий Маланка
-					h3.event__title Влияние выхода платформы Magento 2.0 на мир E-commerce
+					.event.event_lunch
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-17 13:00") 13:00
+								| -
+								time(datetime="2015-04-17 14:00") 14:00
+							span.event__info.event__info_lunch Обед
 
-				a.event(href="#ev1")
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-17 12:00") 12:00
-							| -
-							time(datetime="2015-04-17 13:00") 13:00
-						span.event__info Артем костенко
-					h3.event__title Место юзабилити в процессе разработки. Мечты и реалии
+					a.event(href="#ev1")
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-17 14:00") 14:00
+								| -
+								time(datetime="2015-04-17 15:00") 15:00
+							span.event__info Jean-Baptiste Guerraz &amp; Igor Uzlov
+						h3.event__title Build tons of multi-device JavaScript applications, design patterns &amp; high performance UI
 
-				.event.event_lunch
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-17 13:00") 13:00
-							| -
-							time(datetime="2015-04-17 14:00") 14:00
-						span.event__info.event__info_lunch Обед
+					a.event(href="#ev1")
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-17 15:00") 15:00
+								| -
+								time(datetime="2015-04-17 16:00") 16:00
+							span.event__info Максим Сохацкий
+						h3.event__title Размер ПО как критерий эффективности, надежности и гибкости
 
-				a.event(href="#ev1")
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-17 14:00") 14:00
-							| -
-							time(datetime="2015-04-17 15:00") 15:00
-						span.event__info Jean-Baptiste Guerraz &amp; Igor Uzlov
-					h3.event__title Build tons of multi-device JavaScript applications, design patterns &amp; high performance UI
+					a.event(href="#ev1")
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-17 16:00") 16:00
+								| -
+								time(datetime="2015-04-17 17:00") 17:00
+							span.event__info Василий Маланка
+						h3.event__title Влияние выхода платформы Magento 2.0 на мир E-commerce
 
-				a.event(href="#ev1")
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-17 15:00") 15:00
-							| -
-							time(datetime="2015-04-17 16:00") 16:00
-						span.event__info Максим Сохацкий
-					h3.event__title Размер ПО как критерий эффективности, надежности и гибкости
+					a.event(href="#ev1")
+						p.event__meta
+							span.event__time
+								time(datetime="2015-04-17 17:00") 17:00
+								| -
+								time(datetime="2015-04-17 18:00") 18:00
+							span.event__info Артем костенко
+						h3.event__title Место юзабилити в процессе разработки. Мечты и реалии
 
-				a.event(href="#ev1")
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-17 16:00") 16:00
-							| -
-							time(datetime="2015-04-17 17:00") 17:00
-						span.event__info Василий Маланка
-					h3.event__title Влияние выхода платформы Magento 2.0 на мир E-commerce
-
-				a.event(href="#ev1")
-					p.event__meta
-						span.event__time
-							time(datetime="2015-04-17 17:00") 17:00
-							| -
-							time(datetime="2015-04-17 18:00") 18:00
-						span.event__info Артем костенко
-					h3.event__title Место юзабилити в процессе разработки. Мечты и реалии
-
-			// Afterparty
-			#afterparty.afterparty.icon.icon_ev-aft
-				p.afterparty__text
-					| Душевное автепати в конце недельной конференции.
-					br
-					| Живая музыка, море напитков и угощений. Лёгкая атмосфера для общения и знакомств.
-				p.afterparty__text.afterparty__text_note Вечеринка будет закрытой: только участники и спикеры ІТ-Конференции.
-				p.afterparty__text
-					| Стоимость:
-					span.afterparty__price  300
-					|  грн.
+				// Afterparty
+				#afterparty.afterparty.icon.icon_ev-aft
+					p.afterparty__text
+						| Душевное автепати в конце недельной конференции.
+						br
+						| Живая музыка, море напитков и угощений. Лёгкая атмосфера для общения и знакомств.
+					p.afterparty__text.afterparty__text_note Вечеринка будет закрытой: только участники и спикеры ІТ-Конференции.
+					p.afterparty__text
+						| Стоимость:
+						span.afterparty__price  300
+						|  грн.
 
 
 	// And here comes popup windows

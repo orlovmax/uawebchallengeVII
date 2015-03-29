@@ -1,0 +1,108 @@
+.events-wrap
+	position: relative
+	height: 100%
+	padding-top: 105px
+	float: right
+	overflow: hidden
+	+gs-col-9()
+
+.events-scroll
+	position: relative
+	right: -20px
+	width: 100%
+	height: 100%
+	overflow: auto
+	+clearfix
+
+
+.events-page
+	margin-bottom: 80px
+
+	&.is-active
+		display: block
+		& .event_extra
+			display: none
+
+.event
+	display: block
+	width: 100%
+	padding: 20px 0
+	text-decoration: none
+	border-bottom: 1px solid $c-progr_border
+	+transition(all, .5s)
+
+	&:hover
+		background-color: $c-contrast_light
+		+box-shadow(0,0,10px,0, transparentize($c-contrast_dark, 0.9))
+		& .event__info:before
+			color: $c-light
+
+	&__meta
+		margin-left: 17px
+		font-family: $f-bold
+
+	&__time
+		font-size: 12px
+		line-height: 10px
+
+	&__info
+		font-size: 11px
+		line-height: 20px
+		text-transform: uppercase
+		&:before
+			content: '\2022'
+			display: inline-block
+			margin: 0 13px
+			color: $c-contrast_light
+			font-size: 20px
+			+transition(all, .5s)
+
+		&_lunch:before
+			content: url($i-lunch)
+			vertical-align: middle
+
+	&__title
+		margin: 5px 0 0 17px
+		font-family: $f-thin
+		font-size: 20px
+		line-height: 22px
+
+	&_lunch
+		padding: 10px 0
+		border-bottom: 4px solid $c-contrast_dark
+		border-top: 4px solid $c-contrast_dark
+		&:hover
+			background-color: transparent
+			box-shadow: none
+
+	&_day
+		background-color: $c-contrast_light
+		& .event__info:before
+			color: $c-light
+		&:hover
+			box-shadow: none
+
+.afterparty
+	display: none
+	float: left
+	+gs-col-10
+	+gs-push-2
+
+	&.is-active
+		display: block
+
+	&:before
+		margin-top: 155px
+		margin-bottom: 50px
+
+	&__text
+		font-family: $f-thin
+		font-size: 16px
+		line-height: 22px
+		color: $c-contrast_light
+
+		&_note
+			margin-top: 35px
+			padding-top: 35px
+			font-family: $f-thini
+			border-top: 1px solid $c-popup_divider_dark
