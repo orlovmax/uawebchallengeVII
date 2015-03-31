@@ -1517,18 +1517,6 @@ h6 {
 	right: 0;
 }
 
-.main-nav:before {
-	content: "";
-	position: absolute;
-	top: 0;
-	right: 0;
-	z-index: 0;
-	display: block;
-	width: 30%;
-	height: 100%;
-	background-color: #222;
-}
-
 .main-nav__wrap {
 	position: absolute;
 	top: 0;
@@ -1536,27 +1524,38 @@ h6 {
 	display: inline-block;
 	height: 100%;
 	background-color: #222;
-	width: 23%;
-	width: calc(25% - 30px);
+	width: 31.33333%;
+	width: calc(33.33333% - 30px);
 	margin-left: 1%;
 	margin-right: 1%;
 	margin-left: calc(15px);
 	margin-right: calc(15px);
 }
 
+.main-nav__wrap:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: -1000px;
+	z-index: 0;
+	display: block;
+	width: 1000px;
+	height: 100%;
+	background-color: #222;
+}
+
 .main-nav__wrap:before {
 	content: "";
 	position: absolute;
 	top: 0;
-	left: -230px;
+	left: -199px;
 	z-index: -1;
 	display: block;
-	width: 500px;
+	width: 200px;
 	height: 100%;
-	background-color: #222;
-	-webkit-transform: skewX(-15deg);
-	-ms-transform: skewX(-15deg);
-	transform: skewX(-15deg);
+	background-image: url("../img/crd_r.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 }
 
 .main-nav__list {
@@ -2154,14 +2153,6 @@ h6 {
 
 }
 
-@media screen and (max-width: 960px) {
-
-.main-nav__wrap:before {
-	display: none;
-}
-
-}
-
 @media screen and (max-height: 640px), screen and (max-width: 960px) {
 
 .screen__title_news {
@@ -2218,6 +2209,19 @@ h6 {
 .popup__info {
 	padding-top: 20px;
 	margin-bottom: 25px;
+}
+
+.main-nav__wrap:before {
+	display: none !important;
+}
+
+.main-nav__list {
+	margin-top: 60px;
+}
+
+.main-nav__link {
+	font-size: 28px;
+	line-height: 40px;
 }
 
 .home-info {
