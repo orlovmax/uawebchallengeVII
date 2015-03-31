@@ -11,7 +11,8 @@
 		togglePopup: 'js-togglepopup',
 		toggleClose: 'js-toggleclose',
 		activeContent: 'is-visible',
-		activeLink: 'is-active'
+		activeLink: 'is-active',
+		asideCorner: 'is-corner'
 	};
 
 	function ToggleContent( element, options ) {
@@ -62,14 +63,14 @@
 								$this.removeClass(removeClass)
 								$this.addClass('screen_bg_' + bgName)
 								// Add corner
-								if($toggleCorner) {
+								if(!$toggleCorner.hasClass(this.options.asideCorner)) {
 									$toggleCorner.addClass('is-corner');
 								}
 							} else {
 								$this.removeClass(removeClass)
 								$this.addClass('screen_bg_none')
 								// Remove corner
-								if($toggleCorner) {
+								if($toggleCorner.hasClass(this.options.asideCorner)) {
 									$toggleCorner.removeClass('is-corner');
 								}
 							}
@@ -82,10 +83,15 @@
 						$target.fadeIn().addClass(this.options.activeContent);
 					} else {
 						// Show all
-						$current.addClass(this.options.activeLink);
 						$toggleLink.removeClass(this.options.activeLink);
-						$toggleTarget.fadeIn().removeClass(this.options.activeContent);
-
+						$current.addClass(this.options.activeLink);
+						$toggleTarget.removeAttr('style').removeClass(this.options.activeContent);
+						// Remove background
+						$this.removeClass(removeClass).end().addClass('screen_bg_none')
+						// Remove corner
+						if($toggleCorner.hasClass(this.options.asideCorner)) {
+							$toggleCorner.removeClass('is-corner');
+						}
 					}
 				}
 			}

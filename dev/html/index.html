@@ -32,23 +32,6 @@
     <script src="js/head/head.min.js"></script>  </head>
   <body>
     <!-- Page preloader js-->
-    <script>
-      progressJs().setOptions({overlayMode: true, theme: 'custom'}).start();
-      if(window.attachEvent) {
-          window.attachEvent('onload', function(){ progressJs().end(); });
-      } else {
-          if(window.onload) {
-              var curronload = window.onload;
-              var newonload = function() {
-                  curronload();
-                  progressJs().end();
-              };
-              window.onload = newonload;
-          } else {
-              window.onload = function(){ progressJs().end(); };
-          }
-      }
-    </script>
     <!-- Header-->
     <header class="main-header">
       <div class="container">
@@ -199,11 +182,11 @@
         <!-- Top screen category filter-->
         <nav class="cat cat_hor">
           <ul class="cat__list cat__list_hor_speak">
-            <li class="cat__item cat__item_hor cat__item_hor_speak"><a href="#" data-filter="all" class="cat__link cat__link_hor cat__link_hor_speak js-filterlink is-active">Все спикеры</a></li>
-            <li class="cat__item cat__item_hor cat__item_hor_speak"><a href="#" data-filter="front-end" class="cat__link cat__link_hor cat__link_hor_speak js-filterlink">Front-end</a></li>
-            <li class="cat__item cat__item_hor cat__item_hor_speak"><a href="#" data-filter="back-end" class="cat__link cat__link_hor cat__link_hor_speak js-filterlink">Back-end</a></li>
-            <li class="cat__item cat__item_hor cat__item_hor_speak"><a href="#" data-filter="qa" class="cat__link cat__link_hor cat__link_hor_speak js-filterlink">QA</a></li>
-            <li class="cat__item cat__item_hor cat__item_hor_speak"><a href="#" data-filter="web-design" class="cat__link cat__link_hor cat__link_hor_speak js-filterlink">Web-design</a></li>
+            <li class="cat__item cat__item_hor cat__item_hor_speak"><a href="#all" class="cat__link cat__link_hor cat__link_hor_speak js-filterlink is-active">Все спикеры</a></li>
+            <li class="cat__item cat__item_hor cat__item_hor_speak"><a href="#front-end" class="cat__link cat__link_hor cat__link_hor_speak js-filterlink">Front-end</a></li>
+            <li class="cat__item cat__item_hor cat__item_hor_speak"><a href="#back-end" class="cat__link cat__link_hor cat__link_hor_speak js-filterlink">Back-end</a></li>
+            <li class="cat__item cat__item_hor cat__item_hor_speak"><a href="#qa" class="cat__link cat__link_hor cat__link_hor_speak js-filterlink">QA</a></li>
+            <li class="cat__item cat__item_hor cat__item_hor_speak"><a href="#web-design" class="cat__link cat__link_hor cat__link_hor_speak js-filterlink">Web-design</a></li>
             <li class="cat__item cat__item_hor cat__item_contr js-controls">
               <p class="cat__item-counter"><span>-</span>/<span>-</span></p><a class="cat__item-btn iconfont iconfont_prev iconfont_ctrl_prev">Назад</a><a class="cat__item-btn iconfont iconfont_next iconfont_ctrl_next">Вперед</a>
             </li>
