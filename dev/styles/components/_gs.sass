@@ -1,9 +1,8 @@
-// Custom grid system...
-// I wish I could use this handy and awesome mixin lib
-// https://github.com/mycodelab/miniature-wookie/blob/master/_gs.sass
-// ugh... rules, rules, rules
+// =========================================================
+// Fluid grid system for scss
+// =========================================================
 
-
+// Internal mixins
 // Calc() mixin
 =calc($property, $expression)
 	#{$property}: -webkit-calc(#{$expression})
@@ -13,202 +12,168 @@
 // Clearfix
 =gs_clear
 	&:after
+		display: block
 		content: ''
 		clear: both
-		display: block
-		width: 100%
 		height: 0
 
-// Grid container
-=gs-container()
-	width: 100%
+
+
+//////////////////////////////////////// GRID CONTAINER mixin
+
+// GS Mixins
+// Grid system container mixin, should be used for grid container and rows.
+
+=gs($gs_width: $gs_width, $gs_gutter-width: $gs_gutter-width, $gs_gutter-width-fallback: $gs_gutter-width-fallback)
+
+	// Grid width and margin math for calc() and fallback
+	$half-gutter-width: $gs_gutter-width / 2
+	$half-gutter-width-fallback: $gs_gutter-width-fallback / 2
+
+	// Check gutter width and it fallback for `auto` values, if false - return no math variant
+	@if $gs_gutter-width != auto and $gs_gutter-width-fallback != auto
+
+		// Check gutter value, if its units not equal to grid units - return calc math with fallback<
+		// else - common math
+		@if unit($gs_gutter-width) != unit($gs_width) and unitless($gs_gutter-width) == false
+
+			// Check gutter fallback value for valid  units,
+			// if true - continue math with calc() property and fallback
+			@if unit($gs_gutter-width-fallback) == unit($gs_width) and unitless($gs_gutter-width-fallback) == false
+				width: $gs_width - $gs_gutter-width-fallback
+				+calc(width, #{$gs_width} - #{$gs_gutter-width})
+				margin-left: $half-gutter-width-fallback
+				margin-right: $half-gutter-width-fallback
+				+calc(margin-left, $half-gutter-width)
+				+calc(margin-right, $half-gutter-width)
+
+			@else
+				@error "Fallback gutter units must be the same as grid width units `#{unit($gs_width)}`"
+
+		@else
+			width: $gs_width - $gs_gutter-width
+			margin-left: $half-gutter-width
+			margin-right: $half-gutter-width
+
+	@else
+		width: $gs_width
+		margin-left: $half-gutter-width
+		margin-right: $half-gutter-width
 	+gs_clear
 
-// Columns
-=gs-col-1()
-	width: (100% / 12) * 1 - 2%
-	+calc(width, #{(100% / 12) * 1} - 30px)
-	margin-left:  1%
-	margin-right: 1%
-	+calc(margin-left, 15px)
-	+calc(margin-right, 15px)
-
-=gs-col-2()
-	width: (100% / 12) * 2 - 2%
-	+calc(width, #{(100% / 12) * 2} - 30px)
-	margin-left:  1%
-	margin-right: 1%
-	+calc(margin-left, 15px)
-	+calc(margin-right, 15px)
-
-=gs-col-3()
-	width: (100% / 12) * 3 - 2%
-	+calc(width, #{(100% / 12) * 3} - 30px)
-	margin-left:  1%
-	margin-right: 1%
-	+calc(margin-left, 15px)
-	+calc(margin-right, 15px)
-
-=gs-col-4()
-	width: (100% / 12) * 4 - 2%
-	+calc(width, #{(100% / 12) * 4} - 30px)
-	margin-left:  1%
-	margin-right: 1%
-	+calc(margin-left, 15px)
-	+calc(margin-right, 15px)
-
-=gs-col-5()
-	width: (100% / 12) * 5 - 2%
-	+calc(width, #{(100% / 12) * 5} - 30px)
-	margin-left:  1%
-	margin-right: 1%
-	+calc(margin-left, 15px)
-	+calc(margin-right, 15px)
-
-=gs-col-6()
-	width: (100% / 12) * 6 - 2%
-	+calc(width, #{(100% / 12) * 6} - 30px)
-	margin-left:  1%
-	margin-right: 1%
-	+calc(margin-left, 15px)
-	+calc(margin-right, 15px)
-
-=gs-col-7()
-	width: (100% / 12) * 7 - 2%
-	+calc(width, #{(100% / 12) * 7} - 30px)
-	margin-left:  1%
-	margin-right: 1%
-	+calc(margin-left, 15px)
-	+calc(margin-right, 15px)
-
-=gs-col-8()
-	width: (100% / 12) * 8 - 2%
-	+calc(width, #{(100% / 12) * 8} - 30px)
-	margin-left:  1%
-	margin-right: 1%
-	+calc(margin-left, 15px)
-	+calc(margin-right, 15px)
-
-=gs-col-9()
-	width: (100% / 12) * 9 - 2%
-	+calc(width, #{(100% / 12) * 9} - 30px)
-	margin-left:  1%
-	margin-right: 1%
-	+calc(margin-left, 15px)
-	+calc(margin-right, 15px)
-
-=gs-col-10()
-	width: (100% / 12) * 10 - 2%
-	+calc(width, #{(100% / 12) * 10} - 30px)
-	margin-left:  1%
-	margin-right: 1%
-	+calc(margin-left, 15px)
-	+calc(margin-right, 15px)
-
-=gs-col-11()
-	width: (100% / 12) * 11 - 2%
-	+calc(width, #{(100% / 12) * 11} - 30px)
-	margin-left:  1%
-	margin-right: 1%
-	+calc(margin-left, 15px)
-	+calc(margin-right, 15px)
-
-=gs-col-12()
-	width: 100% - 2%
-	+calc(width, #{100%} - 30px)
-	margin-left:  1%
-	margin-right: 1%
-	+calc(margin-left, 15px)
-	+calc(margin-right, 15px)
 
 
-// Push column
-=gs-push-1()
-	margin-left: (100% / 12) * 1 + 1%
-	+calc(margin-left, #{(100% / 12) * 1} + 15px)
+//////////////////////////////////////// COLUMN mixin
 
-=gs-push-2()
-	margin-left: (100% / 12) * 2 + 1%
-	+calc(margin-left, #{(100% / 12) * 2} + 15px)
+// Column mixin has next variables: column count for current element, total column count in row, horizontal gutter and vertical gutter and their fallbacks.
+// By default it sets to 1 column of 12 total columns wit 2% gutters.
 
-=gs-push-3()
-	margin-left: (100% / 12) * 3 + 1%
-	+calc(margin-left, #{(100% / 12) * 3} + 15px)
+=gs-column($column_count: $column_count, $column_total-count: $column_total-count, $column_gutter-width: $column_gutter-width, $column_gutter-width-fallback: $column_gutter-width-fallback, $gs-width: $gs-width)
 
-=gs-push-4()
-	margin-left: (100% / 12) * 4 + 1%
-	+calc(margin-left, #{(100% / 12) * 4} + 15px)
+	// Grid gutter width and margin math for calc() and fallback
+	$half-gutter-width: $column_gutter-width / 2
+	$half-gutter-width-fallback: $column_gutter-width-fallback / 2
 
-=gs-push-5()
-	margin-left: (100% / 12) * 5 + 1%
-	+calc(margin-left, #{(100% / 12) * 5} + 15px)
+	// Column width math
+	$column_width: $gs_width / $column_total-count * $column_count
 
-=gs-push-6()
-	margin-left: (100% / 12) * 6 + 1%
-	+calc(margin-left, #{(100% / 12) * 6} + 15px)
+	// Check gutter width and it fallback for `auto` values, if false - return no math variant
+	@if $column_gutter-width != auto and $column_gutter-width-fallback != auto
 
-=gs-push-7()
-	margin-left: (100% / 12) * 7 + 1%
-	+calc(margin-left, #{(100% / 12) * 7} + 15px)
+		// Check gutter value, if its units not equal to grid units - return calc math with fallback<
+		// else - common math
+		@if unit($column_gutter-width) != unit($gs_width) and unitless($column_gutter-width) == false
 
-=gs-push-8()
-	margin-left: (100% / 12) * 8 + 1%
-	+calc(margin-left, #{(100% / 12) * 8} + 15px)
+			// Check gutter fallback value for valid  units,
+			// if true - continue math with calc() property and fallback
+			@if unit($column_gutter-width-fallback) == unit($gs_width) and unitless($column_gutter-width-fallback) == false
+				width: $column_width - $column_gutter-width-fallback
+				+calc(width, #{$column_width} - #{$column_gutter-width})
+				margin-left: $half-gutter-width-fallback
+				margin-right: $half-gutter-width-fallback
+				+calc(margin-left, $half-gutter-width)
+				+calc(margin-right, $half-gutter-width)
 
-=gs-push-9()
-	margin-left: (100% / 12) * 9 + 1%
-	+calc(margin-left, #{(100% / 12) * 9} + 15px)
+			@else
+				@error "Fallback gutter units must be the same as grid width units `#{unit($gs_width)}`"
 
-=gs-push-10()
-	margin-left: (100% / 12) * 10 + 1%
-	+calc(margin-left, #{(100% / 12) * 10} + 15px)
+		@else
+			width: $column_width - $column_gutter-width
+			margin-left: $half-gutter-width
+			margin-right: $half-gutter-width
 
-=gs-push-11()
-	margin-left: (100% / 12) * 11 + 1%
-	+calc(margin-left, #{(100% / 12) * 11} + 15px)
+	@else
+		width: $column_width
+		margin-left: $column_gutter-width
+		margin-right: $column_gutter-width
 
 
-// Pull column
-=gs-pull-1()
-	margin-left: (100% / 12) * 1 + 1%
-	+calc(margin-left, #{(100% / 12) * 1} + 15px)
 
-=gs-pull-2()
-	margin-left: (100% / 12) * 2 + 1%
-	+calc(margin-left, #{(100% / 12) * 2} + 15px)
+//////////////////////////////////////// PUSH and PULL mixins
 
-=gs-pull-3()
-	margin-left: (100% / 12) * 3 + 1%
-	+calc(margin-left, #{(100% / 12) * 3} + 15px)
+// Offset mixin allows to push column left or right on some distance.
+// Expected settings: distance-column count to move on, total column count in row, horizontal gutter like in other columns.
+// By default it sets to 1 column of 12 total columns with 2% gutters.
 
-=gs-pull-4()
-	margin-left: (100% / 12) * 4 + 1%
-	+calc(margin-left, #{(100% / 12) * 4} + 15px)
+=gs-push($column_count: $column_count, $column_total-count: $column_total-count, $column_gutter-width: $column_gutter-width, $column_gutter-width-fallback: $column_gutter-width-fallback, $gs_width: $gs_width)
 
-=gs-pull-5()
-	margin-left: (100% / 12) * 5 + 1%
-	+calc(margin-left, #{(100% / 12) * 5} + 15px)
+	// Grid gutter width and margin math for calc() and fallback
+	$half-gutter-width: $column_gutter-width / 2
+	$half-gutter-width-fallback: $column_gutter-width-fallback / 2
 
-=gs-pull-6()
-	margin-left: (100% / 12) * 6 + 1%
-	+calc(margin-left, #{(100% / 12) * 6} + 15px)
+	// Column width math for calc() and fallback
+	$position_width: $gs_width / $column_total-count * $column_count
 
-=gs-pull-7()
-	margin-left: (100% / 12) * 7 + 1%
-	+calc(margin-left, #{(100% / 12) * 7} + 15px)
+	// Check gutter width and it fallback for `auto` values, if false - return no math variant
+	@if $column_gutter-width != auto and $column_gutter-width-fallback != auto
 
-=gs-pull-8()
-	margin-left: (100% / 12) * 8 + 1%
-	+calc(margin-left, #{(100% / 12) * 8} + 15px)
+		// Check gutter value, if its units not equal to grid units - return calc math with fallback<
+		// else - common math
+		@if unit($column_gutter-width) != unit($gs_width) and unitless($column_gutter-width) == false
 
-=gs-pull-9()
-	margin-left: (100% / 12) * 9 + 1%
-	+calc(margin-left, #{(100% / 12) * 9} + 15px)
+			// Check gutter fallback value for valid  units,
+			// if true - continue math with calc() property and fallback
+			@if unit($column_gutter-width-fallback) == unit($gs_width) and unitless($column_gutter-width-fallback) == false
+				margin-left: $position_width + $half-gutter-width-fallback
+				+calc(margin-left, #{$position_width} + #{$half-gutter-width})
 
-=gs-pull-10()
-	margin-left: (100% / 12) * 10 + 1%
-	+calc(margin-left, #{(100% / 12) * 10} + 15px)
+			@else
+				@error "Fallback gutter units must be the same as grid width units `#{unit($gs_width)}`"
 
-=gs-pull-11()
-	margin-left: (100% / 12) * 11 + 1%
-	+calc(margin-left, #{(100% / 12) * 11} + 15px)
+		@else
+			margin-left: $position_width + $half-gutter-width
+
+	@else
+		margin-left: $position_width
+
+
+=gs-pull($column_count: $column_count, $column_total-count: $column_total-count, $column_gutter-width: $column_gutter-width, $column_gutter-width-fallback: $column_gutter-width-fallback, $gs_width: $gs_width)
+
+	// Grid gutter width and margin math for calc() and fallback
+	$half-gutter-width: $column_gutter-width / 2
+	$half-gutter-width-fallback: $column_gutter-width-fallback / 2
+
+	// Column width math for calc() and fallback
+	$position_width: $gs_width / $column_total-count * $column_count
+
+	// Check gutter width and it fallback for `auto` values, if false - return no math variant
+	@if $column_gutter-width != auto and $column_gutter-width-fallback != auto
+
+		// Check gutter value, if its units not equal to grid units - return calc math with fallback<
+		// else - common math
+		@if unit($column_gutter-width) != unit($gs_width) and unitless($column_gutter-width) == false
+
+			// Check gutter fallback value for valid  units,
+			// if true - continue math with calc() property and fallback
+			@if unit($column_gutter-width-fallback) == unit($gs_width) and unitless($column_gutter-width-fallback) == false
+				margin-right: $position_width + $half-gutter-width-fallback
+				+calc(margin-right, #{$position_width} + #{$half-gutter-width})
+
+			@else
+				@error "Fallback gutter units must be the same as grid width units `#{unit($gs_width)}`"
+
+		@else
+			margin-right: $position_width + $half-gutter-width
+
+	@else
+		margin-right: $position_width

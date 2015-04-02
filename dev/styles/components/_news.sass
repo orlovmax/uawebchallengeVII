@@ -1,15 +1,15 @@
 .news
 	list-style: none
-	+gs-container()
+	+gs()
 
 	&__item
 		padding-bottom: 45px
-		+gs-col-6()
+		+gs-column(6)
 		float: left
 		@media screen and (max-height: 640px), screen and (max-width: 960px)
 			padding-bottom: 30px
 		@media screen and (max-height: 480px), screen and (max-width: 800px)
-			+gs-col-12()
+			+gs-column(12)
 			padding-bottom: 20px
 
 		&:before
