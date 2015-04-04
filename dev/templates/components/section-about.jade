@@ -1,60 +1,60 @@
-section#about.screen.screen_about.screen_bg_general.js-toggle
++b('section')#about.screen_about._bg_general.js-toggle
 	.container
-		aside.screen__aside.screen__aside_about.screen__aside_cor.is-corner
+		+e('aside').aside._about._cor.is-corner
 			h2.screen__title.screen__title_about Для кого?
 
 			// Sidebar with screen navigation
-			nav.cat.cat_vert.cat_vert_about
-				ul.cat__list
-					li.cat__item.cat__item_vert
-						a.cat__link.cat__link_vert.js-togglelink.js-togglebg.is-active(href='#general') Для кого?
-					li.cat__item.cat__item_vert
-						a.cat__link.cat__link_vert.js-togglelink.js-togglebg(href='#front-end') Front-end developers
-					li.cat__item.cat__item_vert
-						a.cat__link.cat__link_vert.js-togglelink.js-togglebg(href='#back-end') Back-end developers
-					li.cat__item.cat__item_vert
-						a.cat__link.cat__link_vert.js-togglelink.js-togglebg(href='#testers') Testers
-					li.cat__item.cat__item_vert
-						a.cat__link.cat__link_vert.js-togglelink.js-togglebg(href='#web-designers') Web-designers
-					li.cat__item.cat__item_vert
-						a.cat__link.cat__link_vert.js-togglelink.js-togglebg(href='#startupers') Startupers
+			+b('nav').cat_vert._vert_about
+				+e('ul').list
+					+e.item._vert
+						+e.link._vert.js-togglelink.js-togglebg.is-active(href='#general') Для кого?
+					+e.item._vert
+						+e.link._vert.js-togglelink.js-togglebg(href='#front-end') Front-end developers
+					+e.item._vert
+						+e.link._vert.js-togglelink.js-togglebg(href='#back-end') Back-end developers
+					+e.item._vert
+						+e.link._vert.js-togglelink.js-togglebg(href='#testers') Testers
+					+e.item._vert
+						+e.link._vert.js-togglelink.js-togglebg(href='#web-designers') Web-designers
+					+e.item._vert
+						+e.link._vert.js-togglelink.js-togglebg(href='#startupers') Startupers
 
 
 		// Target information wrap
 		.about-wrap
 
-			#general.about-info.icon.icon_gen-about.js-toggletarget.is-visible
-				p.about-info__text Участники IT-Конференции - прогрессивно мыслящие люди, интересующиеся будущим IT-рынка в целом и веб–разработкой в частности.
-				p.about-info__text Мероприятие будет одинаково интересно бекендам и фронтендам, тестировщикам и веб-дизайнерам, проектным менеджерами предпринимателям.
+			+b#general.about-info.icon.icon_gen-about.js-toggletarget.is-visible
+				+e('p').text Участники IT-Конференции - прогрессивно мыслящие люди, интересующиеся будущим IT-рынка в целом и веб–разработкой в частности.
+				+e('p').text Мероприятие будет одинаково интересно бекендам и фронтендам, тестировщикам и веб-дизайнерам, проектным менеджерами предпринимателям.
 
-			#front-end.about-info.icon.icon_fe-about.js-toggletarget
-				p.about-info__text Когда дизайн сочетается с технологией.
-				h3.about-info__title День вдохновляющих выступлений:
-				p.about-info__text JavaScript, HTML5, CSS3, SASS, AngularJS, Backbone.JS, ExtJS, jQuery, Flat UI, Bootstrap и многое другое – от практиков.
-				p.about-info__text В рамках IT-Конференции будут подняты темы современной верстки, разработки фронтенда на чистом JavaScript, использования различных CSS и JavaScrpt фреймворков для построения фронтенда веб-проектов
+			+b#front-end.about-info.icon.icon_fe-about.js-toggletarget
+				+e('p').text Когда дизайн сочетается с технологией.
+				+e('h3').title День вдохновляющих выступлений:
+				+e('p').text JavaScript, HTML5, CSS3, SASS, AngularJS, Backbone.JS, ExtJS, jQuery, Flat UI, Bootstrap и многое другое – от практиков.
+				+e('p').text В рамках IT-Конференции будут подняты темы современной верстки, разработки фронтенда на чистом JavaScript, использования различных CSS и JavaScrpt фреймворков для построения фронтенда веб-проектов
 
-			#back-end.about-info.icon.icon_be-about.js-toggletarget
-				p.about-info__text Полное погружение в мир распределённых систем, высоких нагрузок и облачных технологий. Доклады об автоматизированной сборке проектов, роли Python в интерактивном анализе данных и многом другом. Тенденции в разработке и суровая реальность мира бекеда.
-				p.about-info__text Что случится в ближайшем будущем, к чему нужно быть готовым и что не упустить из вида — всё это станет предметом докладов и дискуссий.
+			+b#back-end.about-info.icon.icon_be-about.js-toggletarget
+				+e('p').text Полное погружение в мир распределённых систем, высоких нагрузок и облачных технологий. Доклады об автоматизированной сборке проектов, роли Python в интерактивном анализе данных и многом другом. Тенденции в разработке и суровая реальность мира бекеда.
+				+e('p').text Что случится в ближайшем будущем, к чему нужно быть готовым и что не упустить из вида — всё это станет предметом докладов и дискуссий.
 
-			#testers.about-info.icon.icon_test-about.js-toggletarget
-				h3.about-info__title Никаких «капитаночевидность». Только хардкор ;)
-				p.about-info__text Мы не будем учить вас как стартовать в карьере QA. Спикеры подготовили сильные доклады. Так что если Вы не дотягиваете до мидла - этот день станет для Вас хорошим вызовом.
-				p.about-info__text О чём пойдёт речь: автоматизация тестирования, тест менеджмент, функциональное тестирование, тестирование безопасности и др.
+			+b#testers.about-info.icon.icon_test-about.js-toggletarget
+				+e('h3').title Никаких «капитаночевидность». Только хардкор ;)
+				+e('p').text Мы не будем учить вас как стартовать в карьере QA. Спикеры подготовили сильные доклады. Так что если Вы не дотягиваете до мидла - этот день станет для Вас хорошим вызовом.
+				+e('p').text О чём пойдёт речь: автоматизация тестирования, тест менеджмент, функциональное тестирование, тестирование безопасности и др.
 
-			#web-designers.about-info.icon.icon_design-about.js-toggletarget
-				h3.about-info__title В фокусе
-				p.about-info__text Тенденции в веб-дизайне, самые дорогие и качественные кейсы, лайфхаки от настоящих мастеров.
-				p.about-info__text Присоединяйтесь к нам на день с высококлассными презентациями от лучших в нашей отрасли.
+			+b#web-designers.about-info.icon.icon_design-about.js-toggletarget
+				+e('h3').title В фокусе
+				+e('p').text Тенденции в веб-дизайне, самые дорогие и качественные кейсы, лайфхаки от настоящих мастеров.
+				+e('p').text Присоединяйтесь к нам на день с высококлассными презентациями от лучших в нашей отрасли.
 
-				h3.about-info__title.about-info__title_int Участники конференции
-				ul.about-info__list
-					li.about-info__list-item дизайнеры со стажем
-					li.about-info__list-item дизайнеры с серьёзным стажем, арт-директора и ведущие дизайнеры компаний
-					li.about-info__list-item джуниоры - их меньшинство и только те, кто крайне жаждет быстрого роста.
+				+e('h3').title.about-info__title_int Участники конференции
+				+e('ul').list
+					+e.list-item дизайнеры со стажем
+					+e.list-item дизайнеры с серьёзным стажем, арт-директора и ведущие дизайнеры компаний
+					+e.list-item джуниоры - их меньшинство и только те, кто крайне жаждет быстрого роста.
 
-				p.about-info__text.about-info__text_disclaimer Предупреждаем сразу - материалы не для новичков
+				+e('p').text._disclaimer Предупреждаем сразу - материалы не для новичков
 
-			#startupers.about-info.icon.icon_start-about.js-toggletarget
-				p.about-info__text Вам кто-то сказал, что можно запилить крутой IТ-стартап, а технологии знать не обязательно? Может, это был Джейсон Голдберг?
-				p.about-info__text Мы настаиваем: IT-предпринимателям стоит окунаться в мир технологий. Иногда - нырять с головой. Что ж, у Вас есть хорошая возможность: вот оно - всё в одно месте да и с хорошей вечеринкой для нетворкинга ;)
+			+b#startupers.about-info.icon.icon_start-about.js-toggletarget
+				+e('p').text Вам кто-то сказал, что можно запилить крутой IТ-стартап, а технологии знать не обязательно? Может, это был Джейсон Голдберг?
+				+e('p').text Мы настаиваем: IT-предпринимателям стоит окунаться в мир технологий. Иногда - нырять с головой. Что ж, у Вас есть хорошая возможность: вот оно - всё в одно месте да и с хорошей вечеринкой для нетворкинга ;)

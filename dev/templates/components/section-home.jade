@@ -1,21 +1,21 @@
-section#home.screen.screen_home.screen_bg_home
++b('section')#home.screen_home._bg_home
 	.container
 		// Main info
-		aside.screen__aside.screen__aside_home.screen__aside_cor.is-corner
-			.home-info
-				h1.home-info__title
-					span.home-info__title-thin It
-					span.home-info__title-br Confe
-					span.home-info__title-spacing rence
-					span.home-info__title-thin  И
-					span.home-info__title-pos  Я
-				p.home-info__date
+		+e('aside').aside._home._cor.is-corner
+			+b.home-info
+				+e('h1').title
+					+e('span').title-thin It
+					+e('span').title-br Confe
+					+e('span').title-spacing rence
+					+e('span').title-thin  И
+					+e('span').title-pos  Я
+				+e('p').date
 					time(datetime="2015-04-12") 12
 					|  -
 					time(datetime="2015-04-18")  18
 					|  &nbsp;апреля
 
-				a.btn-link.btn-link_home(href='#') Купить билет
-				p.home-info__afterword  ... у нас интересней всего ©Женя
+				+b.btn-link_home(href='#') Купить билет
+				+e('p').afterword  ... у нас интересней всего ©Женя
 
 		// I think there might be some play video controls, but I don't know for what purpose...

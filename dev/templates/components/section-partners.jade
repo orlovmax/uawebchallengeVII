@@ -1,64 +1,64 @@
-section#partners.screen.screen_partn.js-toggle
++b('section')#partners.screen_partn.js-toggle
 	.container
-		h2.screen__title.screen__title_partn Партнеры
+		+e('h2').title._partn Партнеры
 
 		// Top screen navigation
-		nav.cat.cat_hor
-			ul.cat__list
-				li.cat__item.cat__item_hor.cat__item_hor_partn
-					a.cat__link.cat__link_hor.cat__link_hor_partn.js-togglelink.is-active(href='#main-partners') Партнеры
-				li.cat__item.cat__item_hor.cat__item_hor_partn
-					a.cat__link.cat__link_hor.cat__link_hor_partn.js-togglelink(href='#info-partners') Инфо-партнеры
+		+b('nav').cat_hor
+			+e('ul').list
+				+e.item._hor._hor_partn
+					+e.link._hor._hor_partn.js-togglelink.is-active(href='#main-partners') Партнеры
+				+e.item._hor._hor_partn
+					+e.link._hor._hor_partn.js-togglelink(href='#info-partners') Инфо-партнеры
 
 		.partners
 			// Target information
-			#main-partners.partners-page.js-toggletarget.is-visible
-				a.partners-page__item.partners-page__item_general(href='#')
-					span.partners-page__item-status Генеральный партнер
-					img.partners-page__item-logo(src='img/partners/par1.png', alt='Partner1')
+			+b#main-partners.partners-page.js-toggletarget.is-visible
+				+e.item._general(href='#')
+					+e.item-status Генеральный партнер
+					+e.item-logo(src='img/partners/par1.png', alt='Partner1')
 
-				a.partners-page__item(href='#')
-					img.partners-page__item-logo(src='img/partners/par2.png', alt='Partner2')
+				+e.item(href='#')
+					+e.item-logo(src='img/partners/par2.png', alt='Partner2')
 
-				a.partners-page__item(href='#')
-					img.partners-page__item-logo(src='img/partners/par3.png', alt='Partner3')
+				+e.item(href='#')
+					+e.item-logo(src='img/partners/par3.png', alt='Partner3')
 
-				a.partners-page__item(href='#')
-					img.partners-page__item-logo(src='img/partners/par4.png', alt='Partner4')
+				+e.item(href='#')
+					+e.item-logo(src='img/partners/par4.png', alt='Partner4')
 
-				a.partners-page__item(href='#')
-					img.partners-page__item-logo(src='img/partners/par5.png', alt='Partner5')
+				+e.item(href='#')
+					+e.item-logo(src='img/partners/par5.png', alt='Partner5')
 
-				a.partners-page__item(href='#')
-					img.partners-page__item-logo(src='img/partners/par6.png', alt='Partner6')
+				+e.item(href='#')
+					+e.item-logo(src='img/partners/par6.png', alt='Partner6')
 
-				a.partners-page__item(href='#')
-					img.partners-page__item-logo(src='img/partners/par7.png', alt='Partner7')
+				+e.item(href='#')
+					+e.item-logo(src='img/partners/par7.png', alt='Partner7')
 
-				a.partners-page__item(href='#')
-					img.partners-page__item-logo(src='img/partners/par2.png', alt='Partner8')
+				+e.item(href='#')
+					+e.item-logo(src='img/partners/par2.png', alt='Partner8')
 
-				a.partners-page__item(href='#')
-					img.partners-page__item-logo(src='img/partners/par3.png', alt='Partner9')
+				+e.item(href='#')
+					+e.item-logo(src='img/partners/par3.png', alt='Partner9')
 
-			#info-partners.partners-page.js-toggletarget
-				a.partners-page__item(href='#')
-					img.partners-page__item-logo(src='img/partners/par6.png', alt='Partner6')
+			+b#info-partners.partners-page.js-toggletarget
+				+e.item(href='#')
+					+e.item-logo(src='img/partners/par6.png', alt='Partner6')
 
-				a.partners-page__item(href='#')
-					img.partners-page__item-logo(src='img/partners/par7.png', alt='Partner7')
+				+e.item(href='#')
+					+e.item-logo(src='img/partners/par7.png', alt='Partner7')
 
-				a.partners-page__item(href='#')
-					img.partners-page__item-logo(src='img/partners/par4.png', alt='Partner10')
+				+e.item(href='#')
+					+e.item-logo(src='img/partners/par4.png', alt='Partner10')
 
-				a.partners-page__item(href='#')
-					img.partners-page__item-logo(src='img/partners/par2.png', alt='Partner2')
+				+e.item(href='#')
+					+e.item-logo(src='img/partners/par2.png', alt='Partner2')
 
-				a.partners-page__item(href='#')
-					img.partners-page__item-logo(src='img/partners/par3.png', alt='Partner3')
+				+e.item(href='#')
+					+e.item-logo(src='img/partners/par3.png', alt='Partner3')
 
-				a.partners-page__item(href='#')
-					img.partners-page__item-logo(src='img/partners/par4.png', alt='Partner4')
+				+e.item(href='#')
+					+e.item-logo(src='img/partners/par4.png', alt='Partner4')
 
-				a.partners-page__item(href='#')
-					img.partners-page__item-logo(src='img/partners/par5.png', alt='Partner5')
+				+e.item(href='#')
+					+e.item-logo(src='img/partners/par5.png', alt='Partner5')

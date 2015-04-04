@@ -1,69 +1,69 @@
-#tickets.screen.screen_ticket
++b#tickets.screen_ticket
 
 	// Ticket item
-	section.ticket.ticket_light
-		header.ticket__header.icon.icon_light-tc
-			h2.ticket__title Light
-			p.ticket__descr лучший вариант если Вас интересует только одно направление
+	+b('section').ticket_light
+		+e('header').header.icon.icon_light-tc
+			+e('h2').title Light
+			+e('p').descr лучший вариант если Вас интересует только одно направление
 
-		ul.ticket__list
-			li.ticket__list-item посещение 1 дня на выбор
-			li.ticket__list-item бонусный день - первый или последний на выбор
-			li.ticket__list-item раздаточный материал с доставкой
-			li.ticket__list-item запись выступлений Ваших дней
+		+e('ul').list
+			+e.list-item посещение 1 дня на выбор
+			+e.list-item бонусный день - первый или последний на выбор
+			+e.list-item раздаточный материал с доставкой
+			+e.list-item запись выступлений Ваших дней
 
-		footer.ticket__footer
-			p.ticket__cost
-				span.ticket__cost-extra
-					span.ticket__cost-val 450
+		+e('footer').footer
+			+e('p').cost
+				+e.cost-extra
+					+e.cost-val 450
 					|  грн
 				|  / с 01.03 -
-				span.ticket__cost-val 550
+				+e.cost-val 550
 				|  грн
-			a.btn-link.btn-link_ticket(href='#') Купить билет
+			+b.btn-link_ticket(href='#') Купить билет
 
 	// Ticket item
-	section.ticket.ticket_gold
-		header.ticket__header.icon.icon_gold-tc
-			h2.ticket__title Gold
-			p.ticket__descr.ticket__descr_gold если Вас интересует два направления, тогда выбирайте:
+	+b('section').ticket_gold
+		+e('header').header.icon.icon_gold-tc
+			+e('h2').title Gold
+			+e('p').descr._gold если Вас интересует два направления, тогда выбирайте:
 
-		ul.ticket__list
-			li.ticket__list-item посещение 2 дней на выбор
-			li.ticket__list-item бонусный день - первый или последний на выбор
-			li.ticket__list-item раздаточный материал с доставкой
-			li.ticket__list-item запись выступлений
-			li.ticket__list-item возможность выиграть призы и сувениры 
+		+e('ul').list
+			+e.list-item посещение 2 дней на выбор
+			+e.list-item бонусный день - первый или последний на выбор
+			+e.list-item раздаточный материал с доставкой
+			+e.list-item запись выступлений
+			+e.list-item возможность выиграть призы и сувениры 
 
-		footer.ticket__footer
-			p.ticket__cost.ticket__cost_gold
-				span.ticket__cost-extra
-					span.ticket__cost-val 650
+		+e('footer').footer
+			+e('p').cost._gold
+				+e.cost-extra
+					+e.cost-val 650
 					|  грн
 				|  / с 01.03 -
-				span.ticket__cost-val 750
+				+e.cost-val 750
 				|  грн
-			a.btn-link.btn-link_ticket(href='#') Купить билет
+			+b.btn-link_ticket(href='#') Купить билет
 
 	// Ticket item
-	section.ticket.ticket_prem
-		header.ticket__header.icon.icon_prem-tc
-			h2.ticket__title.ticket__title_prem Premium
-			p.ticket__descr.ticket__descr_prem эта неделя станет серьёзным вкладом в себя
+	+b('section').ticket_prem
+		+e('header').header.icon.icon_prem-tc
+			+e('h2').title._prem Premium
+			+e('p').descr._prem эта неделя станет серьёзным вкладом в себя
 
-		ul.ticket__list
-			li.ticket__list-item.ticket__list-item_prem посещение всех дней
-			li.ticket__list-item.ticket__list-item_prem записи всех выступлений
-			li.ticket__list-item.ticket__list-item_prem раздаточный материал с доставкой
-			li.ticket__list-item.ticket__list-item_prem приглашение послушать доклады в офисе Web Challenge
-			li.ticket__list-item.ticket__list-item_prem личный кабинет участника с доступом к материалам выступлений
-			li.ticket__list-item.ticket__list-item_prem возможность выиграть призы и сувениры
-		footer.ticket__footer
-			p.ticket__cost.ticket__cost_prem
-				span.ticket__cost-extra.ticket__cost-extra_prem
-					span.ticket__cost-val 1200
+		+e('ul').list
+			+e.list-item.ticket__list-item_prem посещение всех дней
+			+e.list-item.ticket__list-item_prem записи всех выступлений
+			+e.list-item.ticket__list-item_prem раздаточный материал с доставкой
+			+e.list-item.ticket__list-item_prem приглашение послушать доклады в офисе Web Challenge
+			+e.list-item.ticket__list-item_prem личный кабинет участника с доступом к материалам выступлений
+			+e.list-item.ticket__list-item_prem возможность выиграть призы и сувениры
+		+e('footer').footer
+			+e('p').cost._prem
+				+e.cost-extra.ticket__cost-extra_prem
+					+e.cost-val 1200
 					|  грн
 				|  / с 01.03 -
-				span.ticket__cost-val 1300
+				+e.cost-val 1300
 				|  грн
-			a.btn-link.btn-link_ticket.btn-link_ticket_prem(href='#') Купить билет
+			+b.btn-link_ticket._ticket_prem(href='#') Купить билет

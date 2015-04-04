@@ -1,14 +1,10 @@
 $(function() {
 
 	/* jQuery navKit plugin init and settings */
-	$('.js-nav').navKit({
-		state: 'closed'
-	});
+	$('.js-nav').navKit().end().anchorScroll();
 
 	/* jQuery anchorScroll plugin init and settings */
-	$('.js-switchers').anchorScroll({
-		state: 'closed'
-	});
+	$('.js-switchers').anchorScroll();
 
 	/* jQuery toggleContent plugin init and settings */
 	$('.js-toggle').each(function() {
