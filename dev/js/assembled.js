@@ -247,6 +247,20 @@
 		     	$this.removeClass(this.options.isVisible);
 		     }
 		}, this));
+
+		$(window).scroll($.proxy(function () {
+			var windowPos = $(window).scrollTop(),
+				windowHeight = $(window).height();
+
+			// Show topnav button
+			if (windowPos > windowHeight) {
+				$topnav.addClass(this.options.isBg);
+				$topnavBtn.addClass(this.options.isVisible);
+			} else {
+				$topnav.removeClass(this.options.isBg);
+				$topnavBtn.removeClass(this.options.isVisible);
+			}
+		}, this));
 	};
 
 	$.fn.navKit = function ( options ) {
