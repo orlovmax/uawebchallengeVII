@@ -6,9 +6,9 @@
 	var defaults = {
 	    topnav: 'js-topnav',
 	    topnavBtn: 'js-topnavBtn',
-	    topnavNoBg: 'js-topnavNoBg',
 	    navOpen: 'js-navOpen',
 	    navClose: 'js-navClose',
+	    jsNoBg: 'js-NoBg',
 	    isBg: 'is-bg',
 	    isVisible: 'is-visible',
 	    state: 'closed'
@@ -24,7 +24,7 @@
 		var $this = $(this.element),
 	    	$topnav = $('.' + this.options.topnav),
 	    	$topnavBtn = $('.' + this.options.topnavBtn),
-	    	$topnavNoBg = $('.' + this.options.topnavNoBg),
+	    	$jsNoBg = $('.' + this.options.jsNoBg),
 	    	$navOpen = $('.' + this.options.navOpen),
 	    	$navClose = $('.' + this.options.navClose),
 	    	cond = this.options.state,
@@ -57,16 +57,19 @@
 
 		$(window).scroll($.proxy(function () {
 			var windowPos = $(window).scrollTop(),
-				windowHeight = $(window).height();
+				windowHeight = $(window).height(),
+				sectPos = $jsNoBg.offset().top,
+				sectHeight = $jsNoBg.height();
 
-			// Show topnav button
-			if (windowPos > windowHeight) {
-				$topnav.addClass(this.options.isBg);
-				$topnavBtn.addClass(this.options.isVisible);
-			} else {
+			// Show topnav button, damn it, that's shame
+			if (windowPos < windowHeight || (windowPos > sectPos && windowPos < sectPos + sectHeight)) {
 				$topnav.removeClass(this.options.isBg);
 				$topnavBtn.removeClass(this.options.isVisible);
+			} else if (windowPos > windowHeight){
+				$topnav.addClass(this.options.isBg);
+				$topnavBtn.addClass(this.options.isVisible);
 			}
+
 		}, this));
 	};
 

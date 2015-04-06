@@ -44,17 +44,22 @@
 					targetCheck = $current.attr('href'),
 					$target = $($current.attr('href'));
 
-				// Disable actions with selected item
-				if (!$current.hasClass(this.options.activeLink)) {
+				// Check what we want to toggle: popup or link target
+				if($target.hasClass(this.options.togglePopup)){
 
-					// Check for target page
-					if(targetCheck !== '#all') {
+					// And if this is popup - then toggle it
+					$togglePopup.fadeOut().removeClass(this.options.activeContent);
+					$target.fadeIn().addClass(this.options.activeContent);
+				} else {
+					// here we have a deal with link target so we should work also with links
+					// Disable actions with selected item
+					if (!$current.hasClass(this.options.activeLink)) {
 
-						// Hide all targets and remove highlight from links
-						$toggleLink.removeClass(this.options.activeLink);
+						// Check for target page
+						if(targetCheck !== '#all') {
 
-						// Check what we want to toggle: page or popup
-						if($target.hasClass(this.options.toggleTarget)) {
+							// Hide all targets and remove highlight from links
+							$toggleLink.removeClass(this.options.activeLink);
 							$toggleTarget.fadeOut().removeClass(this.options.activeContent);
 
 							// Change background
@@ -74,23 +79,21 @@
 									$toggleCorner.removeClass('is-corner');
 								}
 							}
-						} else {
-							$togglePopup.fadeOut().removeClass(this.options.activeContent);
-						}
 
-						// Show targets and highlight active link
-						$current.addClass(this.options.activeLink);
-						$target.fadeIn().addClass(this.options.activeContent);
-					} else {
-						// Show all
-						$toggleLink.removeClass(this.options.activeLink);
-						$current.addClass(this.options.activeLink);
-						$toggleTarget.removeAttr('style').removeClass(this.options.activeContent);
-						// Remove background
-						$this.removeClass(removeClass).end().addClass('screen_bg_none')
-						// Remove corner
-						if($toggleCorner.hasClass(this.options.asideCorner)) {
-							$toggleCorner.removeClass('is-corner');
+							// Show targets and highlight active link
+							$current.addClass(this.options.activeLink);
+							$target.fadeIn().addClass(this.options.activeContent);
+						} else {
+							// Show all
+							$toggleLink.removeClass(this.options.activeLink);
+							$current.addClass(this.options.activeLink);
+							$toggleTarget.removeAttr('style').removeClass(this.options.activeContent);
+							// Remove background
+							$this.removeClass(removeClass).end().addClass('screen_bg_none')
+							// Remove corner
+							if($toggleCorner.hasClass(this.options.asideCorner)) {
+								$toggleCorner.removeClass('is-corner');
+							}
 						}
 					}
 				}

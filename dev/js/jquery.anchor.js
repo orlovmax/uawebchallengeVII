@@ -39,20 +39,19 @@
 			var link = $navAnchor[i],
 				ahref = $(link).attr('href');
 				aArray.push(ahref);
-		} // this for loop fills the aArray with attribute href values
+		}
 
 		$(window).scroll($.proxy(function () {
-			var windowPos = $(window).scrollTop(), // get the offset of the window from the top of page
-				windowHeight = $(window).height(), // get the height of the window
-				docHeight = $(document).height(),
+			var windowPos = $(window).scrollTop(),
+				windowHeight = $(window).height(),
 
 				$firstSection = $(aArray[0]),
 				$lastSection = $(aArray.slice(-1)[0]);
 
 			for (i = 0; i < aArray.length; i += 1) {
 				var theID = aArray[i],
-				sectPos = $(theID).offset().top, // get the offset of the div from the top of page + except nav height
-				sectHeight = $(theID).height(); // get the height of the div in question
+				sectPos = $(theID).offset().top,
+				sectHeight = $(theID).height();
 
 				if (windowPos >= sectPos && windowPos < (sectPos + sectHeight)) {
 					$navAnchor.filter("[href='" + theID + "']").addClass(this.options.activeLink);

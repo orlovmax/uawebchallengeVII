@@ -39,20 +39,19 @@
 			var link = $navAnchor[i],
 				ahref = $(link).attr('href');
 				aArray.push(ahref);
-		} // this for loop fills the aArray with attribute href values
+		}
 
 		$(window).scroll($.proxy(function () {
-			var windowPos = $(window).scrollTop(), // get the offset of the window from the top of page
-				windowHeight = $(window).height(), // get the height of the window
-				docHeight = $(document).height(),
+			var windowPos = $(window).scrollTop(),
+				windowHeight = $(window).height(),
 
 				$firstSection = $(aArray[0]),
 				$lastSection = $(aArray.slice(-1)[0]);
 
 			for (i = 0; i < aArray.length; i += 1) {
 				var theID = aArray[i],
-				sectPos = $(theID).offset().top, // get the offset of the div from the top of page + except nav height
-				sectHeight = $(theID).height(); // get the height of the div in question
+				sectPos = $(theID).offset().top,
+				sectHeight = $(theID).height();
 
 				if (windowPos >= sectPos && windowPos < (sectPos + sectHeight)) {
 					$navAnchor.filter("[href='" + theID + "']").addClass(this.options.activeLink);
@@ -199,9 +198,9 @@
 	var defaults = {
 	    topnav: 'js-topnav',
 	    topnavBtn: 'js-topnavBtn',
-	    topnavNoBg: 'js-topnavNoBg',
 	    navOpen: 'js-navOpen',
 	    navClose: 'js-navClose',
+	    jsNoBg: 'js-NoBg',
 	    isBg: 'is-bg',
 	    isVisible: 'is-visible',
 	    state: 'closed'
@@ -217,7 +216,7 @@
 		var $this = $(this.element),
 	    	$topnav = $('.' + this.options.topnav),
 	    	$topnavBtn = $('.' + this.options.topnavBtn),
-	    	$topnavNoBg = $('.' + this.options.topnavNoBg),
+	    	$jsNoBg = $('.' + this.options.jsNoBg),
 	    	$navOpen = $('.' + this.options.navOpen),
 	    	$navClose = $('.' + this.options.navClose),
 	    	cond = this.options.state,
@@ -250,16 +249,19 @@
 
 		$(window).scroll($.proxy(function () {
 			var windowPos = $(window).scrollTop(),
-				windowHeight = $(window).height();
+				windowHeight = $(window).height(),
+				sectPos = $jsNoBg.offset().top,
+				sectHeight = $jsNoBg.height();
 
-			// Show topnav button
-			if (windowPos > windowHeight) {
-				$topnav.addClass(this.options.isBg);
-				$topnavBtn.addClass(this.options.isVisible);
-			} else {
+			// Show topnav button, damn it, that's shame
+			if (windowPos < windowHeight || (windowPos > sectPos && windowPos < sectPos + sectHeight)) {
 				$topnav.removeClass(this.options.isBg);
 				$topnavBtn.removeClass(this.options.isVisible);
+			} else if (windowPos > windowHeight){
+				$topnav.addClass(this.options.isBg);
+				$topnavBtn.addClass(this.options.isVisible);
 			}
+
 		}, this));
 	};
 
@@ -331,17 +333,22 @@ function removeClass (index, classNames) {
 					targetCheck = $current.attr('href'),
 					$target = $($current.attr('href'));
 
-				// Disable actions with selected item
-				if (!$current.hasClass(this.options.activeLink)) {
+				// Check what we want to toggle: popup or link target
+				if($target.hasClass(this.options.togglePopup)){
 
-					// Check for target page
-					if(targetCheck !== '#all') {
+					// And if this is popup - then toggle it
+					$togglePopup.fadeOut().removeClass(this.options.activeContent);
+					$target.fadeIn().addClass(this.options.activeContent);
+				} else {
+					// here we have a deal with link target so we should work also with links
+					// Disable actions with selected item
+					if (!$current.hasClass(this.options.activeLink)) {
 
-						// Hide all targets and remove highlight from links
-						$toggleLink.removeClass(this.options.activeLink);
+						// Check for target page
+						if(targetCheck !== '#all') {
 
-						// Check what we want to toggle: page or popup
-						if($target.hasClass(this.options.toggleTarget)) {
+							// Hide all targets and remove highlight from links
+							$toggleLink.removeClass(this.options.activeLink);
 							$toggleTarget.fadeOut().removeClass(this.options.activeContent);
 
 							// Change background
@@ -361,23 +368,21 @@ function removeClass (index, classNames) {
 									$toggleCorner.removeClass('is-corner');
 								}
 							}
-						} else {
-							$togglePopup.fadeOut().removeClass(this.options.activeContent);
-						}
 
-						// Show targets and highlight active link
-						$current.addClass(this.options.activeLink);
-						$target.fadeIn().addClass(this.options.activeContent);
-					} else {
-						// Show all
-						$toggleLink.removeClass(this.options.activeLink);
-						$current.addClass(this.options.activeLink);
-						$toggleTarget.removeAttr('style').removeClass(this.options.activeContent);
-						// Remove background
-						$this.removeClass(removeClass).end().addClass('screen_bg_none')
-						// Remove corner
-						if($toggleCorner.hasClass(this.options.asideCorner)) {
-							$toggleCorner.removeClass('is-corner');
+							// Show targets and highlight active link
+							$current.addClass(this.options.activeLink);
+							$target.fadeIn().addClass(this.options.activeContent);
+						} else {
+							// Show all
+							$toggleLink.removeClass(this.options.activeLink);
+							$current.addClass(this.options.activeLink);
+							$toggleTarget.removeAttr('style').removeClass(this.options.activeContent);
+							// Remove background
+							$this.removeClass(removeClass).end().addClass('screen_bg_none')
+							// Remove corner
+							if($toggleCorner.hasClass(this.options.asideCorner)) {
+								$toggleCorner.removeClass('is-corner');
+							}
 						}
 					}
 				}
