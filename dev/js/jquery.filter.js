@@ -4,7 +4,7 @@
 
 ;(function ( $, window, document, undefined ) {
 	var defaults = {
-		item: 'js-filteritem',
+		item: 'js-filterItem',
 		itemHidden: 'is-hidden',
 		filterLink: 'js-filterlink',
 		filterSelected: 'is-active'

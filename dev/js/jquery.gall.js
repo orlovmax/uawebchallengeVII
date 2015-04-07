@@ -7,6 +7,10 @@
 		toggleLink: 'js-showall',
 		toggleList: 'js-galllist',
 		gallControls: 'js-controls',
+		gallCurrent: 'js-controlsCur',
+		gallTotal: 'js-controlsTot',
+		gallPrev: 'js-controlsPrev',
+		gallNext: 'js-controlsNext',
 		openList: 'is-open'
 	};
 
@@ -20,7 +24,11 @@
 		var $this = $(this.element),
 			$toggleLink = $this.find('.' + this.options.toggleLink),
 			$toggleList = $this.find('.' + this.options.toggleList),
-			$gallControls = $this.find('.' + this.options.gallControls);
+			$gallControls = $this.find('.' + this.options.gallControls),
+			$gallCurrent = $this.find('.' + this.options.gallCurrent),
+			$gallTotal = $this.find('.' + this.options.gallTotal),
+			$gallPrev = $this.find('.' + this.options.gallPrev),
+			$gallNext = $this.find('.' + this.options.gallNext);
 
 
 		$toggleLink.on('click', $.proxy(function(e){

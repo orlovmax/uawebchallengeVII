@@ -17,51 +17,51 @@
 					+e.link._hor._hor_speak.js-filterlink(href='#web-design') Web-design
 				+e.item._hor._contr.js-controls
 					+e('p').item-counter
-						span -
+						span.js-counterCur -
 						| /
-						span -
-					+e('a').item-btn.iconfont.iconfont_prev.iconfont_ctrl_prev() Назад
-					+e('a').item-btn.iconfont.iconfont_next.iconfont_ctrl_next() Вперед
+						span.js-counterTot -
+					+e('a').item-btn.iconfont.iconfont_prev.iconfont_ctrl_prev.js-counterPrev() Назад
+					+e('a').item-btn.iconfont.iconfont_next.iconfont_ctrl_next.js-counterNext() Вперед
 
 		// Spoiler-styled speakers list
 		+b.gall_speak.js-galllist
 			// ok, that's first 6 visible persons...
-			+b('figure').gall-item_pers.js-filteritem(data-cat='all back-end')
+			+b('figure').gall-item_pers.js-filterItem.js-gallItem(data-cat='all back-end')
 				+e.link.js-togglelink(href='#speaker1')
 					+e.link-pic(src='img/speakers/sp1.jpg', alt='Speaker')
 				+e('figcaption').capt
 					+e('h3').capt-title Jean-Baptiste Guerrax
 					+e('p').capt-descr розработчик комплексных back-end решений
 
-			+b('figure').gall-item_pers.js-filteritem(data-cat='all back-end')
+			+b('figure').gall-item_pers.js-filterItem.js-gallItem(data-cat='all back-end')
 				+e.link.js-togglelink(href='#speaker1')
 					+e.link-pic(src='img/speakers/sp2.jpg', alt='Speaker')
 				+e('figcaption').capt
 					+e('h3').capt-title Юрий Миколишин
 					+e('p').capt-descr розработчик комплексных back-end решений
 
-			+b('figure').gall-item_pers.js-filteritem(data-cat='all back-end')
+			+b('figure').gall-item_pers.js-filterItem.js-gallItem(data-cat='all back-end')
 				+e.link.js-togglelink(href='#speaker1')
 					+e.link-pic(src='img/speakers/sp3.jpg', alt='Speaker')
 				+e('figcaption').capt
 					+e('h3').capt-title Юрий Артюх
 					+e('p').capt-descr розработчик комплексных back-end решений
 
-			+b('figure').gall-item_pers.js-filteritem(data-cat='all back-end')
+			+b('figure').gall-item_pers.js-filterItem.js-gallItem(data-cat='all back-end')
 				+e.link.js-togglelink(href='#speaker1')
 					+e.link-pic(src='img/speakers/sp4.jpg', alt='Speaker')
 				+e('figcaption').capt
 					+e('h3').capt-title Александр Майданюк
 					+e('p').capt-descr розработчик комплексных back-end решений
 
-			+b('figure').gall-item_pers.js-filteritem(data-cat='all qa')
+			+b('figure').gall-item_pers.js-filterItem.js-gallItem(data-cat='all qa')
 				+e.link.js-togglelink(href='#speaker1')
 					+e.link-pic(src='img/speakers/sp5.jpg', alt='Speaker')
 				+e('figcaption').capt
 					+e('h3').capt-title Дарья Горницская
 					+e('p').capt-descr Віце-президент GlobalLogic. Керівник київського центру інжинірингу компанії
 
-			+b('figure').gall-item_pers.js-filteritem(data-cat='all back-end')
+			+b('figure').gall-item_pers.js-filterItem.js-gallItem(data-cat='all back-end')
 				+e.link.js-togglelink(href='#speaker1')
 					+e.link-pic(src='img/speakers/sp6.jpg', alt='Speaker')
 				+e('figcaption').capt
@@ -69,63 +69,63 @@
 					+e('p').capt-descr розработчик комплексных back-end решений
 
 			// ... and here comes other speakers
-			+b('figure').gall-item_pers.js-filteritem(data-cat='all front-end')
+			+b('figure').gall-item_pers.js-filterItem.js-gallItem(data-cat='all front-end')
 				+e.link.js-togglelink(href='#speaker1')
 					+e.link-pic(src='img/speakers/sp1.jpg', alt='Speaker')
 				+e('figcaption').capt
 					+e('h3').capt-title Jean-Baptiste Guerrax
 					+e('p').capt-descr розработчик комплексных back-end решений
 
-			+b('figure').gall-item_pers.js-filteritem(data-cat='all back-end')
+			+b('figure').gall-item_pers.js-filterItem.js-gallItem(data-cat='all back-end')
 				+e.link.js-togglelink(href='#speaker1')
 					+e.link-pic(src='img/speakers/sp3.jpg', alt='Speaker')
 				+e('figcaption').capt
 					+e('h3').capt-title Юрий Миколишин
 					+e('p').capt-descr розработчик комплексных back-end решений
 
-			+b('figure').gall-item_pers.js-filteritem(data-cat='all web-design front-end')
+			+b('figure').gall-item_pers.js-filterItem.js-gallItem(data-cat='all web-design front-end')
 				+e.link.js-togglelink(href='#speaker1')
 					+e.link-pic(src='img/speakers/sp2.jpg', alt='Speaker')
 				+e('figcaption').capt
 					+e('h3').capt-title Юрий Артюх
 					+e('p').capt-descr розработчик комплексных back-end решений
 
-			+b('figure').gall-item_pers.js-filteritem(data-cat='all qa')
+			+b('figure').gall-item_pers.js-filterItem.js-gallItem(data-cat='all qa')
 				+e.link.js-togglelink(href='#speaker1')
 					+e.link-pic(src='img/speakers/sp6.jpg', alt='Speaker')
 				+e('figcaption').capt
 					+e('h3').capt-title Александр Майданюк
 					+e('p').capt-descr розработчик комплексных back-end решений
 
-			+b('figure').gall-item_pers.js-filteritem(data-cat='all front-end')
+			+b('figure').gall-item_pers.js-filterItem.js-gallItem(data-cat='all front-end')
 				+e.link.js-togglelink(href='#speaker1')
 					+e.link-pic(src='img/speakers/sp5.jpg', alt='Speaker')
 				+e('figcaption').capt
 					+e('h3').capt-title Дарья Горницская
 					+e('p').capt-descr Віце-президент GlobalLogic. Керівник київського центру інжинірингу компанії
 
-			+b('figure').gall-item_pers.js-filteritem(data-cat='all qa web-design')
+			+b('figure').gall-item_pers.js-filterItem.js-gallItem(data-cat='all qa web-design')
 				+e.link.js-togglelink(href='#speaker1')
 					+e.link-pic(src='img/speakers/sp4.jpg', alt='Speaker')
 				+e('figcaption').capt
 					+e('h3').capt-title Андрей Яворский
 					+e('p').capt-descr розработчик комплексных back-end решений
 
-			+b('figure').gall-item_pers.js-filteritem(data-cat='all front-end')
+			+b('figure').gall-item_pers.js-filterItem.js-gallItem(data-cat='all front-end')
 				+e.link.js-togglelink(href='#speaker1')
 					+e.link-pic(src='img/speakers/sp1.jpg', alt='Speaker')
 				+e('figcaption').capt
 					+e('h3').capt-title Jean-Baptiste Guerrax
 					+e('p').capt-descr розработчик комплексных back-end решений
 
-			+b('figure').gall-item_pers.js-filteritem(data-cat='all back-end')
+			+b('figure').gall-item_pers.js-filterItem.js-gallItem(data-cat='all back-end')
 				+e.link.js-togglelink(href='#speaker1')
 					+e.link-pic(src='img/speakers/sp3.jpg', alt='Speaker')
 				+e('figcaption').capt
 					+e('h3').capt-title Юрий Миколишин
 					+e('p').capt-descr розработчик комплексных back-end решений
 
-			+b('figure').gall-item_pers.js-filteritem(data-cat='all web-design front-end')
+			+b('figure').gall-item_pers.js-filterItem.js-gallItem(data-cat='all web-design front-end')
 				+e.link.js-togglelink(href='#speaker1')
 					+e.link-pic(src='img/speakers/sp2.jpg', alt='Speaker')
 				+e('figcaption').capt
