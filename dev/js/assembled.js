@@ -95,7 +95,15 @@
 		item: 'js-filterItem',
 		itemHidden: 'is-hidden',
 		filterLink: 'js-filterlink',
-		filterSelected: 'is-active'
+		filterSelected: 'is-active',
+		toggleLink: 'js-showall',
+		toggleList: 'js-galllist',
+		openList: 'is-open',
+		gallControls: 'js-controls',
+		gallCurrent: 'js-counterCur',
+		gallTotal: 'js-counterTot',
+		gallPrev: 'js-controlsPrev',
+		gallNext: 'js-controlsNext'
 	};
 
 	function MixFilter( element, options ) {
@@ -109,8 +117,19 @@
 			$item = $this.find('.' + this.options.item),
 			$itemHidden = $('.' + this.options.itemHidden),
 			$filterLink = $this.find('.' + this.options.filterLink),
-			$filterSelected = $('.' + this.options.filterSelected);
+			$filterSelected = $('.' + this.options.filterSelected),
+			$toggleLink = $this.find('.' + this.options.toggleLink),
+			$toggleList = $this.find('.' + this.options.toggleList),
+			$gallControls = $this.find('.' + this.options.gallControls),
+			$gallCurrent = $gallControls.find('.' + this.options.gallCurrent),
+			$gallTotal = $gallControls.find('.' + this.options.gallTotal),
+			$gallPrev = $gallControls.find('.' + this.options.gallPrev),
+			$gallNext = $gallControls.find('.' + this.options.gallNext);
 
+		// Total count of speakers in gallery
+		$gallTotal.text($item.length);
+
+		// Sort speakers by category
 		$filterLink.on('click', $.proxy(function(e){
 			e.preventDefault();
 			var $target = $($(e.target));
@@ -127,51 +146,21 @@
 						$(this).show();
 					}
 				});
+
+				// Hide toggle link when number of speakers in a row is shorter than 6
+				// Yep, this is magick number and my shame...
+				if ($item.filter(':visible').length <= 6){
+					$toggleLink.hide();
+				} else {
+					$toggleLink.show();
+				}
 			}
+
+			// Set total count of chosen filtered items
+			$gallTotal.text($item.filter(':visible').length);
 		}, this));
-	};
 
-	$.fn.mixFilter = function ( options ) {
-		return this.each(function () {
-			new MixFilter( this, options );
-		});
-	};
-
-})( jQuery, window, document );
-
-/*
- * Gall custom script
-*/
-
-;(function ( $, window, document, undefined ) {
-	var defaults = {
-		toggleLink: 'js-showall',
-		toggleList: 'js-galllist',
-		gallControls: 'js-controls',
-		gallCurrent: 'js-controlsCur',
-		gallTotal: 'js-controlsTot',
-		gallPrev: 'js-controlsPrev',
-		gallNext: 'js-controlsNext',
-		openList: 'is-open'
-	};
-
-	function GallJs( element, options ) {
-		this.options = $.extend( {}, defaults, options) ;
-		this.element = element;
-		this.init();
-	}
-
-	GallJs.prototype.init = function () {
-		var $this = $(this.element),
-			$toggleLink = $this.find('.' + this.options.toggleLink),
-			$toggleList = $this.find('.' + this.options.toggleList),
-			$gallControls = $this.find('.' + this.options.gallControls),
-			$gallCurrent = $this.find('.' + this.options.gallCurrent),
-			$gallTotal = $this.find('.' + this.options.gallTotal),
-			$gallPrev = $this.find('.' + this.options.gallPrev),
-			$gallNext = $this.find('.' + this.options.gallNext);
-
-
+		// Show all speakers or hde them
 		$toggleLink.on('click', $.proxy(function(e){
 			e.preventDefault();
 			var $link = $($(e.target));
@@ -190,9 +179,9 @@
 		}, this));
 	};
 
-	$.fn.gallJs = function ( options ) {
+	$.fn.mixFilter = function ( options ) {
 		return this.each(function () {
-			new GallJs( this, options );
+			new MixFilter( this, options );
 		});
 	};
 
@@ -423,9 +412,6 @@ $(function() {
 	$('.js-toggle').each(function() {
 		$(this).toggleContent();
 	});
-
-	/* jQuery gallery plugin init and settings */
-	$('.js-gall').gallJs();
 
 	/* jQuery filter plugin init and settings */
 	$(".js-filter").mixFilter();

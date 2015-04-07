@@ -11,9 +11,6 @@ $(function() {
 		$(this).toggleContent();
 	});
 
-	/* jQuery gallery plugin init and settings */
-	$('.js-gall').gallJs();
-
 	/* jQuery filter plugin init and settings */
 	$(".js-filter").mixFilter();
 
