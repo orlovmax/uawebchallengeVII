@@ -336,6 +336,7 @@ function removeClass (index, classNames) {
 					// And if this is popup - then toggle it
 					$togglePopup.fadeOut().removeClass(this.options.activeContent);
 					$target.fadeIn().addClass(this.options.activeContent);
+					$('body').css({overflow:'hidden'});
 				} else {
 					// here we have a deal with link target so we should work also with links
 					// Disable actions with selected item
@@ -389,6 +390,7 @@ function removeClass (index, classNames) {
 		$toggleClose.on('click', $.proxy(function(e){
 			e.preventDefault();
 			$togglePopup.fadeOut().removeClass(this.options.activeContent);
+			$('body').css({overflow:'auto'});
 		}, this));
 	};
 

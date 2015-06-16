@@ -30,7 +30,6 @@ Live demo: [http://orlovmax.github.io/uawebchallengeVII](http://orlovmax.github.
 
 ## Test screenshots
 **Browser screenshots [here](https://github.com/orlovmax/uawebchallengeVII/tree/master/test_screenshots/)**
-**Responsive screenshots (soon) [here](https://github.com/orlovmax/uawebchallengeVII/tree/master/test_screenshots/responsive/)**
 
 ##Folder-structure
 ```
@@ -40,6 +39,11 @@ Live demo: [http://orlovmax.github.io/uawebchallengeVII](http://orlovmax.github.
 ├── bower.json
 ├── README.md
 ├── Rakefile
+├── archives                               result *.zip archive
+|   └── project.zip
+├── grunt                                  grunt tasks
+|   ├── task.js
+│   └── aliases.yml 
 └── dev
     ├── css                                compiled css
     │   └── screen.css
